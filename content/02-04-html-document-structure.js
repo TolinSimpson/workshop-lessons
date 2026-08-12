@@ -1,6 +1,6 @@
 section({
   unit: "Unit 2: Intro to Computer Science",
-  title: "Section 3: HTML Document Structure",
+  title: "Section 4: HTML Document Structure",
 
   slides: [
     {

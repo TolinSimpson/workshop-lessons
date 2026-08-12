@@ -1,6 +1,6 @@
 section({
   unit: "Unit 2: Intro to Computer Science",
-  title: "Section 2: Website File Structure",
+  title: "Section 3: Website File Structure",
 
   slides: [
     {

@@ -1,6 +1,6 @@
 section({
   unit: "Unit 2: Intro to Computer Science",
-  title: "Section 5: Hosting",
+  title: "Section 6: Hosting",
 
   slides: [
     {

@@ -1,6 +1,6 @@
 section({
   unit: "Unit 2: Intro to Computer Science",
-  title: "Section 4: How Networks Work",
+  title: "Section 5: How Networks Work",
 
   slides: [
     {
