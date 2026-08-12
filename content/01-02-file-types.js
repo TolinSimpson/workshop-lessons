@@ -15,11 +15,14 @@ section({
     },
     {
       title: "Compression",
-      body: `<p><b>Compression</b> shrinks a file by removing redundancy.</p>
-<p>Simple idea — instead of storing:</p>
-<pre>AAAAAAAAAAAAAAAAAAAA</pre>
-<p>store "the letter A, 20 times". Same information, far fewer bytes.</p>
-<p>Compression saves disk space, makes downloads faster, and cuts bandwidth costs. The trade-off is CPU time: something has to compress and decompress the data.</p>`
+      body: `<p><b>Compression</b> shrinks a file by finding repetition and describing it more briefly.</p>
+<p>Example. A file containing the letter A twenty times takes 20 bytes — one byte per letter:</p>
+<pre>AAAAAAAAAAAAAAAAAAAA   ← 20 bytes</pre>
+<p>A compressor notices the repetition and stores a short <i>instruction</i> instead:</p>
+<pre>repeat "A" 20 times    ← stored as ~3 bytes</pre>
+<p>When the file is opened, the instruction is followed and all twenty A's come back exactly. Nothing was lost — the <b>description</b> got shorter, not the information.</p>
+<p>Real files rarely repeat a single letter, but they are full of other repetition — the same words appearing again and again in a document, large patches of identical colour in an image. Compressors hunt for those patterns the same way.</p>
+<p>Why bother: smaller files mean less disk space, faster downloads, and lower bandwidth costs. The trade-off is CPU time: something has to compress and decompress the data.</p>`
     },
     {
       title: "Lossless compression",

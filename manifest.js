@@ -5,5 +5,6 @@ const MANIFEST = [
   "02-01-programming-languages.js",
   "02-02-website-file-structure.js",
   "02-03-html-document-structure.js",
-  "02-04-hosting.js"
+  "02-04-how-networks-work.js",
+  "02-05-hosting.js"
 ];
