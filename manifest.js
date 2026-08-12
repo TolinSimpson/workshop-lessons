@@ -3,6 +3,7 @@ const MANIFEST = [
   "01-02-file-types.js",
   "01-03-web-browsing.js",
   "01-04-cybersecurity-fundamentals.js",
+  "01-05-keyboard-shortcuts.js",
   "02-01-programming-languages.js",
   "02-02-good-code-practices.js",
   "02-03-website-file-structure.js",
