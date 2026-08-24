@@ -99,8 +99,8 @@ section({
     {
       q: "What does a compiler do?",
       choices: [
-        "Translates the entire source file into machine code before the program runs",
-        "Executes the source code one line at a time as the program runs",
+        "Translates all source code into machine code before the program runs",
+        "Executes the source code one line at a time, translating each line while the program runs",
         "Formats the code so it is easier to read",
         "Compresses source code into a smaller file"
       ],
@@ -109,8 +109,8 @@ section({
     {
       q: "Which is a genuine advantage of interpreted languages?",
       choices: [
-        "They always run faster than compiled programs",
-        "Instant edit-and-run cycle with no build step, and the same source runs anywhere the interpreter exists",
+        "They always run faster than compiled programs because no translation step is needed",
+        "Instant edit-and-run cycle with no separate build step",
         "They never produce errors",
         "They hide your source code from the user"
       ],
@@ -131,8 +131,8 @@ section({
       choices: [
         "The file is compressed differently",
         "macOS blocks all downloaded files",
-        "A compiled executable is machine code targeted at a specific platform and operating system",
-        "The file extension is wrong and needs renaming"
+        "The executable is machine code targeted at a different platform",
+        "The file extension is wrong; simply renaming `.exe` to `.app` would let macOS run it"
       ],
       answer: 2
     },
@@ -140,8 +140,8 @@ section({
       q: "Is HTML a programming language?",
       choices: [
         "Yes — it runs in the browser",
-        "No — it is a markup language describing structure, with no logic, variables, or loops",
-        "Yes — it is compiled before being sent to the browser",
+        "No — it is a markup language with no logic, variables, or loops",
+        "Yes — it is compiled into machine code before being sent to the browser",
         "No — it is a style sheet language"
       ],
       answer: 1
@@ -149,19 +149,19 @@ section({
     {
       q: "Java and C# compile to bytecode. What does that mean?",
       choices: [
-        "The code is turned into an intermediate form that a virtual machine then executes",
-        "The code is encrypted so nobody can read it",
+        "The code becomes an intermediate form that a virtual machine executes",
+        "The code is encrypted so that nobody without a secret key can ever read or run it",
         "The code is converted directly to a Windows executable",
-        "The code is compressed into a ZIP archive"
+        "The code is compressed into a ZIP archive to save space"
       ],
       answer: 0
     },
     {
       q: "Which task is Python most commonly chosen for?",
       choices: [
-        "Writing an operating system kernel",
+        "Writing an operating system kernel that talks directly to hardware",
         "Firmware for a microcontroller with 2 KB of memory",
-        "Data science, machine learning, and automation scripting",
+        "Data science, machine learning, and automation",
         "Styling web pages"
       ],
       answer: 2
@@ -180,7 +180,7 @@ section({
       q: "Which language do web browsers run natively?",
       choices: [
         "Python",
-        "Java",
+        "Java (through browser applets)",
         "C++",
         "JavaScript"
       ],
@@ -190,18 +190,18 @@ section({
       q: "What does JIT (just-in-time) compilation do?",
       choices: [
         "Compiles the whole program before shipping it to users",
-        "Compiles frequently-used code paths into machine code while the program is running",
+        "Compiles hot code paths to machine code while the program runs",
         "Prevents the program from ever needing to be compiled",
-        "Converts machine code back into source code"
+        "Converts already-compiled machine code back into the original source code"
       ],
       answer: 1
     },
     {
       q: "Generally, what is the trade-off between low-level and high-level languages?",
       choices: [
-        "Low-level is faster to write but slower to run",
-        "High-level is faster to write but generally slower to run; low-level gives more control and speed",
-        "There is no difference other than syntax",
+        "Low-level is faster to write but slower to run than high-level code",
+        "High-level is faster to write but generally slower to run",
+        "There is no real difference between them other than syntax",
         "High-level languages cannot be used for real applications"
       ],
       answer: 1

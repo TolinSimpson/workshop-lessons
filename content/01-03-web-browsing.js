@@ -97,7 +97,7 @@ section({
       choices: [
         "A browser is a program that displays web pages; a search engine is a website that finds other websites",
         "They are two names for the same thing",
-        "A search engine is a program; a browser is a website",
+        "A search engine is a program installed on your computer; a browser is a website you visit to find other websites",
         "Browsers are free, search engines require a subscription"
       ],
       answer: 0
@@ -107,7 +107,7 @@ section({
       choices: [
         "https",
         "example.com",
-        "/recipes/",
+        "/recipes/bread.html",
         "bread.html"
       ],
       answer: 1
@@ -118,14 +118,14 @@ section({
         "The browser shows an error",
         "The browser sends them to your default search engine",
         "The browser opens the last page you visited",
-        "Nothing, the address bar only accepts URLs"
+        "Nothing happens, because the address bar only accepts complete web addresses"
       ],
       answer: 1
     },
     {
       q: "When you press Enter on a search, what does the engine actually search?",
       choices: [
-        "The entire live web, page by page",
+        "The entire live web, checking every page one by one at the moment you search",
         "Its own pre-built index of pages its crawlers have visited",
         "Only websites that paid to be included",
         "Your browsing history"
@@ -158,7 +158,7 @@ section({
         "Searches for jaguar and car together",
         "Searches for jaguar while excluding results about cars",
         "Searches only car websites",
-        "Subtracts the word jaguar from your history"
+        "Subtracts the word jaguar from your search history and past results"
       ],
       answer: 1
     },
@@ -167,7 +167,7 @@ section({
       choices: [
         "It is the most accurate result",
         "Someone paid for that position — it may or may not be the site you want",
-        "The search engine officially endorses it",
+        "The search engine's editors reviewed it and officially endorse it as the best answer",
         "It is always a scam"
       ],
       answer: 1
@@ -175,7 +175,7 @@ section({
     {
       q: "What is a cookie?",
       choices: [
-        "A small program websites install on your computer",
+        "A small hidden program that websites secretly install and run on your computer's hard drive",
         "A small piece of text a website stores in your browser and reads back on later visits",
         "A type of computer virus",
         "A saved copy of a web page's images"
@@ -188,7 +188,7 @@ section({
         "It remembers your screen",
         "A cookie is sent back to the site with each request, identifying you",
         "Your password is typed automatically each time",
-        "The pages are all downloaded in advance"
+        "Every page on the site is downloaded to your computer in advance, so no login is needed"
       ],
       answer: 1
     },
@@ -197,7 +197,7 @@ section({
       choices: [
         "Those websites all share one owner",
         "A third-party ad network embedded in many sites recognises its cookie on all of them",
-        "Your browser broadcasts your history to every site",
+        "Your browser automatically broadcasts your full browsing history to every website you visit",
         "It is a coincidence"
       ],
       answer: 1
@@ -205,7 +205,7 @@ section({
     {
       q: "What does clicking 'Reject all' on a cookie banner typically do?",
       choices: [
-        "Blocks the site from loading",
+        "Blocks the site from loading until you change your mind and accept all cookies",
         "Declines tracking cookies while keeping the ones the site needs to function",
         "Deletes your account on that site",
         "Turns off cookies in every browser on the computer"
@@ -216,16 +216,16 @@ section({
       q: "What does private / incognito mode actually do?",
       choices: [
         "Hides your activity from websites and your internet provider",
-        "Keeps no local history or cookies after the window closes — but your network and the sites you visit still see you",
+        "Keeps no local history or cookies once the window closes",
         "Encrypts your connection like a VPN",
-        "Makes you completely anonymous online"
+        "Makes you completely anonymous online, so no website or internet provider can tell who you are"
       ],
       answer: 1
     },
     {
       q: "A page you visit often looks broken — images missing, layout scrambled — but works on your phone. Likely first fix?",
       choices: [
-        "Reinstall the operating system",
+        "Back up your files and completely reinstall the operating system from scratch",
         "Force-refresh to bypass the browser's stale cached copies (Ctrl+F5)",
         "Delete all your bookmarks",
         "Buy a new monitor"

@@ -16,7 +16,7 @@ console.assert(
   JSON.stringify(manifest) === JSON.stringify(files),
   'manifest.js is stale — run `node build.js`');
 
-let questions = 0, slides = 0;
+let questions = 0, slides = 0, longestIsAnswer = 0;
 for (const s of SECTIONS) {
   console.assert(s.unit, `${s.id}: missing unit`);
   console.assert(s.title, `${s.id}: missing title`);
@@ -27,9 +27,14 @@ for (const s of SECTIONS) {
     console.assert(Number.isInteger(q.answer) && q.choices[q.answer] !== undefined,
       `${s.id} q${i + 1}: answer index out of range`);
     console.assert(new Set(q.choices).size === q.choices.length, `${s.id} q${i + 1}: duplicate choices`);
+    const lens = q.choices.map(c => c.length);
+    if (lens[q.answer] === Math.max(...lens) && lens.filter(l => l === lens[q.answer]).length === 1) longestIsAnswer++;
   });
   slides += s.slides.length;
   questions += s.questions.length;
   console.log(`${s.id.padEnd(40)} ${String(s.slides.length).padStart(2)} slides  ${String(s.questions.length).padStart(2)} questions`);
 }
+// ponytail: 35% threshold (chance is ~25% for 4 choices); tighten if bias creeps back
+console.assert(longestIsAnswer / questions <= 0.35,
+  `answer-length bias: correct choice is strictly longest in ${longestIsAnswer}/${questions} questions`);
 console.log(`\n${SECTIONS.length} sections, ${slides} slides, ${questions} questions`);

@@ -101,10 +101,10 @@ section({
     {
       q: "What does DNS do?",
       choices: [
-        "Encrypts traffic between browser and server",
-        "Translates a domain name into the server's IP address",
-        "Compresses files before sending them",
-        "Stores your website's files"
+        "Encrypts all traffic between your browser and the destination server",
+        "Translates a domain name into an IP address",
+        "Compresses files before sending them to the browser",
+        "Stores your website's HTML, CSS, and image files"
       ],
       answer: 1
     },
@@ -121,10 +121,10 @@ section({
     {
       q: "What does an HTTP 404 status code mean?",
       choices: [
-        "The request succeeded",
-        "The server's own code crashed",
-        "The requested resource was not found at that path",
-        "The page has permanently moved"
+        "The request succeeded and the file was returned",
+        "The server's own code crashed while handling the request",
+        "The requested resource was not found",
+        "The page has permanently moved to a new address"
       ],
       answer: 2
     },
@@ -141,10 +141,10 @@ section({
     {
       q: "What type of site can GitHub Pages host?",
       choices: [
-        "Static sites — HTML, CSS, JavaScript, and assets",
+        "Static sites — HTML, CSS, and JavaScript",
         "Any site including PHP and MySQL databases",
-        "Only sites written in Python",
-        "Only single-page sites with no images"
+        "Only sites written in the Python programming language",
+        "Only single-page sites with no images, videos, or other media files"
       ],
       answer: 0
     },
@@ -162,28 +162,28 @@ section({
       q: "What does an SSL/TLS certificate provide?",
       choices: [
         "Proof that the website's content is truthful",
-        "Encryption of the connection and proof that the server matches the domain",
-        "Protection against all viruses",
-        "Faster page loading through compression"
+        "Encryption and proof the server matches the domain",
+        "Complete protection against all viruses and malware on the site",
+        "Faster page loading through file compression"
       ],
       answer: 1
     },
     {
       q: "What is a CDN?",
       choices: [
-        "A type of domain name",
-        "A network of servers worldwide that cache your files closer to visitors",
-        "A programming language for servers",
-        "A backup service for databases"
+        "A type of domain name reserved for large companies",
+        "A worldwide network of servers that cache your files",
+        "A programming language used for writing server code",
+        "A backup service that stores copies of your databases in the cloud"
       ],
       answer: 1
     },
     {
       q: "Why is a home laptop a poor web server?",
       choices: [
-        "Laptops cannot run server software",
-        "It sleeps, has a changing IP address, slow upload speed, and exposes your home network to attack",
-        "HTML files cannot be served from a laptop",
+        "Laptop hardware is physically incapable of running any web server software",
+        "It sleeps, its IP changes, and home upload is slow",
+        "HTML files cannot be served from a laptop's hard drive",
         "It is illegal in most countries"
       ],
       answer: 1
@@ -191,10 +191,10 @@ section({
     {
       q: "Do you own a domain name permanently once purchased?",
       choices: [
-        "Yes, it is yours forever",
-        "No — you rent it, usually yearly, and it can be taken if you let it expire",
-        "Yes, but only if you also buy hosting",
-        "No — domains are assigned randomly each year"
+        "Yes, a one-time purchase makes it yours forever",
+        "No — you rent it yearly and can lose it if it expires",
+        "Yes, but only if you also purchase hosting from the same registrar",
+        "No — domains are randomly reassigned to new owners every year"
       ],
       answer: 1
     },
@@ -211,10 +211,10 @@ section({
     {
       q: "How does deployment work on GitHub Pages after initial setup?",
       choices: [
-        "You must upload files manually by FTP each time",
-        "Every push to the configured branch redeploys the site automatically",
+        "You must upload the files manually over FTP after every change",
+        "Every push to the configured branch redeploys automatically",
         "You email the files to GitHub support",
-        "The site must be rebuilt from the Settings page by hand"
+        "The site must be rebuilt by hand from the Settings page after each change"
       ],
       answer: 1
     }

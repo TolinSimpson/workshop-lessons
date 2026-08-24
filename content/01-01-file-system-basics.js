@@ -106,17 +106,17 @@ archive.tar.gz → extension is  .gz</pre>
     {
       q: "What does the file extension of a file actually do?",
       choices: [
-        "It labels the file so the operating system knows which program should open it",
+        "It tells the operating system which program should open it",
         "It converts the file's data into that format",
         "It compresses the file to save space",
-        "It determines which drive the file is stored on"
+        "It determines which physical drive and sector the file's bytes are stored on"
       ],
       answer: 0
     },
     {
       q: "Which of these is an absolute path?",
       choices: [
-        "../Photos/beach.jpg",
+        "..\\..\\Photos\\vacation\\summer-trip\\beach.jpg",
         "Documents\\essay.docx",
         "C:\\Users\\Alex\\Documents\\essay.docx",
         "./notes.txt"
@@ -127,8 +127,8 @@ archive.tar.gz → extension is  .gz</pre>
       q: "In a file path, what does `..` mean?",
       choices: [
         "The root of the drive",
-        "The parent directory, one level up",
-        "The current directory",
+        "The parent directory",
+        "The current directory you are working in right now",
         "A hidden file"
       ],
       answer: 1
@@ -137,8 +137,8 @@ archive.tar.gz → extension is  .gz</pre>
       q: "You rename `song.mp3` to `song.jpg`. What happens?",
       choices: [
         "The audio is converted into an image",
-        "The file is deleted because the format is invalid",
-        "Nothing changes inside the file — it is just mislabeled and image viewers will fail to open it",
+        "The file is deleted because the operating system rejects the invalid format",
+        "Nothing inside the file changes — it is just mislabeled",
         "The file is automatically compressed"
       ],
       answer: 2
@@ -149,15 +149,15 @@ archive.tar.gz → extension is  .gz</pre>
         "SSDs have no moving parts and are faster, but cost more per gigabyte",
         "HDDs have no moving parts and are faster than SSDs",
         "SSDs lose all their data when the computer is turned off",
-        "HDDs are more resistant to being dropped than SSDs"
+        "HDDs handle drops and physical shocks better than SSDs because their platters spin"
       ],
       answer: 0
     },
     {
       q: "On Windows, what is `C:` normally?",
       choices: [
-        "A folder inside the Documents directory",
-        "The drive letter for the main volume that holds the operating system",
+        "A special folder inside the Documents directory of the main user account",
+        "The drive letter of the volume holding the operating system",
         "The name of the file system format",
         "A temporary storage area cleared at shutdown"
       ],
@@ -177,8 +177,8 @@ archive.tar.gz → extension is  .gz</pre>
       q: "Why is it recommended to turn on 'show file name extensions' in Windows?",
       choices: [
         "It makes files open faster",
-        "It frees up disk space",
-        "It reveals disguised files such as `invoice.pdf.exe`, which is really a program",
+        "It frees up disk space by removing extension data from every file name",
+        "It reveals disguised files like `invoice.pdf.exe`",
         "It is required in order to save files to a USB drive"
       ],
       answer: 2

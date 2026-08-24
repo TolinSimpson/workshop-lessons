@@ -175,18 +175,18 @@
       q: "Why is reusing one password across many sites so dangerous?",
       choices: [
         "It makes each site load more slowly",
-        "One site's breach lets attackers automatically try that email and password on hundreds of other sites â€” credential stuffing",
-        "Websites can detect it and will ban your account",
-        "It uses more storage in your browser"
+        "One breach lets attackers try that login on hundreds of other sites â€” credential stuffing",
+        "Websites detect the reuse and permanently ban your account for violating their terms of service",
+        "It uses far more storage space in your browser's saved password list"
       ],
       answer: 1
     },
     {
       q: "Which of these is genuinely two-factor authentication?",
       choices: [
-        "A password plus a security question",
-        "A password plus a PIN",
-        "A password plus a code from an authenticator app on your phone",
+        "A password plus a security question, since the question acts as a second independent factor",
+        "A password plus a PIN, because entering two secrets counts as two factors",
+        "A password plus a code from a phone authenticator app",
         "A very long password"
       ],
       answer: 2
@@ -195,19 +195,19 @@
       q: "Why is SMS the weakest common form of 2FA?",
       choices: [
         "Text messages cost money to send",
-        "Attackers can perform SIM swapping to take over your phone number",
-        "SMS codes never expire",
-        "Phones cannot receive texts while offline"
+        "SIM swapping lets attackers take over your phone number",
+        "SMS codes never expire, so a single intercepted code can be replayed by attackers indefinitely",
+        "Phones cannot receive texts while offline, so codes are lost"
       ],
       answer: 1
     },
     {
       q: "What distinguishes a worm from a virus?",
       choices: [
-        "A worm self-replicates across a network with no human action; a virus needs someone to run an infected file",
-        "A worm only affects mobile phones",
-        "A worm encrypts files while a virus never does",
-        "A virus spreads by itself; a worm must be installed manually"
+        "A worm spreads across networks by itself; a virus needs someone to run an infected file",
+        "A worm only affects mobile phones, while a virus can only infect desktop computers",
+        "A worm always encrypts files for ransom, while a virus never modifies any data at all",
+        "A virus spreads by itself across networks; a worm must be installed manually by the attacker"
       ],
       answer: 0
     },
@@ -224,9 +224,9 @@
     {
       q: "Signature-based antivirus detection has which key limitation?",
       choices: [
-        "It slows the computer to a halt",
-        "It only works on text files",
-        "It cannot recognise brand-new malware that is not yet in its database",
+        "It slows the computer to a halt whenever any file is opened",
+        "It only works on plain text files, so executables are never scanned or checked at all",
+        "It cannot recognise malware not yet in its database",
         "It deletes files without asking"
       ],
       answer: 2
@@ -234,10 +234,10 @@
     {
       q: "Why should you avoid running two real-time antivirus programs at once?",
       choices: [
-        "It doubles your protection but costs more money",
-        "They conflict with each other, causing crashes and potentially worse protection than one alone",
-        "Antivirus programs are illegal to run in pairs",
-        "The second one will always be disabled automatically with no effect"
+        "It doubles your protection but the extra licence always costs twice as much money",
+        "They conflict, causing crashes and potentially worse protection than one alone",
+        "Running two antivirus programs at the same time is illegal in most countries",
+        "The second one is always disabled automatically, so there is never any effect either way"
       ],
       answer: 1
     },
@@ -245,8 +245,8 @@
       q: "A site has a padlock and HTTPS in the address bar. What does that guarantee?",
       choices: [
         "The site is legitimate and safe to trust",
-        "The site has been scanned for malware",
-        "Only that the connection is encrypted â€” criminals can obtain certificates too",
+        "The site has been fully scanned for malware and approved by the browser vendor",
+        "Only that the connection is encrypted; criminals get certificates too",
         "The site is owned by the company shown in its logo"
       ],
       answer: 2
@@ -254,19 +254,19 @@
     {
       q: "What is the most reliable response to an urgent email claiming your bank account will be closed?",
       choices: [
-        "Click the link and log in quickly before the deadline",
-        "Reply asking whether the message is genuine",
-        "Ignore the links, open a new tab, type the bank's address yourself, and check your account there",
-        "Forward it to your contacts as a warning"
+        "Click the link and log in quickly before the deadline passes",
+        "Reply to the message asking the sender to confirm whether it is genuine",
+        "Ignore the links; type the bank's address into a new tab and check your account there",
+        "Forward the email to every one of your contacts immediately as a warning about the ongoing scam"
       ],
       answer: 2
     },
     {
       q: "What does the 3-2-1 backup rule state?",
       choices: [
-        "3 passwords, 2 devices, 1 antivirus",
-        "3 copies of the data, on 2 different media, with 1 stored offsite or offline",
-        "Scan 3 times a day, 2 times a week, 1 time a month",
+        "3 passwords, 2 backup devices, 1 antivirus program installed",
+        "3 copies, on 2 different media, 1 kept offsite or offline",
+        "Scan 3 times a day, 2 times a week, and 1 extra time at the end of every month",
         "3 firewalls, 2 routers, 1 network"
       ],
       answer: 1
@@ -274,8 +274,8 @@
     {
       q: "You realise you just entered your password into a phishing site. What should you do FIRST?",
       choices: [
-        "Delete the email",
-        "Restart the computer",
+        "Delete the phishing email immediately so that the attackers lose their access",
+        "Restart the computer to clear anything the site placed in memory",
         "Disconnect from the network, then change that password from a clean device",
         "Wait to see whether anything bad happens"
       ],
@@ -285,8 +285,8 @@
       q: "Why is your email account described as the 'master key'?",
       choices: [
         "It stores every file you have ever downloaded",
-        "Whoever controls it can trigger password resets on all your other accounts",
-        "It is the only account that cannot use 2FA",
+        "Whoever controls it can reset passwords on all your other accounts",
+        "It is the only type of account that cannot be protected with any form of 2FA",
         "Email providers store your other passwords for you"
       ],
       answer: 1
@@ -294,10 +294,10 @@
     {
       q: "Which download habit is safest?",
       choices: [
-        "Taking the top sponsored search result",
-        "Getting software from the vendor's official site or an official app store",
+        "Taking the top sponsored search result, since advertisers are vetted before ads run",
+        "Getting software from the vendor's site or an official app store",
         "Using a cracked version to avoid registration",
-        "Downloading from whichever mirror is fastest"
+        "Downloading from whichever unofficial mirror responds fastest"
       ],
       answer: 1
     },

@@ -109,16 +109,16 @@ section({
     {
       q: "What does Alt+Tab do on Windows?",
       choices: [
-        "Closes the current window",
+        "Closes the current window and exits the program",
         "Cycles between open windows",
-        "Opens the Start menu",
-        "Locks the computer"
+        "Opens the Start menu to search",
+        "Locks the computer screen"
       ],
       answer: 1
     },
     {
       q: "Which shortcut snaps the current window to fill the left half of the screen?",
-      choices: ["Windows+D", "Windows+E", "Windows+Left", "Windows+L"],
+      choices: ["Windows+Right", "Windows+Down", "Windows+Left", "Windows+Ctrl+D"],
       answer: 2
     },
     {
@@ -130,15 +130,15 @@ section({
       q: "What does Windows+D do?",
       choices: [
         "Opens File Explorer",
-        "Shows the desktop by hiding every window",
-        "Deletes the selected file",
-        "Opens a new virtual desktop"
+        "Shows the desktop",
+        "Permanently deletes the selected file",
+        "Creates a new virtual desktop"
       ],
       answer: 1
     },
     {
       q: "You closed a browser tab by accident. How do you get it back?",
-      choices: ["Ctrl+T", "Ctrl+Shift+T", "Ctrl+W", "Ctrl+N"],
+      choices: ["Ctrl+Shift+N", "Ctrl+Shift+T", "Ctrl+Shift+Tab", "Ctrl+Shift+Esc"],
       answer: 1
     },
     {
@@ -148,16 +148,16 @@ section({
     },
     {
       q: "A page looks broken because of a stale cached copy. Which reload forces a fresh one?",
-      choices: ["F5", "Ctrl+R", "Ctrl+F5", "Ctrl+W"],
+      choices: ["Ctrl+F4", "Ctrl+Esc", "Ctrl+F5", "Alt+Left"],
       answer: 2
     },
     {
       q: "What does Alt+Left do in a browser?",
       choices: [
         "Opens a new tab",
-        "Goes back to the previous page",
+        "Goes back one page",
         "Closes the current tab",
-        "Moves the window left"
+        "Snaps the window to the left half of the screen"
       ],
       answer: 1
     }

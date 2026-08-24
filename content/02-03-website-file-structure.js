@@ -117,8 +117,8 @@ example.com/about/    → serves  /about/index.html</pre>
     {
       q: "Why should web file names avoid spaces and capital letters?",
       choices: [
-        "Spaces become %20 in URLs, and servers are usually case-sensitive so `Logo.svg` will 404",
-        "Browsers refuse to load files longer than 8 characters",
+        "Spaces become %20 in URLs, and most servers are case-sensitive",
+        "Browsers refuse to load any file whose name is longer than 8 characters, a limit kept from MS-DOS",
         "It reduces file size",
         "Capital letters are reserved for CSS files"
       ],
@@ -127,7 +127,7 @@ example.com/about/    → serves  /about/index.html</pre>
     {
       q: "What does the path `../images/logo.svg` mean?",
       choices: [
-        "Look in an images folder at the site root",
+        "Look in an images folder located at the top level of the site root directory",
         "Go up one folder, then into the images folder",
         "Download the file from another website",
         "Look in a hidden folder"
@@ -140,7 +140,7 @@ example.com/about/    → serves  /about/index.html</pre>
         "<script src=\"css/style.css\"></script>",
         "<style href=\"css/style.css\">",
         "<link rel=\"stylesheet\" href=\"css/style.css\">",
-        "<css src=\"css/style.css\">"
+        "<css rel=\"stylesheet\" src=\"css/style.css\"></css>"
       ],
       answer: 2
     },
@@ -148,8 +148,8 @@ example.com/about/    → serves  /about/index.html</pre>
       q: "What defines a static website?",
       choices: [
         "It has no images or animation",
-        "The server sends pre-written files as they are, the same for every visitor",
-        "It cannot be viewed on mobile devices",
+        "The server sends pre-written files unchanged to every visitor",
+        "It cannot be viewed correctly on mobile devices or tablet screens",
         "It must be rebuilt from a database on every request"
       ],
       answer: 1
@@ -157,9 +157,9 @@ example.com/about/    → serves  /about/index.html</pre>
     {
       q: "Why must you never put an API key or password in front-end JavaScript?",
       choices: [
-        "It would slow the page down",
+        "It would slow down page load by adding extra encryption overhead",
         "JavaScript cannot store text values",
-        "Front-end code is fully visible to every visitor who opens developer tools",
+        "Front-end code is visible to anyone who opens developer tools",
         "Browsers automatically delete them"
       ],
       answer: 2
@@ -168,9 +168,9 @@ example.com/about/    → serves  /about/index.html</pre>
       q: "Your page works locally but images break once uploaded to a Linux server. Most likely cause?",
       choices: [
         "The server does not support images",
-        "A filename case mismatch — `Logo.svg` referenced as `logo.svg` or vice versa",
+        "A filename case mismatch, like `Logo.svg` referenced as `logo.svg`",
         "Images must always be JPEG on servers",
-        "The HTML file is too large"
+        "The HTML file exceeds the maximum size Linux servers allow for uploads"
       ],
       answer: 1
     },
@@ -188,8 +188,8 @@ example.com/about/    → serves  /about/index.html</pre>
       q: "What is the main practical benefit of putting CSS in a separate file rather than inside each page?",
       choices: [
         "It makes the CSS run faster on the server",
-        "One file restyles every page at once, and the browser caches it after the first download",
-        "It is required by HTML5",
+        "One file restyles every page, and the browser caches it after first download",
+        "Separate files are strictly required by the HTML5 specification; inline styles fail validation",
         "It encrypts the styles"
       ],
       answer: 1

@@ -99,8 +99,8 @@ section({
     {
       q: "What is the internet?",
       choices: [
-        "One giant computer owned by a single company",
-        "A global network of independent networks that agree to pass each other's traffic",
+        "One giant central supercomputer owned and operated by a single private company",
+        "A global network of independent networks that pass each other's traffic",
         "Another name for the World Wide Web browser",
         "A type of Wi-Fi signal"
       ],
@@ -112,7 +112,7 @@ section({
         "As one continuous unbroken stream that must follow a single path",
         "Split into packets that are routed independently and reassembled at the destination",
         "As physical copies mailed between data centres",
-        "Only when both computers are made by the same manufacturer"
+        "Only when both computers are made by the same manufacturer and run the same operating system"
       ],
       answer: 1
     },
@@ -130,8 +130,8 @@ section({
       q: "What is a 'server'?",
       choices: [
         "A special kind of hardware that ordinary computers cannot imitate",
-        "A program or machine whose role is to wait for requests and answer them",
-        "Any computer with a large hard drive",
+        "A program or machine that waits for requests and answers them",
+        "Any computer that happens to have a large hard drive and lots of RAM",
         "The cable that connects a home to the internet"
       ],
       answer: 1
@@ -139,7 +139,7 @@ section({
     {
       q: "What defines a peer-to-peer network?",
       choices: [
-        "All traffic passes through one central server",
+        "All traffic must pass through one central, always-on server owned by the operator",
         "Each participant acts as both client and server, talking directly to others",
         "It only works over cables, never Wi-Fi",
         "It requires a paid subscription"
@@ -152,7 +152,7 @@ section({
         "Content is always guaranteed to be available",
         "More users add more capacity, since each peer shares the load",
         "It needs no internet connection",
-        "It is always faster than a central server"
+        "It is always faster than a central server, no matter the network conditions"
       ],
       answer: 1
     },
@@ -160,8 +160,8 @@ section({
       q: "Which is a real weakness of P2P?",
       choices: [
         "It stops working when more than ten users join",
-        "Availability depends on which peers happen to be online at that moment",
-        "It cannot transfer files larger than 1 MB",
+        "Availability depends on which peers happen to be online",
+        "It cannot transfer any file larger than 1 MB without corrupting it",
         "It only runs on Linux"
       ],
       answer: 1
@@ -189,7 +189,7 @@ section({
     {
       q: "Which port and protocol pair serves encrypted web pages?",
       choices: [
-        "HTTP on port 80",
+        "HTTP on port 80, the unencrypted web",
         "HTTPS on port 443",
         "SMTP on port 25",
         "DNS on port 53"
@@ -201,7 +201,7 @@ section({
       choices: [
         "The agreed language both ends of a connection speak, like HTTP",
         "A brand of router",
-        "The physical cable between two computers",
+        "The physical copper or fibre cable that carries signals between two computers",
         "A law about internet usage"
       ],
       answer: 0
@@ -210,8 +210,8 @@ section({
       q: "Why do all the devices in your home appear to the internet as one address?",
       choices: [
         "They take turns being connected",
-        "The router holds the single public IP and translates for the private ones inside",
-        "The ISP assigns every device its own public IP",
+        "The router holds the one public IP and translates for the private ones",
+        "The ISP assigns every single device in the home its own permanent public IP",
         "Wi-Fi merges the devices into one computer"
       ],
       answer: 1
@@ -222,7 +222,7 @@ section({
         "Packets are encrypted so they cannot be lost",
         "If one route fails, packets can flow around it by other routes",
         "Each packet is stored permanently on every router",
-        "Packets travel faster than electricity"
+        "Packets travel faster than the speed of electricity through copper wire"
       ],
       answer: 1
     }

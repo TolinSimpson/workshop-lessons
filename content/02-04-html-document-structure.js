@@ -114,10 +114,10 @@ opening  content        closing</pre>
     {
       q: "What is the purpose of `<!DOCTYPE html>`?",
       choices: [
-        "It imports the HTML library",
-        "It tells the browser to render using modern standards mode instead of quirks mode",
-        "It is a comment for other developers",
-        "It defines the page title"
+        "It imports the HTML library so that tags like <p> and <img> become available",
+        "It switches the browser into modern standards mode instead of quirks mode",
+        "It is a comment left for other developers",
+        "It defines the title shown in the browser tab"
       ],
       answer: 1
     },
@@ -145,19 +145,19 @@ opening  content        closing</pre>
       q: "What does `<meta charset=\"UTF-8\">` do?",
       choices: [
         "Sets the page width on mobile devices",
-        "Declares the character encoding so accented characters and emoji display correctly",
-        "Links the stylesheet",
-        "Sets the text colour"
+        "Declares the character encoding so text displays correctly",
+        "Links the stylesheet in css/style.css to the page",
+        "Sets the default text colour to match the operating system theme"
       ],
       answer: 1
     },
     {
       q: "Which head element's content is visible to the user?",
       choices: [
-        "<meta charset>",
-        "<link rel=\"stylesheet\">",
-        "<title> — it appears in the browser tab and in search results",
-        "None of them are ever visible"
+        "<meta charset>, shown at the top of the page",
+        "<link rel=\"stylesheet\">, displayed as a link the user can click",
+        "<title>, shown in the browser tab",
+        "None of them are ever visible anywhere"
       ],
       answer: 2
     },
@@ -174,20 +174,20 @@ opening  content        closing</pre>
     {
       q: "Why use semantic elements like `<nav>` and `<main>` instead of `<div>` everywhere?",
       choices: [
-        "They load faster than divs",
-        "They describe what the content is, helping screen readers, search engines, and human readers",
-        "They apply built-in colours and fonts",
-        "Divs are deprecated and no longer work"
+        "They load faster than divs because the browser caches them",
+        "They describe what the content is, not how it looks",
+        "They apply built-in colours and fonts to matching content automatically",
+        "Divs are deprecated and no longer work in modern browsers"
       ],
       answer: 1
     },
     {
       q: "What is the correct use of the `alt` attribute on an image?",
       choices: [
-        "The filename of the image",
-        "A description of the image's meaning, for screen readers and for when the image fails to load",
-        "The image's width and height",
-        "A caption always displayed beneath the image"
+        "The filename of the image, so the browser knows which file to load",
+        "A description of the image's meaning, read by screen readers",
+        "The image's width and height in pixels",
+        "A caption that is always displayed beneath the image on the page"
       ],
       answer: 1
     },
@@ -204,20 +204,20 @@ opening  content        closing</pre>
     {
       q: "What is the difference between `id` and `class`?",
       choices: [
-        "`id` must be unique to one element; `class` can be shared by many elements",
-        "`class` must be unique; `id` can be reused",
-        "They are identical and interchangeable",
-        "`id` is for CSS only and `class` is for JavaScript only"
+        "`id` is unique to one element; `class` can be shared by many",
+        "`class` must be unique; `id` can be reused on many elements",
+        "They are identical and completely interchangeable",
+        "`id` is only usable from CSS and `class` is only usable from JavaScript"
       ],
       answer: 0
     },
     {
       q: "Why is a plain `<script>` tag in the `<head>` often a problem?",
       choices: [
-        "Scripts are not allowed in the head",
-        "It blocks HTML parsing while it downloads and runs, delaying what the user sees",
-        "It causes the CSS to be ignored",
-        "The browser will run it twice"
+        "Scripts are not allowed inside the head",
+        "It blocks HTML parsing while it downloads and runs",
+        "It causes the browser to ignore all CSS loaded before the script",
+        "The browser will run the same script twice"
       ],
       answer: 1
     },

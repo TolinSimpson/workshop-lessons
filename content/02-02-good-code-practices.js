@@ -82,9 +82,9 @@ sendToPrinter(job, { retries: 2 });</pre>
       q: "Why does readable code matter if the program already works?",
       choices: [
         "It doesn't — working is all that counts",
-        "Code is read many times after being written, and unreadable code is where bugs hide and changes stall",
-        "Readable code runs faster",
-        "Compilers refuse messy code"
+        "Code is read many times after it is written; unreadable code is where bugs hide",
+        "Readable code runs faster because the computer skips over well-named variables and tidy indentation while executing",
+        "Compilers refuse to compile messy code and stop with a formatting error"
       ],
       answer: 1
     },
@@ -94,17 +94,17 @@ sendToPrinter(job, { retries: 2 });</pre>
         "x",
         "data",
         "livesRemaining",
-        "myVariable2"
+        "myVariable2HoldingThePlayerNumber"
       ],
       answer: 2
     },
     {
       q: "A function is 250 lines long and its honest name would be `loadSortFilterAndDraw`. What does good practice suggest?",
       choices: [
-        "Nothing — long functions are a sign of skill",
+        "Nothing — long functions are a sign of skill, since only experts can hold 250 lines of logic in their head at once",
         "Split it into smaller functions that each do one nameable job",
-        "Remove the blank lines so it looks shorter",
-        "Rename it to something vaguer"
+        "Remove the blank lines and comments so it looks shorter on screen",
+        "Rename it to something vaguer so the four jobs are less obvious"
       ],
       answer: 1
     },
@@ -112,16 +112,16 @@ sendToPrinter(job, { retries: 2 });</pre>
       q: "Why are small functions easier to debug?",
       choices: [
         "They run faster",
-        "A bug has far fewer places to hide, and the function's one job is easy to check",
+        "A bug has few places to hide, and the one job is easy to check",
         "Small functions cannot contain bugs",
-        "Debuggers only work on short functions"
+        "Debuggers only work on short functions and refuse to step through anything longer than one screen"
       ],
       answer: 1
     },
     {
       q: "What problem does DRY (Don't Repeat Yourself) prevent?",
       choices: [
-        "Programs using too much memory",
+        "Programs using too much memory, since every pasted copy doubles the RAM the program needs while running",
         "A change made in three of four pasted copies, leaving the fourth as a lurking bug",
         "Functions with long names",
         "Files being too small"
@@ -132,8 +132,8 @@ sendToPrinter(job, { retries: 2 });</pre>
       q: "What is the 'rule of three' about?",
       choices: [
         "Functions must have exactly three arguments",
-        "Tolerate a little duplication at first; by the third copy, extract it into one shared function",
-        "Every program needs three files",
+        "Tolerate duplication at first; by the third copy, extract a shared function",
+        "Every program needs exactly three files: one for input, one for logic, and one for output",
         "Bugs always come in threes"
       ],
       answer: 1
@@ -142,7 +142,7 @@ sendToPrinter(job, { retries: 2 });</pre>
       q: "Which comment is actually useful?",
       choices: [
         "// add one to counter",
-        "// loop over the list",
+        "// loop over the list from the first element to the last element, one element at a time",
         "// Retry twice: the printer drops the first request about once an hour",
         "// this is a function"
       ],
@@ -151,7 +151,7 @@ sendToPrinter(job, { retries: 2 });</pre>
     {
       q: "What should you do with a large block of commented-out code that has sat unused for months?",
       choices: [
-        "Keep it forever in case it is needed",
+        "Keep it forever in case it is needed, since code deleted from a file can never be recovered again",
         "Delete it — version control remembers it, and it only confuses readers",
         "Move it to the top of the file",
         "Uncomment it to see what happens"
@@ -163,7 +163,7 @@ sendToPrinter(job, { retries: 2 });</pre>
       choices: [
         "Rewrite the program from scratch",
         "Find steps that reproduce the bug reliably",
-        "Change several things and re-run",
+        "Change several things at once and re-run, hoping some combination of edits happens to fix it",
         "Blame the computer"
       ],
       answer: 1
@@ -172,17 +172,17 @@ sendToPrinter(job, { retries: 2 });</pre>
       q: "Why change only one thing at a time while hunting a bug?",
       choices: [
         "Computers can only process one change",
-        "If the bug disappears after five changes, you don't know which fixed it — and the other four are now mystery code",
+        "If the bug disappears after five changes, you don't know which one fixed it",
         "It is faster to type",
-        "Version control forbids multiple changes"
+        "Version control forbids committing more than one changed line at a time, so multiple edits get rejected"
       ],
       answer: 1
     },
     {
       q: "Your negative-price bug is 'fixed' by forcing any negative price to zero. Why is this bad?",
       choices: [
-        "Zero is not a valid price",
-        "It hides the symptom while the root cause — whatever made the price negative — is still there",
+        "Zero is not a valid price, because every store is legally required to charge at least one cent",
+        "It hides the symptom; the root cause of the negative price is still there",
         "It makes the code longer",
         "Negative prices are sometimes correct"
       ],
@@ -193,7 +193,7 @@ sendToPrinter(job, { retries: 2 });</pre>
       choices: [
         "'What changed since yesterday?' — diff against the last working version",
         "'Which computer is faulty?'",
-        "'Should I rewrite it in another language?'",
+        "'Should I rewrite it in another language?' — a fresh language guarantees yesterday's bug cannot follow",
         "'Can I ignore it?'"
       ],
       answer: 0
@@ -201,8 +201,8 @@ sendToPrinter(job, { retries: 2 });</pre>
     {
       q: "What is rubber duck debugging?",
       choices: [
-        "A tool that automatically finds bugs",
-        "Explaining your code line by line out loud, which forces you to check assumptions until the bug surfaces",
+        "A tool that automatically finds bugs by scanning your code and highlighting every faulty line for you",
+        "Explaining your code aloud line by line, which forces you to check each assumption",
         "Testing software in the bath",
         "A type of antivirus scan"
       ],
@@ -212,8 +212,8 @@ sendToPrinter(job, { retries: 2 });</pre>
       q: "Why is 'write a little, run it, repeat' safer than writing 200 lines and running once?",
       choices: [
         "Long programs cannot be run once",
-        "When something breaks, the cause is in the few lines you just wrote — the smallest possible search",
-        "Running code frequently wears out the computer",
+        "When something breaks, the cause is in the few lines you just wrote",
+        "Running code frequently wears out the processor, so a program should only be run once when it is finished",
         "It isn't — one big run is always better"
       ],
       answer: 1
@@ -221,7 +221,7 @@ sendToPrinter(job, { retries: 2 });</pre>
     {
       q: "Where do bugs most often lurk in code that handles a list of items?",
       choices: [
-        "Exactly in the middle of the list",
+        "Exactly in the middle of the list, where the computer's attention is weakest halfway through counting",
         "At the edges: an empty list, the first item, the last item, or huge input",
         "In the fifth item",
         "Nowhere, lists are always safe"

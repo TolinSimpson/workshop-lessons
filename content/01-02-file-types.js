@@ -135,8 +135,8 @@ section({
     {
       q: "What is the defining feature of lossy compression?",
       choices: [
-        "It permanently discards some data, so the original cannot be perfectly restored",
-        "It keeps every bit and can be reversed exactly",
+        "It permanently discards data, so the original cannot be restored",
+        "It keeps every single bit and can always be reversed exactly to the original",
         "It only works on text files",
         "It makes files larger but faster to open"
       ],
@@ -165,9 +165,9 @@ section({
     {
       q: "Why is JPEG a poor choice for a screenshot containing small text?",
       choices: [
-        "JPEG files cannot be opened by web browsers",
+        "JPEG files cannot be opened by web browsers without a separate plugin installed",
         "JPEG has a maximum size of 256 colours",
-        "Lossy compression blurs the sharp edges of text, making it fuzzy",
+        "Lossy compression blurs the sharp edges of small text",
         "JPEG does not support rectangular images"
       ],
       answer: 2
@@ -176,9 +176,9 @@ section({
       q: "What happens if you open, edit, and re-save the same JPEG twenty times?",
       choices: [
         "Nothing — the quality stays identical",
-        "Quality visibly degrades each save, because it is re-compressed every time",
+        "Quality visibly degrades each save, because it is re-compressed",
         "The file converts itself to PNG",
-        "The file becomes larger each time but keeps full quality"
+        "The file becomes larger each time but keeps full quality, since JPEG never discards any data"
       ],
       answer: 1
     },
@@ -197,7 +197,7 @@ section({
       choices: [
         "Compresses files without bundling them",
         "Bundles many files into one without compressing them",
-        "Encrypts a folder",
+        "Encrypts a folder with a password so only authorised users can extract its contents",
         "Creates an exact copy of a DVD"
       ],
       answer: 1
@@ -215,8 +215,8 @@ section({
     {
       q: "Why does zipping a folder full of JPEGs and MP4s save almost no space?",
       choices: [
-        "ZIP cannot read media files",
-        "Those files are already compressed, so the redundancy ZIP looks for is gone",
+        "ZIP cannot read media files, so it stores photos and videos completely untouched",
+        "Those files are already compressed, so ZIP finds no redundancy",
         "ZIP only compresses files under 1 MB",
         "Media files are encrypted by default"
       ],
@@ -227,16 +227,16 @@ section({
       choices: [
         "A proprietary format from a discontinued program",
         "A JPEG re-saved at low quality",
-        "PDF/A or plain text — open, documented, widely supported",
-        "A password-protected RAR where the password is unknown"
+        "PDF/A or plain text — open and widely supported",
+        "A password-protected RAR archive whose password has long since been forgotten"
       ],
       answer: 2
     },
     {
       q: "What is the difference between a raster and a vector image?",
       choices: [
-        "Raster stores a grid of pixels; vector stores mathematical shapes that scale without losing quality",
-        "Vector stores pixels; raster stores shapes",
+        "Raster stores a pixel grid; vector stores scalable shapes",
+        "Vector stores a grid of pixels, while raster stores mathematical shapes that scale to any size",
         "Raster images are always lossless; vector images are always lossy",
         "There is no difference, only the file extension changes"
       ],
