@@ -1,6 +1,6 @@
 section({
   unit: "Unit 4: Digital Marketing",
-  title: "Section 4: Short-Form, Social, and Email",
+  title: "Section 5: Short-Form, Social, and Email",
 
   slides: [
     {
@@ -77,8 +77,9 @@ section({
   <li><b>Foundations</b> — a niche, a value-first mindset, a sustainable cadence (§1)</li>
   <li><b>Search</b> — site and content built to be found and cited, by Google and by AI answers (§2)</li>
   <li><b>YouTube</b> — packaging first, retention engineered, formats iterated by data (§3)</li>
-  <li><b>Reach</b> — short-form hooks and one mastered platform, repurposed everywhere (§4)</li>
-  <li><b>Ownership</b> — every channel feeding the email list and site you control (§1, §4)</li>
+  <li><b>Metadata</b> — descriptions, chapters, and captions that tell the platform what you made (§4)</li>
+  <li><b>Reach</b> — short-form hooks and one mastered platform, repurposed everywhere (§5)</li>
+  <li><b>Ownership</b> — every channel feeding the email list and site you control (§1, §5)</li>
 </ol>
 <p>AI accelerates every step — research, drafts, thumbnails, clips, analysis — and none of it replaces the loop: <b>make something valuable for a specific audience, read the data, make the next one better.</b> That loop, run consistently, is the entire game.</p>`
     }

@@ -19,5 +19,6 @@ const MANIFEST = [
   "04-01-marketing-fundamentals.js",
   "04-02-web-seo.js",
   "04-03-youtube.js",
-  "04-04-social-and-email.js"
+  "04-04-youtube-metadata.js",
+  "04-05-social-and-email.js"
 ];

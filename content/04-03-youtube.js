@@ -60,14 +60,8 @@ section({
 <p>The current playbook: <b>Shorts for discovery, long-form for depth and income</b>. Cut your best long-form moments into Shorts that funnel new viewers to the full videos. For Shorts, the first second replaces the thumbnail — hook instantly or get swiped.</p>`
     },
     {
-      title: "Metadata, search, and AI tools",
-      body: `<p>YouTube is also a search engine — apply Section 2's thinking:</p>
-<ul>
-  <li><b>Titles carry keywords naturally</b> — "how to" searches on YouTube are enormous, and tutorial content gets found for years</li>
-  <li><b>Descriptions</b> — first lines state what the video covers and for whom; add links to your site and newsletter (own your audience)</li>
-  <li><b>Chapters</b> — timestamps help viewers, retention, and search</li>
-  <li><b>Accurate captions</b> — auto-generated, worth correcting; they're indexed and they widen your audience</li>
-</ul>
+      title: "Search, and AI tools",
+      body: `<p>YouTube is also a search engine — apply Section 2's thinking. <b>Titles carry keywords naturally</b>: "how to" searches on YouTube are enormous, and tutorial content gets found for years. The rest of the markup — descriptions, chapters, tags, hashtags, captions — has its own rules and gets the whole next section.</p>
 <p>The AI-tool workflow from Unit 3 maps on directly: chatbots for ideas, titles, and scripts; research tools (vidIQ, TubeBuddy) for keyword and competitor data; image generators for thumbnail drafts; transcription and AI editing for the production grind. The taste and the face on camera remain yours.</p>`
     },
     {
