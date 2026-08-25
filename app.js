@@ -29,18 +29,29 @@ function home() {
     if (!u) units.push(u = { title: s.unit, sections: [] });
     u.sections.push(s);
   }
+  let openUnits = [];
+  try { openUnits = JSON.parse(localStorage.getItem('openUnits')) || []; } catch (e) {}
   app.innerHTML = units.map(u => `
-    <h2>${esc(u.title)}</h2>
-    ${u.sections.map(s => `
-      <div class="card">
-        <div><b>${esc(s.title)}</b></div>
-        <div class="meta">${s.slides.length} slides &middot; ${s.questions.length} questions</div>
-        <div class="row">
-          <a class="btn primary" href="#/${s.id}/lesson/0">Lesson</a>
-          <a class="btn" href="#/${s.id}/test">Test</a>
-        </div>
-      </div>`).join('')}
+    <details class="unit" data-title="${esc(u.title)}" ${openUnits.includes(u.title) ? 'open' : ''}>
+      <summary>
+        <span class="utitle">${esc(u.title)}</span>
+        <span class="meta">${u.sections.length} sections</span>
+      </summary>
+      ${u.sections.map(s => `
+        <div class="card">
+          <div><b>${esc(s.title)}</b></div>
+          <div class="meta">${s.slides.length} slides &middot; ${s.questions.length} questions</div>
+          <div class="row">
+            <a class="btn primary" href="#/${s.id}/lesson/0">Lesson</a>
+            <a class="btn" href="#/${s.id}/test">Test</a>
+          </div>
+        </div>`).join('')}
+    </details>
   `).join('');
+  app.querySelectorAll('details.unit').forEach(d => d.addEventListener('toggle', () => {
+    const open = [...app.querySelectorAll('details.unit[open]')].map(x => x.dataset.title);
+    localStorage.setItem('openUnits', JSON.stringify(open));
+  }));
 }
 
 function lesson(section, i) {

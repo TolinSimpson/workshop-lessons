@@ -142,3 +142,32 @@
 }
 .teach p { margin: 6px 0; }
 .teach b { color: var(--accent); }
+
+/* home: collapsible units */
+details.unit {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--panel);
+  margin-bottom: 14px;
+  padding: 0 16px;
+}
+details.unit summary {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  padding: 16px 2px;
+}
+details.unit summary::-webkit-details-marker { display: none; }
+details.unit summary::before {
+  content: "\25B8";
+  color: var(--muted);
+  font-size: 14px;
+}
+details.unit[open] summary::before { content: "\25BE"; }
+details.unit summary:hover .utitle { color: var(--accent); }
+details.unit .utitle { font-size: 20px; font-weight: 600; }
+details.unit[open] summary { border-bottom: 1px solid var(--line); margin-bottom: 12px; }
+details.unit .card { background: var(--bg); }
+details.unit > .card:last-of-type { margin-bottom: 16px; }
