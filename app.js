@@ -163,6 +163,20 @@ function loadScript(src) {
       It is listed in manifest.js but missing or broken — run <code>node build.js</code>.</p>`;
     return;
   }
+  // Presenter sync: a teacher.html window broadcasts its route; student windows
+  // in the same browser follow. Requires http(s) — file:// may block the channel.
+  let sync = null;
+  try { sync = new BroadcastChannel('course-sync'); } catch (e) {}
+  if (sync) {
+    if (window.TEACHER) {
+      const broadcast = () => sync.postMessage(location.hash);
+      window.addEventListener('hashchange', broadcast);
+      broadcast();
+    } else {
+      sync.onmessage = e => { if (location.hash !== e.data) location.hash = e.data; };
+    }
+  }
+
   window.onhashchange = render;
   render();
 })();
