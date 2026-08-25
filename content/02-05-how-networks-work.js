@@ -33,48 +33,13 @@ section({
 </ul>
 <p>The conversation is always request → response: the client asks, the server answers. Servers never call you first.</p>
 <p>Examples: browser ↔ web server, mail app ↔ mail server, game ↔ game server.</p>
-<p>"Server" describes a <i>role</i>, not special hardware — any computer can act as one. The same machine can be a server for one conversation and a client in another.</p>`
-    },
-    {
-      title: "Peer-to-peer (P2P)",
-      body: `<p><b>Peer-to-peer</b> is the other model: no central server. Every participant — every <b>peer</b> — acts as both client and server, talking directly to other peers.</p>
-<p>Examples: BitTorrent file sharing, some video calls, many multiplayer games' voice chat, cryptocurrencies.</p>
-<p>Strengths:</p>
-<ul>
-  <li>No central machine to pay for — peers share the load</li>
-  <li>Gets <i>stronger</i> with more users: each downloader is also an uploader</li>
-  <li>No single point of failure or control</li>
-</ul>
-<p>Weaknesses:</p>
-<ul>
-  <li>Peers vanish when users close the app — nothing is guaranteed to be online</li>
-  <li>Finding other peers still usually needs some central help</li>
-  <li>You are trusting strangers' machines, not one accountable operator</li>
-</ul>`
-    },
-    {
-      title: "Client–server vs P2P side by side",
-      body: `<table>
-  <tr><th></th><th>Client–server</th><th>Peer-to-peer</th></tr>
-  <tr><td>Who answers requests</td><td>One central, always-on server</td><td>Every peer answers every other</td></tr>
-  <tr><td>If the centre dies</td><td>Everyone is cut off</td><td>No centre to die</td></tr>
-  <tr><td>More users means</td><td>More load on the server — someone pays to scale it</td><td>More capacity — users bring their own</td></tr>
-  <tr><td>Control and trust</td><td>One operator: accountable, but also a gatekeeper</td><td>Spread across strangers</td></tr>
-  <tr><td>Availability</td><td>Reliable — the server's whole job is being up</td><td>Depends on which peers happen to be online</td></tr>
-  <tr><td>Used for</td><td>Websites, email, banking, streaming</td><td>File sharing, some calls and games, cryptocurrencies</td></tr>
-</table>
-<p>The web is client–server: your browser is the client, and <b>hosting</b> — the next section — is the business of providing the server.</p>`
+<p>"Server" describes a <i>role</i>, not special hardware — any computer can act as one. The same machine can be a server for one conversation and a client in another.</p>
+<p>The other model, worth one line: <b>peer-to-peer</b> has no central server — every participant talks directly to the others. File sharing and cryptocurrencies work this way. The web does not: it is client–server, and <b>hosting</b> — the next section — is the business of providing the server.</p>`
     },
     {
       title: "Ports and protocols",
-      body: `<p>An IP address gets a packet to the right <i>machine</i>. A <b>port</b> — a number from 1 to 65535 — gets it to the right <i>program</i> on that machine, like a flat number inside a building.</p>
-<p>A <b>protocol</b> is the agreed language both ends speak once connected. Common pairs:</p>
-<ul>
-  <li><b>HTTP</b> — web pages, port <b>80</b></li>
-  <li><b>HTTPS</b> — encrypted web pages, port <b>443</b></li>
-  <li><b>SMTP</b> — sending email, port 25</li>
-  <li><b>DNS</b> — name lookups, port 53</li>
-</ul>
+      body: `<p>An IP address gets a packet to the right <i>machine</i>. A <b>port</b> — a number stamped on the packet — gets it to the right <i>program</i> on that machine, like a flat number inside a building. Web traffic uses port <b>80</b> (HTTP) or <b>443</b> (HTTPS); email and games use others.</p>
+<p>A <b>protocol</b> is the agreed language both ends speak once connected — <b>HTTP</b> for web pages, <b>HTTPS</b> for the encrypted version.</p>
 <p>So "visit <code>https://example.com</code>" really means: look up the IP for <code>example.com</code>, connect to it on port 443, and speak HTTPS.</p>`
     },
     {
@@ -117,6 +82,16 @@ section({
       answer: 1
     },
     {
+      q: "Why is the packet-based design resilient?",
+      choices: [
+        "Packets are encrypted so they cannot be lost",
+        "If one route fails, packets can flow around it by other routes",
+        "Each packet is stored permanently on every router",
+        "Packets travel faster than the speed of electricity through copper wire"
+      ],
+      answer: 1
+    },
+    {
       q: "In the client–server model, which statement is true?",
       choices: [
         "The client waits for requests and the server sends them",
@@ -143,26 +118,6 @@ section({
         "Each participant acts as both client and server, talking directly to others",
         "It only works over cables, never Wi-Fi",
         "It requires a paid subscription"
-      ],
-      answer: 1
-    },
-    {
-      q: "Which is a real strength of P2P over client–server?",
-      choices: [
-        "Content is always guaranteed to be available",
-        "More users add more capacity, since each peer shares the load",
-        "It needs no internet connection",
-        "It is always faster than a central server, no matter the network conditions"
-      ],
-      answer: 1
-    },
-    {
-      q: "Which is a real weakness of P2P?",
-      choices: [
-        "It stops working when more than ten users join",
-        "Availability depends on which peers happen to be online",
-        "It cannot transfer any file larger than 1 MB without corrupting it",
-        "It only runs on Linux"
       ],
       answer: 1
     },
@@ -213,16 +168,6 @@ section({
         "The router holds the one public IP and translates for the private ones",
         "The ISP assigns every single device in the home its own permanent public IP",
         "Wi-Fi merges the devices into one computer"
-      ],
-      answer: 1
-    },
-    {
-      q: "Why is the packet-based design resilient?",
-      choices: [
-        "Packets are encrypted so they cannot be lost",
-        "If one route fails, packets can flow around it by other routes",
-        "Each packet is stored permanently on every router",
-        "Packets travel faster than the speed of electricity through copper wire"
       ],
       answer: 1
     }

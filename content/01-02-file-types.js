@@ -71,21 +71,18 @@ section({
   <tr><td>GIF</td><td>Raster, lossless, 256 colours</td><td>Yes (on/off only)</td><td>Simple animation</td></tr>
   <tr><td>SVG</td><td>Vector (text-based)</td><td>Yes</td><td>Logos, icons, diagrams at any size</td></tr>
   <tr><td>WEBP</td><td>Raster, lossy or lossless</td><td>Yes</td><td>Modern web images — smaller than JPEG or PNG</td></tr>
-  <tr><td>RAW (.cr2, .nef)</td><td>Raster, uncompressed sensor data</td><td>n/a</td><td>Professional photo editing, huge files</td></tr>
-  <tr><td>TIFF</td><td>Raster, usually lossless</td><td>Yes</td><td>Print and archival masters</td></tr>
 </table>
 <p>Quick picks: <b>photo on a website → JPEG or WEBP. Logo with transparent background → PNG or SVG. Screenshot of text → PNG</b> (JPEG makes text edges fuzzy).</p>`
     },
     {
       title: "Text formats: plain text",
       body: `<p><b>Plain text</b> has no formatting at all — no bold, no fonts, no colours. Only characters.</p>
-<p>Its virtues: readable by every program on every platform, tiny, diff-able, and it will still open in fifty years.</p>
+<p>Its virtues: readable by every program on every platform, tiny, and it will still open in fifty years.</p>
 <ul>
   <li><code>.txt</code> — plain notes</li>
   <li><code>.csv</code> — comma-separated values; a spreadsheet as plain text</li>
-  <li><code>.md</code> — Markdown; plain text with light markup like <code>**bold**</code></li>
-  <li><code>.json</code>, <code>.xml</code>, <code>.yaml</code> — structured data for programs to exchange</li>
-  <li><code>.html</code>, <code>.css</code>, <code>.js</code>, <code>.py</code> — source code</li>
+  <li><code>.md</code> — Markdown; plain text with light markup like <code>**bold**</code> (AI chatbots write their answers in Markdown)</li>
+  <li><code>.html</code>, <code>.css</code>, <code>.js</code> — source code, coming in Unit 2</li>
 </ul>
 <p>Character encoding matters here. <b>UTF-8</b> is the modern standard and covers every language and emoji. Wrong encoding is why you sometimes see <code>Ã©</code> where an <code>é</code> should be.</p>`
     },
@@ -101,37 +98,29 @@ section({
 <p>Key distinction: <b>.docx is for editing, .pdf is for delivering.</b> A PDF preserves exact layout and fonts on every device; a .docx may re-flow differently if the reader lacks your font.</p>`
     },
     {
-      title: "Archival and container formats",
-      body: `<p>An <b>archive</b> bundles many files and folders into one file, usually with compression. Two separate jobs are involved:</p>
+      title: "ZIP files",
+      body: `<p>A <b>ZIP file</b> bundles many files and folders into one file and compresses them. It is built into Windows and macOS — right-click a folder to make one; double-click a ZIP to open it.</p>
+<p>Two things worth knowing:</p>
 <ul>
-  <li><b>Archiving</b> — packing many files into one</li>
-  <li><b>Compressing</b> — making it smaller</li>
+  <li>ZIP is <b>lossless</b> — extract it and your files come back exactly.</li>
+  <li>Zipping already-compressed files (JPEGs, MP4s) saves almost nothing — their redundancy is already gone. ZIP shines on documents, text, and folders of mixed small files.</li>
 </ul>
-<table>
-  <tr><th>Format</th><th>Does what</th><th>Notes</th></tr>
-  <tr><td>.zip</td><td>Archives + compresses</td><td>Universal; built into Windows and macOS</td></tr>
-  <tr><td>.tar</td><td>Archives only, no compression</td><td>Unix standard; a "tarball"</td></tr>
-  <tr><td>.tar.gz / .tgz</td><td>Tar archive then gzip-compressed</td><td>Standard on Linux and macOS</td></tr>
-  <tr><td>.7z</td><td>Archives + compresses</td><td>Better compression than ZIP, needs 7-Zip</td></tr>
-  <tr><td>.rar</td><td>Archives + compresses</td><td>Proprietary; free to extract, not to create</td></tr>
-  <tr><td>.iso</td><td>Disc image</td><td>Exact copy of a CD/DVD or install medium</td></tr>
-</table>
-<p>All of these are <b>lossless</b> — extract and you get your files back exactly. Note that zipping already-compressed files (JPEGs, MP4s) saves almost nothing; the redundancy is already gone.</p>`
-    },
-    {
-      title: "Long-term archival",
-      body: `<p>For files that must still open decades from now, prefer formats that are:</p>
-<ul>
-  <li><b>Open and documented</b> — the specification is public, so anyone can write a reader</li>
-  <li><b>Widely adopted</b> — many independent programs support them</li>
-  <li><b>Lossless</b> — no accumulated quality decay</li>
-</ul>
-<p>Good archival choices: <code>.txt</code>, <code>.csv</code>, <code>PDF/A</code>, <code>.tiff</code>, <code>.png</code>, <code>.flac</code>, <code>.zip</code></p>
-<p>Risky choices: obscure proprietary formats tied to one dead program, and anything encrypted with a key you might lose.</p>`
+<p>Common trap: some programs cannot open files that are still <i>inside</i> a ZIP. If a downloaded ZIP "doesn't work", extract it first, then use the extracted files.</p>
+<p>You may also meet cousins — <code>.7z</code>, <code>.rar</code>, <code>.tar.gz</code> — which do the same job with different tools. Free programs like 7-Zip open all of them.</p>`
     }
   ],
 
   questions: [
+    {
+      q: "Which of these is a lossless format?",
+      choices: [
+        ".mp3",
+        ".jpg",
+        ".png",
+        ".mp4"
+      ],
+      answer: 2
+    },
     {
       q: "What is the defining feature of lossy compression?",
       choices: [
@@ -143,14 +132,24 @@ section({
       answer: 0
     },
     {
-      q: "Which of these is a lossless format?",
+      q: "What happens if you open, edit, and re-save the same JPEG twenty times?",
       choices: [
-        ".mp3",
-        ".jpg",
-        ".png",
-        ".mp4"
+        "Nothing — the quality stays identical",
+        "Quality visibly degrades each save, because it is re-compressed",
+        "The file converts itself to PNG",
+        "The file becomes larger each time but keeps full quality, since JPEG never discards any data"
       ],
-      answer: 2
+      answer: 1
+    },
+    {
+      q: "What is the difference between a raster and a vector image?",
+      choices: [
+        "Raster stores a pixel grid; vector stores scalable shapes",
+        "Vector stores a grid of pixels, while raster stores mathematical shapes that scale to any size",
+        "Raster images are always lossless; vector images are always lossy",
+        "There is no difference, only the file extension changes"
+      ],
+      answer: 0
     },
     {
       q: "You need a company logo that stays perfectly sharp on a business card and on a billboard. Which format?",
@@ -173,16 +172,6 @@ section({
       answer: 2
     },
     {
-      q: "What happens if you open, edit, and re-save the same JPEG twenty times?",
-      choices: [
-        "Nothing — the quality stays identical",
-        "Quality visibly degrades each save, because it is re-compressed",
-        "The file converts itself to PNG",
-        "The file becomes larger each time but keeps full quality, since JPEG never discards any data"
-      ],
-      answer: 1
-    },
-    {
       q: "Which image format supports a transparent background AND is lossless?",
       choices: [
         "JPEG",
@@ -193,12 +182,12 @@ section({
       answer: 1
     },
     {
-      q: "What does a `.tar` file do on its own?",
+      q: "Which text encoding is the modern standard that covers essentially every language and emoji?",
       choices: [
-        "Compresses files without bundling them",
-        "Bundles many files into one without compressing them",
-        "Encrypts a folder with a password so only authorised users can extract its contents",
-        "Creates an exact copy of a DVD"
+        "ASCII",
+        "UTF-8",
+        "RTF",
+        "CSV"
       ],
       answer: 1
     },
@@ -213,6 +202,16 @@ section({
       answer: 1
     },
     {
+      q: "What does a ZIP file do?",
+      choices: [
+        "Bundles files into one and compresses them, losslessly",
+        "Converts every file inside into plain text",
+        "Permanently discards data to shrink files as far as possible",
+        "Encrypts files so they can never be opened again"
+      ],
+      answer: 0
+    },
+    {
       q: "Why does zipping a folder full of JPEGs and MP4s save almost no space?",
       choices: [
         "ZIP cannot read media files, so it stores photos and videos completely untouched",
@@ -223,32 +222,12 @@ section({
       answer: 1
     },
     {
-      q: "Which is the best choice for long-term archival of a document?",
+      q: "A program refuses to open a file you downloaded inside a ZIP. Likely fix?",
       choices: [
-        "A proprietary format from a discontinued program",
-        "A JPEG re-saved at low quality",
-        "PDF/A or plain text — open and widely supported",
-        "A password-protected RAR archive whose password has long since been forgotten"
-      ],
-      answer: 2
-    },
-    {
-      q: "What is the difference between a raster and a vector image?",
-      choices: [
-        "Raster stores a pixel grid; vector stores scalable shapes",
-        "Vector stores a grid of pixels, while raster stores mathematical shapes that scale to any size",
-        "Raster images are always lossless; vector images are always lossy",
-        "There is no difference, only the file extension changes"
-      ],
-      answer: 0
-    },
-    {
-      q: "Which text encoding is the modern standard that covers essentially every language and emoji?",
-      choices: [
-        "ASCII",
-        "UTF-8",
-        "RTF",
-        "CSV"
+        "Rename the ZIP so it ends in the file's own extension",
+        "Extract the ZIP first, then open the extracted file",
+        "Re-download the ZIP from a different website",
+        "Compress the ZIP a second time to repair it"
       ],
       answer: 1
     }

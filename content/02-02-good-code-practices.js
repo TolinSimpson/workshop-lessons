@@ -27,8 +27,7 @@ let secondsPerDay = 86400;    // ah.</pre>
       title: "Don't repeat yourself (DRY)",
       body: `<p>If the same code is pasted in four places, every future change must be made four times — and the day someone updates three of them, the fourth becomes a lurking bug.</p>
 <p><b>DRY — Don't Repeat Yourself</b>: when you notice real repetition, pull it into one function and call it from each place. One home, one fix.</p>
-<p>The counterweight: <b>don't over-abstract</b>. Two things that merely <i>look</i> similar today may grow apart tomorrow, and code twisted to share what it shouldn't is worse than a little duplication. A common habit is the <b>rule of three</b>: copy once and note it; on the third copy, extract.</p>
-<p>This tension — repetition versus premature cleverness — never goes away. Recurring shapes of solution to it are called <b>patterns</b>; you will meet named ones later. For now the instinct to build: <i>notice</i> repetition, and be deliberate about when to fold it together.</p>`
+<p>The counterweight: <b>don't over-abstract</b>. Two things that merely <i>look</i> similar today may grow apart tomorrow, and code twisted to share what it shouldn't is worse than a little duplication. A common habit is the <b>rule of three</b>: copy once and note it; on the third copy, extract.</p>`
     },
     {
       title: "Comments: why, not what",

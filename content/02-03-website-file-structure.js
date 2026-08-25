@@ -95,22 +95,32 @@ example.com/about/    → serves  /about/index.html</pre>
 
   questions: [
     {
-      q: "Which file does a web server send by default when someone requests a directory?",
-      choices: [
-        "main.html",
-        "index.html",
-        "home.html",
-        "default.css"
-      ],
-      answer: 1
-    },
-    {
       q: "Which layer is responsible for the appearance of a page?",
       choices: [
         "HTML",
         "CSS",
         "JavaScript",
         "HTTP"
+      ],
+      answer: 1
+    },
+    {
+      q: "What is the main practical benefit of putting CSS in a separate file rather than inside each page?",
+      choices: [
+        "It makes the CSS run faster on the server",
+        "One file restyles every page, and the browser caches it after first download",
+        "Separate files are strictly required by the HTML5 specification; inline styles fail validation",
+        "It encrypts the styles"
+      ],
+      answer: 1
+    },
+    {
+      q: "Which file does a web server send by default when someone requests a directory?",
+      choices: [
+        "main.html",
+        "index.html",
+        "home.html",
+        "default.css"
       ],
       answer: 1
     },
@@ -145,32 +155,22 @@ example.com/about/    → serves  /about/index.html</pre>
       answer: 2
     },
     {
-      q: "What defines a static website?",
-      choices: [
-        "It has no images or animation",
-        "The server sends pre-written files unchanged to every visitor",
-        "It cannot be viewed correctly on mobile devices or tablet screens",
-        "It must be rebuilt from a database on every request"
-      ],
-      answer: 1
-    },
-    {
-      q: "Why must you never put an API key or password in front-end JavaScript?",
-      choices: [
-        "It would slow down page load by adding extra encryption overhead",
-        "JavaScript cannot store text values",
-        "Front-end code is visible to anyone who opens developer tools",
-        "Browsers automatically delete them"
-      ],
-      answer: 2
-    },
-    {
       q: "Your page works locally but images break once uploaded to a Linux server. Most likely cause?",
       choices: [
         "The server does not support images",
         "A filename case mismatch, like `Logo.svg` referenced as `logo.svg`",
         "Images must always be JPEG on servers",
         "The HTML file exceeds the maximum size Linux servers allow for uploads"
+      ],
+      answer: 1
+    },
+    {
+      q: "What defines a static website?",
+      choices: [
+        "It has no images or animation",
+        "The server sends pre-written files unchanged to every visitor",
+        "It cannot be viewed correctly on mobile devices or tablet screens",
+        "It must be rebuilt from a database on every request"
       ],
       answer: 1
     },
@@ -185,14 +185,14 @@ example.com/about/    → serves  /about/index.html</pre>
       answer: 2
     },
     {
-      q: "What is the main practical benefit of putting CSS in a separate file rather than inside each page?",
+      q: "Why must you never put an API key or password in front-end JavaScript?",
       choices: [
-        "It makes the CSS run faster on the server",
-        "One file restyles every page, and the browser caches it after first download",
-        "Separate files are strictly required by the HTML5 specification; inline styles fail validation",
-        "It encrypts the styles"
+        "It would slow down page load by adding extra encryption overhead",
+        "JavaScript cannot store text values",
+        "Front-end code is visible to anyone who opens developer tools",
+        "Browsers automatically delete them"
       ],
-      answer: 1
+      answer: 2
     }
   ]
 });

@@ -50,27 +50,17 @@ section({
 <p>Examples: <b>Python, JavaScript, Ruby, PHP</b></p>`
     },
     {
-      title: "The middle ground: bytecode and JIT",
-      body: `<p>The compiled/interpreted split is a useful simplification, not a hard law. Most modern languages sit in between.</p>
-<p><b>Java</b> and <b>C#</b> compile to <b>bytecode</b> — an intermediate form for a virtual machine (the JVM or .NET runtime), which then executes it. This buys compile-time checking plus "write once, run anywhere".</p>
-<p><b>JIT (just-in-time) compilation</b> goes further: the runtime compiles hot code paths to machine code <i>while the program runs</i>. Modern JavaScript engines do this, which is why browser JavaScript is far faster than a naive line-by-line interpreter would be.</p>
-<p>The honest statement: <b>compilation is a property of an implementation, not of a language.</b> There are C interpreters and Python compilers.</p>`
-    },
-    {
       title: "Language use cases",
       body: `<table>
   <tr><th>Language</th><th>Model</th><th>Typical use</th></tr>
-  <tr><td>C / C++</td><td>Compiled</td><td>Operating systems, game engines, embedded devices, anything performance-critical</td></tr>
-  <tr><td>Rust</td><td>Compiled</td><td>Systems work with memory safety enforced by the compiler</td></tr>
-  <tr><td>Go</td><td>Compiled</td><td>Cloud services, networking tools, backend APIs</td></tr>
-  <tr><td>Python</td><td>Interpreted</td><td>Data science, machine learning, automation, scripting, backends</td></tr>
-  <tr><td>JavaScript</td><td>Interpreted / JIT</td><td>The only language browsers run natively; also servers via Node.js</td></tr>
-  <tr><td>Java</td><td>Bytecode + JIT</td><td>Large enterprise systems, Android apps</td></tr>
-  <tr><td>C#</td><td>Bytecode + JIT</td><td>Windows applications, Unity games, business backends</td></tr>
+  <tr><td>Python</td><td>Interpreted</td><td>Data science, AI, automation, scripting — and the language AI tools most often write for you</td></tr>
+  <tr><td>JavaScript</td><td>Interpreted</td><td>The only language browsers run natively; also servers via Node.js</td></tr>
+  <tr><td>C / C++</td><td>Compiled</td><td>Operating systems, game engines, anything performance-critical</td></tr>
+  <tr><td>Java / C#</td><td>In between</td><td>Enterprise systems, Android apps / Windows apps, Unity games</td></tr>
   <tr><td>SQL</td><td>Query language</td><td>Asking databases for data</td></tr>
   <tr><td>Swift / Kotlin</td><td>Compiled</td><td>iOS apps / Android apps</td></tr>
 </table>
-<p>There is no "best language" — only the right tool for the constraints. Firmware on a chip with 2 KB of memory rules out Python; a one-off data cleanup script rules out C++.</p>`
+<p>There is no "best language" — only the right tool for the constraints. For this course's path, the two that matter are <b>JavaScript</b> (it runs in every browser) and <b>Python</b> (the default for automation and AI work).</p>`
     },
     {
       title: "Markup is not programming",
@@ -97,6 +87,16 @@ section({
 
   questions: [
     {
+      q: "Generally, what is the trade-off between low-level and high-level languages?",
+      choices: [
+        "Low-level is faster to write but slower to run than high-level code",
+        "High-level is faster to write but generally slower to run",
+        "There is no real difference between them other than syntax",
+        "High-level languages cannot be used for real applications"
+      ],
+      answer: 1
+    },
+    {
       q: "What does a compiler do?",
       choices: [
         "Translates all source code into machine code before the program runs",
@@ -105,16 +105,6 @@ section({
         "Compresses source code into a smaller file"
       ],
       answer: 0
-    },
-    {
-      q: "Which is a genuine advantage of interpreted languages?",
-      choices: [
-        "They always run faster than compiled programs because no translation step is needed",
-        "Instant edit-and-run cycle with no separate build step",
-        "They never produce errors",
-        "They hide your source code from the user"
-      ],
-      answer: 1
     },
     {
       q: "Which set contains only compiled languages?",
@@ -137,24 +127,14 @@ section({
       answer: 2
     },
     {
-      q: "Is HTML a programming language?",
+      q: "Which is a genuine advantage of interpreted languages?",
       choices: [
-        "Yes — it runs in the browser",
-        "No — it is a markup language with no logic, variables, or loops",
-        "Yes — it is compiled into machine code before being sent to the browser",
-        "No — it is a style sheet language"
+        "They always run faster than compiled programs because no translation step is needed",
+        "Instant edit-and-run cycle with no separate build step",
+        "They never produce errors",
+        "They hide your source code from the user"
       ],
       answer: 1
-    },
-    {
-      q: "Java and C# compile to bytecode. What does that mean?",
-      choices: [
-        "The code becomes an intermediate form that a virtual machine executes",
-        "The code is encrypted so that nobody without a secret key can ever read or run it",
-        "The code is converted directly to a Windows executable",
-        "The code is compressed into a ZIP archive to save space"
-      ],
-      answer: 0
     },
     {
       q: "Which task is Python most commonly chosen for?",
@@ -163,16 +143,6 @@ section({
         "Firmware for a microcontroller with 2 KB of memory",
         "Data science, machine learning, and automation",
         "Styling web pages"
-      ],
-      answer: 2
-    },
-    {
-      q: "Your program runs with no error message but calculates the average wrongly. What kind of error is this?",
-      choices: [
-        "Syntax error",
-        "Runtime error",
-        "Logic error",
-        "Compile error"
       ],
       answer: 2
     },
@@ -187,24 +157,24 @@ section({
       answer: 3
     },
     {
-      q: "What does JIT (just-in-time) compilation do?",
+      q: "Is HTML a programming language?",
       choices: [
-        "Compiles the whole program before shipping it to users",
-        "Compiles hot code paths to machine code while the program runs",
-        "Prevents the program from ever needing to be compiled",
-        "Converts already-compiled machine code back into the original source code"
+        "Yes — it runs in the browser",
+        "No — it is a markup language with no logic, variables, or loops",
+        "Yes — it is compiled into machine code before being sent to the browser",
+        "No — it is a style sheet language"
       ],
       answer: 1
     },
     {
-      q: "Generally, what is the trade-off between low-level and high-level languages?",
+      q: "Your program runs with no error message but calculates the average wrongly. What kind of error is this?",
       choices: [
-        "Low-level is faster to write but slower to run than high-level code",
-        "High-level is faster to write but generally slower to run",
-        "There is no real difference between them other than syntax",
-        "High-level languages cannot be used for real applications"
+        "Syntax error",
+        "Runtime error",
+        "Logic error",
+        "Compile error"
       ],
-      answer: 1
+      answer: 2
     }
   ]
 });

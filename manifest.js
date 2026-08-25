@@ -9,5 +9,15 @@ const MANIFEST = [
   "02-03-website-file-structure.js",
   "02-04-html-document-structure.js",
   "02-05-how-networks-work.js",
-  "02-06-hosting.js"
+  "02-06-hosting.js",
+  "03-01-what-ai-tools-are.js",
+  "03-02-prompting.js",
+  "03-03-ai-for-writing.js",
+  "03-04-ai-for-media.js",
+  "03-05-agentic-coding.js",
+  "03-06-ai-judgment-and-safety.js",
+  "04-01-marketing-fundamentals.js",
+  "04-02-web-seo.js",
+  "04-03-youtube.js",
+  "04-04-social-and-email.js"
 ];

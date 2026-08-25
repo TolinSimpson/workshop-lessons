@@ -112,6 +112,26 @@ opening  content        closing</pre>
 
   questions: [
     {
+      q: "Which of these is a void element (no closing tag)?",
+      choices: [
+        "<p>",
+        "<div>",
+        "<img>",
+        "<h1>"
+      ],
+      answer: 2
+    },
+    {
+      q: "Which nesting is correct?",
+      choices: [
+        "<b><i>text</b></i>",
+        "<b><i>text</i></b>",
+        "<b>text<i></b></i>",
+        "<i><b>text<b></i>"
+      ],
+      answer: 1
+    },
+    {
       q: "What is the purpose of `<!DOCTYPE html>`?",
       choices: [
         "It imports the HTML library so that tags like <p> and <img> become available",
@@ -130,16 +150,6 @@ opening  content        closing</pre>
         "<meta> and <main>"
       ],
       answer: 2
-    },
-    {
-      q: "Where does content that the user actually sees on the page go?",
-      choices: [
-        "Inside <head>",
-        "Inside <body>",
-        "Inside <title>",
-        "Inside <meta>"
-      ],
-      answer: 1
     },
     {
       q: "What does `<meta charset=\"UTF-8\">` do?",
@@ -162,14 +172,24 @@ opening  content        closing</pre>
       answer: 2
     },
     {
-      q: "Which of these is a void element (no closing tag)?",
+      q: "Where does content that the user actually sees on the page go?",
       choices: [
-        "<p>",
-        "<div>",
-        "<img>",
-        "<h1>"
+        "Inside <head>",
+        "Inside <body>",
+        "Inside <title>",
+        "Inside <meta>"
       ],
-      answer: 2
+      answer: 1
+    },
+    {
+      q: "How many `<h1>` elements should a typical page have?",
+      choices: [
+        "One",
+        "One per paragraph",
+        "At least six",
+        "As many as needed for large text"
+      ],
+      answer: 0
     },
     {
       q: "Why use semantic elements like `<nav>` and `<main>` instead of `<div>` everywhere?",
@@ -192,16 +212,6 @@ opening  content        closing</pre>
       answer: 1
     },
     {
-      q: "How many `<h1>` elements should a typical page have?",
-      choices: [
-        "One",
-        "One per paragraph",
-        "At least six",
-        "As many as needed for large text"
-      ],
-      answer: 0
-    },
-    {
       q: "What is the difference between `id` and `class`?",
       choices: [
         "`id` is unique to one element; `class` can be shared by many",
@@ -218,16 +228,6 @@ opening  content        closing</pre>
         "It blocks HTML parsing while it downloads and runs",
         "It causes the browser to ignore all CSS loaded before the script",
         "The browser will run the same script twice"
-      ],
-      answer: 1
-    },
-    {
-      q: "Which nesting is correct?",
-      choices: [
-        "<b><i>text</b></i>",
-        "<b><i>text</i></b>",
-        "<b>text<i></b></i>",
-        "<i><b>text<b></i>"
       ],
       answer: 1
     }

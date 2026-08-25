@@ -50,11 +50,9 @@ section({
       title: "Types of hosting",
       body: `<table>
   <tr><th>Type</th><th>What you get</th><th>Suits</th></tr>
-  <tr><td><b>Static hosting</b><br>(GitHub Pages, Netlify, Cloudflare Pages)</td><td>Serves files only; often free</td><td>Portfolios, docs, blogs, courses</td></tr>
+  <tr><td><b>Static hosting</b><br>(GitHub Pages, Netlify, Cloudflare Pages)</td><td>Serves files only; often free</td><td>Portfolios, docs, blogs, courses — the kind of site this course builds</td></tr>
   <tr><td><b>Shared hosting</b></td><td>One server split among many customers, cheap</td><td>Small business sites, WordPress</td></tr>
-  <tr><td><b>VPS</b> (virtual private server)</td><td>Your own virtual machine with root access</td><td>Custom apps, full control</td></tr>
-  <tr><td><b>Dedicated server</b></td><td>An entire physical machine</td><td>High-traffic or specialised workloads</td></tr>
-  <tr><td><b>Cloud / serverless</b></td><td>Scales automatically, pay for what you use</td><td>Variable or spiky traffic</td></tr>
+  <tr><td><b>Cloud servers</b></td><td>Rented machines, scale with demand</td><td>Apps with their own server code and databases</td></tr>
 </table>
 <p>A <b>CDN</b> (content delivery network) is a complementary layer: copies of your files cached in data centres worldwide, so a visitor in Tokyo is served from Tokyo rather than Virginia. Faster, and it absorbs traffic spikes.</p>`
     },
@@ -80,11 +78,10 @@ section({
     },
     {
       title: "Deploying and maintaining",
-      body: `<p>Getting files onto the server — oldest to newest:</p>
+      body: `<p>Getting files onto the server:</p>
 <ul>
-  <li><b>FTP / SFTP</b> — manually dragging files across. Traditional, error-prone, still common on shared hosting.</li>
-  <li><b>Git-based deploy</b> — push to a branch and the host rebuilds. What GitHub Pages, Netlify, and Vercel do.</li>
-  <li><b>CI/CD pipeline</b> — an automated process runs tests then deploys on every commit.</li>
+  <li><b>Git-based deploy</b> — push to a branch and the host updates the site. What GitHub Pages, Netlify, and Vercel do, and the way you will work.</li>
+  <li><b>Manual upload (FTP)</b> — dragging files across yourself. Traditional, error-prone, still common on shared hosting.</li>
 </ul>
 <p>Ongoing responsibilities once a site is live:</p>
 <ul>
@@ -93,11 +90,21 @@ section({
   <li>Keep backups; a host is not a backup</li>
   <li>Watch analytics and uptime</li>
 </ul>
-<p>Costs, roughly: domain £8–15 a year, static hosting free, shared hosting £3–10 a month, VPS £5–50 a month.</p>`
+<p>Costs, roughly: domain £8–15 a year, static hosting free, shared hosting £3–10 a month.</p>`
     }
   ],
 
   questions: [
+    {
+      q: "Why is a home laptop a poor web server?",
+      choices: [
+        "Laptop hardware is physically incapable of running any web server software",
+        "It sleeps, its IP changes, and home upload is slow",
+        "HTML files cannot be served from a laptop's hard drive",
+        "It is illegal in most countries"
+      ],
+      answer: 1
+    },
     {
       q: "What does DNS do?",
       choices: [
@@ -119,6 +126,16 @@ section({
       answer: 2
     },
     {
+      q: "Do you own a domain name permanently once purchased?",
+      choices: [
+        "Yes, a one-time purchase makes it yours forever",
+        "No — you rent it yearly and can lose it if it expires",
+        "Yes, but only if you also purchase hosting from the same registrar",
+        "No — domains are randomly reassigned to new owners every year"
+      ],
+      answer: 1
+    },
+    {
       q: "What does an HTTP 404 status code mean?",
       choices: [
         "The request succeeded and the file was returned",
@@ -137,6 +154,16 @@ section({
         "500"
       ],
       answer: 3
+    },
+    {
+      q: "What is a CDN?",
+      choices: [
+        "A type of domain name reserved for large companies",
+        "A worldwide network of servers that cache your files",
+        "A programming language used for writing server code",
+        "A backup service that stores copies of your databases in the cloud"
+      ],
+      answer: 1
     },
     {
       q: "What type of site can GitHub Pages host?",
@@ -167,46 +194,6 @@ section({
         "Faster page loading through file compression"
       ],
       answer: 1
-    },
-    {
-      q: "What is a CDN?",
-      choices: [
-        "A type of domain name reserved for large companies",
-        "A worldwide network of servers that cache your files",
-        "A programming language used for writing server code",
-        "A backup service that stores copies of your databases in the cloud"
-      ],
-      answer: 1
-    },
-    {
-      q: "Why is a home laptop a poor web server?",
-      choices: [
-        "Laptop hardware is physically incapable of running any web server software",
-        "It sleeps, its IP changes, and home upload is slow",
-        "HTML files cannot be served from a laptop's hard drive",
-        "It is illegal in most countries"
-      ],
-      answer: 1
-    },
-    {
-      q: "Do you own a domain name permanently once purchased?",
-      choices: [
-        "Yes, a one-time purchase makes it yours forever",
-        "No — you rent it yearly and can lose it if it expires",
-        "Yes, but only if you also purchase hosting from the same registrar",
-        "No — domains are randomly reassigned to new owners every year"
-      ],
-      answer: 1
-    },
-    {
-      q: "Which hosting type gives you your own virtual machine with root access?",
-      choices: [
-        "Static hosting",
-        "Shared hosting",
-        "VPS",
-        "CDN"
-      ],
-      answer: 2
     },
     {
       q: "How does deployment work on GitHub Pages after initial setup?",

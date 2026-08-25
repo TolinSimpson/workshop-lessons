@@ -85,8 +85,7 @@ section({
 photo.jpg     →  extension is  .jpg
 archive.tar.gz → extension is  .gz</pre>
 <p>The extension tells the operating system which program should open the file. It is a <b>label, not the content</b>.</p>
-<p>Renaming <code>song.mp3</code> to <code>song.jpg</code> does not convert it. The bytes are unchanged — you have just mislabeled the file, and the image viewer will fail to open it.</p>
-<p>What actually identifies a file's real type is its <b>magic number</b>: a short signature in the first few bytes. A PNG always begins with the bytes <code>89 50 4E 47</code>.</p>`
+<p>Renaming <code>song.mp3</code> to <code>song.jpg</code> does not convert it. The bytes are unchanged — you have just mislabeled the file, and the image viewer will fail to open it. To actually change a file's format, you need a program that converts it (an image editor's "Save as", an audio converter).</p>`
     },
     {
       title: "Hidden extensions and why it matters",
@@ -104,12 +103,12 @@ archive.tar.gz → extension is  .gz</pre>
 
   questions: [
     {
-      q: "What does the file extension of a file actually do?",
+      q: "What is the directory at the very top of a file system tree called?",
       choices: [
-        "It tells the operating system which program should open it",
-        "It converts the file's data into that format",
-        "It compresses the file to save space",
-        "It determines which physical drive and sector the file's bytes are stored on"
+        "The root",
+        "The parent",
+        "The volume",
+        "The header"
       ],
       answer: 0
     },
@@ -134,14 +133,14 @@ archive.tar.gz → extension is  .gz</pre>
       answer: 1
     },
     {
-      q: "You rename `song.mp3` to `song.jpg`. What happens?",
+      q: "On Windows, what is `C:` normally?",
       choices: [
-        "The audio is converted into an image",
-        "The file is deleted because the operating system rejects the invalid format",
-        "Nothing inside the file changes — it is just mislabeled",
-        "The file is automatically compressed"
+        "A special folder inside the Documents directory of the main user account",
+        "The drive letter of the volume holding the operating system",
+        "The name of the file system format",
+        "A temporary storage area cleared at shutdown"
       ],
-      answer: 2
+      answer: 1
     },
     {
       q: "Which statement about SSDs versus HDDs is correct?",
@@ -154,14 +153,14 @@ archive.tar.gz → extension is  .gz</pre>
       answer: 0
     },
     {
-      q: "On Windows, what is `C:` normally?",
+      q: "Which of these is NOT permanent storage?",
       choices: [
-        "A special folder inside the Documents directory of the main user account",
-        "The drive letter of the volume holding the operating system",
-        "The name of the file system format",
-        "A temporary storage area cleared at shutdown"
+        "An SSD",
+        "A hard disk drive",
+        "A USB flash drive",
+        "RAM"
       ],
-      answer: 1
+      answer: 3
     },
     {
       q: "How many megabytes are in one gigabyte (using the common round numbers)?",
@@ -174,6 +173,26 @@ archive.tar.gz → extension is  .gz</pre>
       answer: 2
     },
     {
+      q: "What does the file extension of a file actually do?",
+      choices: [
+        "It tells the operating system which program should open it",
+        "It converts the file's data into that format",
+        "It compresses the file to save space",
+        "It determines which physical drive and sector the file's bytes are stored on"
+      ],
+      answer: 0
+    },
+    {
+      q: "You rename `song.mp3` to `song.jpg`. What happens?",
+      choices: [
+        "The audio is converted into an image",
+        "The file is deleted because the operating system rejects the invalid format",
+        "Nothing inside the file changes — it is just mislabeled",
+        "The file is automatically compressed"
+      ],
+      answer: 2
+    },
+    {
       q: "Why is it recommended to turn on 'show file name extensions' in Windows?",
       choices: [
         "It makes files open faster",
@@ -182,26 +201,6 @@ archive.tar.gz → extension is  .gz</pre>
         "It is required in order to save files to a USB drive"
       ],
       answer: 2
-    },
-    {
-      q: "What is the directory at the very top of a file system tree called?",
-      choices: [
-        "The root",
-        "The parent",
-        "The volume",
-        "The header"
-      ],
-      answer: 0
-    },
-    {
-      q: "Which of these is NOT permanent storage?",
-      choices: [
-        "An SSD",
-        "A hard disk drive",
-        "A USB flash drive",
-        "RAM"
-      ],
-      answer: 3
     }
   ]
 });

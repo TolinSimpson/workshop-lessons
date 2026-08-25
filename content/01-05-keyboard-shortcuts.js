@@ -117,16 +117,6 @@ section({
       answer: 1
     },
     {
-      q: "Which shortcut snaps the current window to fill the left half of the screen?",
-      choices: ["Windows+Right", "Windows+Down", "Windows+Left", "Windows+Ctrl+D"],
-      answer: 2
-    },
-    {
-      q: "A program has stopped responding. Fastest way to open Task Manager and end it?",
-      choices: ["Ctrl+Alt+Delete", "Ctrl+Shift+Esc", "Alt+F4", "Windows+D"],
-      answer: 1
-    },
-    {
       q: "What does Windows+D do?",
       choices: [
         "Opens File Explorer",
@@ -134,6 +124,16 @@ section({
         "Permanently deletes the selected file",
         "Creates a new virtual desktop"
       ],
+      answer: 1
+    },
+    {
+      q: "Which shortcut snaps the current window to fill the left half of the screen?",
+      choices: ["Windows+Right", "Windows+Down", "Windows+Left", "Windows+Ctrl+D"],
+      answer: 2
+    },
+    {
+      q: "A program has stopped responding. Fastest way to open Task Manager and end it?",
+      choices: ["Ctrl+Alt+Delete", "Ctrl+Shift+Esc", "Alt+F4", "Windows+D"],
       answer: 1
     },
     {
