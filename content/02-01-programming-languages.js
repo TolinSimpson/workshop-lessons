@@ -13,6 +13,8 @@ section({
   <li><b>High-level</b> (Python, JavaScript) — close to human thinking, memory managed for you, faster to write</li>
 </ul>
 <p>Higher level generally means faster to develop and slower to run. Lower level means the reverse.</p>`
+    ,
+      teach: "Say: We're crossing from using computers to instructing them. A language is just strict notation a translator turns into machine code.\nAsk: Why can't we just write instructions in English?\nExtend: Show one line of assembly next to one line of Python for shock value."
     },
     {
       title: "Compiled languages",
@@ -30,6 +32,8 @@ section({
   <li>The executable is platform-specific; a Windows build will not run on macOS</li>
 </ul>
 <p>Examples: <b>C, C++, Rust, Go, Swift</b></p>`
+    ,
+      teach: "Say: Compiled means translated fully in advance — like publishing a book.\nAsk: Why would translation-in-advance make the program fast?\nExtend: If you know C, compile hello.c live and show the .exe runs alone."
     },
     {
       title: "Interpreted languages",
@@ -48,6 +52,8 @@ section({
   <li>The user needs the interpreter installed, and receives your source code</li>
 </ul>
 <p>Examples: <b>Python, JavaScript, Ruby, PHP</b></p>`
+    ,
+      teach: "Say: Interpreted means translated live, line by line — like a live interpreter at a speech.\nAsk: What's the trade? (Fast to change, slower to run, needs the interpreter installed.)\nExtend: Run two lines of Python in a REPL to show the instant edit-run loop."
     },
     {
       title: "Language use cases",
@@ -61,6 +67,8 @@ section({
   <tr><td>Swift / Kotlin</td><td>Compiled</td><td>iOS apps / Android apps</td></tr>
 </table>
 <p>There is no "best language" — only the right tool for the constraints. For this course's path, the two that matter are <b>JavaScript</b> (it runs in every browser) and <b>Python</b> (the default for automation and AI work).</p>`
+    ,
+      teach: "Say: There is no best language — the table is a map of what tools fit what jobs.\nAsk: Given our course path — websites and AI — which two rows matter most to us?\nExtend: Share what languages your own projects or industry actually use and why."
     },
     {
       title: "Markup is not programming",
@@ -71,6 +79,8 @@ section({
   <li><b>JavaScript</b> <i>is</i> a programming language — it has variables, conditions, loops, and functions, so it can compute and decide.</li>
 </ul>
 <p>The dividing line is the ability to express logic and computation.</p>`
+    ,
+      teach: "Say: HTML is structure, CSS is looks, JavaScript is behaviour — only one of these is a programming language.\nAsk: What can JavaScript do that HTML can't? (Decide, repeat, calculate.)\nExtend: A classic exam trap worth drilling; advanced groups can discuss whether SQL counts."
     },
     {
       title: "Syntax, source code, and errors",
@@ -82,6 +92,8 @@ section({
   <li><b>Logic error</b> — the code runs perfectly and produces the wrong answer. No error message appears. The hardest kind to find.</li>
 </ul>
 <p>Compiled languages catch more mistakes at compile time. Interpreted languages tend to find them when the user does.</p>`
+    ,
+      teach: "Say: Three kinds of broken: won't run, crashes while running, runs but wrong. The last is the sneakiest.\nAsk: Which error type has no error message at all?\nExtend: Show one of each live in a browser console if the group is ready."
     }
   ],
 

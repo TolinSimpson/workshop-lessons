@@ -5,6 +5,12 @@ A static course site: click-through lesson slides and multiple-choice tests. No 
 Open `index.html` in a browser, or publish the repository with GitHub Pages
 (Settings → Pages → source `main`, folder `/root`).
 
+**Teacher edition:** `teacher.html` renders the same lessons plus each slide's
+`teach` notes (Say / Ask / Extend — read-aloud framing, a class discussion break,
+and an insertion point for the teacher's own advanced material). It is not linked
+from the student site; share the URL only with instructors. Note this is
+obscurity, not security — the page is publicly reachable by anyone with the link.
+
 ## Adding a section
 
 Drop a new file in `content/`. That is the whole job.
@@ -29,7 +35,8 @@ section({
   slides: [
     {
       title: "What is a network?",
-      body: `<p>Two or more computers that can talk to each other.</p>`
+      body: `<p>Two or more computers that can talk to each other.</p>`,
+      teach: "Say: A network is just computers talking.\nAsk: What's the smallest network you own?\nExtend: Sketch the classroom's network on the board."
     }
   ],
 

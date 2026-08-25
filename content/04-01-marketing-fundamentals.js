@@ -12,6 +12,8 @@ section({
   <li><b>Invite action</b> — subscribe, join, buy, book, share</li>
 </ol>
 <p>Every channel in this unit — search engines, YouTube, short-form video, email — is just a different door into that same loop. The channels change every few years; the loop doesn't.</p>`
+    ,
+      teach: "Say: Strip the jargon: be found, earn trust, invite action. Every platform is a different door into that loop.\nAsk: Think of a creator or brand you follow — walk their version of the loop.\nExtend: Map a local business the class knows onto the loop."
     },
     {
       title: "Pick an audience, not \"everyone\"",
@@ -22,12 +24,16 @@ section({
   <li><b>Who exactly is this for?</b> (specific enough that some people are excluded)</li>
   <li><b>Why you?</b> — your experience, results, or angle nobody else has. This becomes crucial in the next section.</li>
 </ul>`
+    ,
+      teach: "Say: 'For everyone' lands with no one. A niche is a filter that makes the right people feel found.\nAsk: Sharpen 'cooking videos' into three different strong niches, as a class.\nExtend: Have each student draft their own niche sentence — who exactly, plus why you."
     },
     {
       title: "Value first, ask second",
       body: `<p>The internet's exchange rate is fixed: attention is paid for value. Content that teaches, entertains, solves, or inspires earns attention; content that only asks — buy this, subscribe now, follow me — is skipped.</p>
 <p>The working ratio for creators is heavily lopsided: overwhelmingly give, occasionally ask. A channel that solves your problem thirty times has earned the right to mention its product once — and by then the audience often <i>wants</i> to be asked.</p>
 <p>This is not idealism; it is how every ranking system in this unit works. Search engines and video platforms measure whether people were satisfied, and reward the content that satisfied them.</p>`
+    ,
+      teach: "Say: The internet's exchange rate: attention is paid for value. Give overwhelmingly, ask occasionally.\nAsk: When did you last unfollow someone for asking too much and giving too little?\nExtend: Find real ratio examples in a feed live — count gives vs asks for one creator."
     },
     {
       title: "Consistency beats intensity",
@@ -37,6 +43,8 @@ section({
   <li><b>Repeatable formats compound.</b> When something works, don't move on — turn it into a series and iterate. Channels grow by engineering repeatability, not by chasing one viral hit.</li>
   <li><b>Expect a slow start.</b> The first months are mostly practice reps and data. Almost every successful creator's early content underperformed; the ones who won kept publishing and kept adjusting.</li>
 </ul>`
+    ,
+      teach: "Say: Consistency beats intensity — a sustainable schedule, repeatable formats, patience through the slow start.\nAsk: Why does one video a week for a year beat ten in January?\nExtend: Show an established channel's earliest videos — the gap between then and now is the whole lesson."
     },
     {
       title: "Own your audience",
@@ -47,6 +55,8 @@ section({
   <li><b>Your own website</b> — home base that no platform controls (you built one in Unit 2).</li>
 </ul>
 <p>Standard play: use platforms for <i>discovery</i>, then invite the audience somewhere you <i>own</i> — "free checklist at my site, join the newsletter".</p>`
+    ,
+      teach: "Say: Platform followers are rented; email and your own site are owned. Discovery there, relationship here.\nAsk: What happens to a creator whose only asset is a platform account that gets suspended?\nExtend: Real deplatforming or algorithm-change stories land hard here — bring one."
     },
     {
       title: "Measure what matters",
@@ -56,6 +66,8 @@ section({
   <li><b>Actionable metrics</b> — ones that tell you what to change: click-through rate, watch time and retention, search clicks, email signups, sales.</li>
 </ul>
 <p>The habit that separates professionals from hobbyists: after each piece of content, ask <b>"what did this teach me?"</b> — which title got clicked, where viewers left, which page brought signups — and feed the answer into the next piece. Marketing is iteration with a scoreboard.</p>`
+    ,
+      teach: "Say: Two piles of numbers: vanity (big, flattering) and actionable (tells you what to change).\nAsk: Sort these live: views, CTR, follower count, email signups, watch time.\nExtend: Open a real analytics dashboard (yours, or a public case study) and sort its numbers into the two piles."
     },
     {
       title: "AI's place in the workflow",
@@ -66,6 +78,8 @@ section({
   <li><b>Iteration</b> — generate ten title options and pick using your data, not your mood</li>
 </ul>
 <p>What AI cannot supply: your experience, your taste, and your relationship with the audience. AI-generated sameness is now everywhere, which makes the genuinely human parts — a real face, a real story, a real opinion — <i>more</i> valuable, not less. Use AI for leverage on the mechanical work; keep the humanity visible.</p>`
+    ,
+      teach: "Say: AI accelerates research, production, iteration — and makes the visibly human parts scarcer, so more valuable.\nAsk: As feeds fill with AI content, what will you trust MORE?\nExtend: This connects Unit 3 to everything ahead: pick one AI tool from that unit and slot it into this workflow."
     }
   ],
 

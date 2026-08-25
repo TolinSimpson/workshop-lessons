@@ -11,6 +11,8 @@ section({
 <pre>let x = 86400;                // what is this?
 let secondsPerDay = 86400;    // ah.</pre>
 <p>Name variables after what they <i>contain</i> (<code>playerScore</code>, not <code>data</code>) and functions after what they <i>do</i> (<code>calculateTotal</code>, not <code>doStuff</code>). If a thing is hard to name, that is often a hint the thing itself is confused.</p>`
+    ,
+      teach: "Say: Code is read far more than written — and mostly by future-you, who remembers nothing.\nAsk: Compare x = 86400 with secondsPerDay = 86400 — which one is kind?\nExtend: Share genuinely bad names you've met in real code (anonymized)."
     },
     {
       title: "Keep pieces small",
@@ -22,12 +24,16 @@ let secondsPerDay = 86400;    // ah.</pre>
   <li>If you struggle to name a function without using "and" — <code>loadAndSortAndDisplay</code> — it is three functions.</li>
 </ul>
 <p>Small pieces pay off when things break: a bug in a 10-line function has ten hiding places; in a 300-line function it has three hundred.</p>`
+    ,
+      teach: "Say: Small pieces, one job each, honest names. A bug in ten lines has ten hiding places.\nAsk: What does the name loadAndSortAndDisplay tell you is wrong?\nExtend: Refactor a deliberately bloated function on the projector if your group codes."
     },
     {
       title: "Don't repeat yourself (DRY)",
       body: `<p>If the same code is pasted in four places, every future change must be made four times — and the day someone updates three of them, the fourth becomes a lurking bug.</p>
 <p><b>DRY — Don't Repeat Yourself</b>: when you notice real repetition, pull it into one function and call it from each place. One home, one fix.</p>
 <p>The counterweight: <b>don't over-abstract</b>. Two things that merely <i>look</i> similar today may grow apart tomorrow, and code twisted to share what it shouldn't is worse than a little duplication. A common habit is the <b>rule of three</b>: copy once and note it; on the third copy, extract.</p>`
+    ,
+      teach: "Say: Copy-paste is a loan; DRY is paying it off. But over-abstracting is its own debt — hence the rule of three.\nAsk: You fixed a bug in three of four pasted copies. What happens next month?\nExtend: The tension between DRY and premature abstraction is a great senior-dev war-story slot."
     },
     {
       title: "Comments: why, not what",
@@ -39,6 +45,8 @@ let secondsPerDay = 86400;    // ah.</pre>
 sendToPrinter(job, { retries: 2 });</pre>
 <p>If a comment explains <i>what</i> tangled code does, the better fix is usually clearer code and no comment.</p>
 <p>Related housekeeping: <b>delete dead code</b>. Commented-out blocks and never-called functions rot, confuse readers ("is this important?"), and version control already remembers everything you delete — that is what it is for.</p>`
+    ,
+      teach: "Say: Comments explain WHY, never WHAT — the code already says what.\nAsk: Which comment on this slide would you actually thank someone for?\nExtend: Show dead commented-out code from any real repo and discuss why version control makes it safe to delete."
     },
     {
       title: "Debugging is a method, not luck",
@@ -51,6 +59,8 @@ sendToPrinter(job, { retries: 2 });</pre>
   <li><b>Change one thing at a time.</b> Change five things and the bug goes away — which one fixed it? Now you don't know, and four mystery changes remain in your code.</li>
 </ol>
 <p>And fix the <b>root cause</b>, not the symptom: forcing a negative total to zero hides the real bug that made it negative — it will be back wearing a different hat.</p>`
+    ,
+      teach: "Say: Debugging is a method, not luck — reproduce, read the error, isolate, hypothesize, change one thing.\nAsk: What's wrong with changing five things and the bug disappearing?\nExtend: Root-cause vs symptom deserves a story: the negative-total example, or one of your own."
     },
     {
       title: "The debugger's toolbox",
@@ -62,6 +72,8 @@ sendToPrinter(job, { retries: 2 });</pre>
   <li><b>Rubber duck debugging</b> — explain the code, line by line, out loud, to anyone or anything (classically a rubber duck). Forcing the explanation forces you to check each assumption, and the bug surfaces mid-sentence surprisingly often.</li>
   <li><b>Search the exact error message</b> in quotes — as in the searching lesson. You are rarely the first.</li>
 </ul>`
+    ,
+      teach: "Say: The toolbox: print statements, the console, diffs, the duck. Unglamorous, universal.\nAsk: Why does explaining code aloud to a rubber duck actually work?\nExtend: Demo F12 on a real site — errors, logs, the works. This console returns in every later web lesson."
     },
     {
       title: "Work in small steps",
@@ -73,6 +85,8 @@ sendToPrinter(job, { retries: 2 });</pre>
   <li><b>Test the edges.</b> Code that handles the middle usually breaks at the ends: an empty list, zero, the very first and very last item, absurdly large input.</li>
 </ul>
 <p>All of this is one habit wearing different clothes: <b>never let the gap between "definitely works" and "hope it works" grow large.</b></p>`
+    ,
+      teach: "Say: Write a little, run it, repeat. Never let 'definitely works' drift far from 'hope it works'.\nAsk: You wrote 200 lines and ran them once — where's the bug? Contrast with 10-line steps.\nExtend: This is exactly the rhythm agents follow in Unit 3 — plant that seed now. Edge cases (empty list, zero) make good board examples."
     }
   ],
 

@@ -7,6 +7,8 @@ section({
       title: "What \"AI\" means here",
       body: `<p>The AI tools in this unit are built on <b>large language models</b> (LLMs): programs trained on enormous amounts of text until they become very good at predicting what text should come next. Ask a question, and the model generates a fluent answer word by word.</p>
 <p>That is all that is happening. The model is not looking things up in a database of facts, and it is not thinking the way a person does. Keeping that in mind explains both its strengths and its failures.</p>`
+    ,
+      teach: "Say: Everything in this unit rests on one idea: these tools predict text. Not databases, not minds — prediction. Hold onto that.\nAsk: If it's 'just' predicting the next word, why does it feel so smart?\nExtend: Sketch next-word prediction on the board: 'The cat sat on the ___' — then scale the idea up."
     },
     {
       title: "The tools by name",
@@ -18,6 +20,8 @@ section({
   <li><b>Copilot</b> — from Microsoft, built into Windows and Office</li>
 </ul>
 <p>Each has a free tier that is enough for learning and everyday use. Skills learned in one carry directly to the others — they differ in details, not in kind.</p>`
+    ,
+      teach: "Say: Four names, one idea. Whichever tool your class can actually access, use that one for every demo.\nAsk: Who has used any of these? For what?\nExtend: Open your preferred tool live and show the blank chat — this is home base for the whole unit."
     },
     {
       title: "What they are good at",
@@ -31,6 +35,8 @@ section({
   <li>Brainstorming names, ideas, and alternatives</li>
 </ul>
 <p>Notice the pattern: in every one of these, <i>you</i> can judge whether the result is good just by reading it.</p>`
+    ,
+      teach: "Say: Notice the pattern in this list — tasks where YOU can judge the output by reading it.\nAsk: Why does that make these tasks safe territory?\nExtend: Live-demo one: paste a clumsy paragraph and ask for a rewrite."
     },
     {
       title: "What they are bad at",
@@ -41,11 +47,15 @@ section({
   <li><b>Counting and careful arithmetic</b> — it predicts text, it does not calculate. Simple math is usually fine; do not trust it with your accounts.</li>
   <li><b>Knowing what it does not know</b> — it rarely says "I am not sure" on its own.</li>
 </ul>`
+    ,
+      teach: "Say: Same design, predictable weaknesses — facts, freshness, arithmetic, and false confidence.\nAsk: Which of these four would bite hardest in schoolwork? In a job?\nExtend: Ask the tool live for something past its training cutoff and inspect the answer together."
     },
     {
       title: "Hallucination",
       body: `<p>When a model confidently states something false — a book that does not exist, a fake statistic, a made-up court case — that is called a <b>hallucination</b>. It is not a rare glitch; it is a direct consequence of how the model works. Plausible-sounding text is exactly what it is built to produce, and false claims can sound just as plausible as true ones.</p>
 <p>The working rule for this whole unit: <b>anything that matters gets verified before you rely on it or publish it.</b> Names, numbers, dates, quotes, links — check them against a real source.</p>`
+    ,
+      teach: "Say: Hallucination is the word of the unit — confident, fluent, wrong. Not a rare glitch; a design consequence.\nAsk: Why is a WRONG answer that sounds RIGHT more dangerous than an obvious error?\nExtend: Try eliciting one live (ask for citations on an obscure topic) — verify a couple on the spot."
     },
     {
       title: "How a chat works",
@@ -56,6 +66,8 @@ section({
   <li>You can usually <b>edit your message</b> and resend it, or ask the model to try again — useful when the first answer misses the point.</li>
   <li>Long chats drift. When switching topics, start a fresh chat.</li>
 </ul>`
+    ,
+      teach: "Say: Mechanics matter: memory within a chat, blank slate between chats, edit and regenerate.\nAsk: Why would a long, wandering chat give worse answers than a fresh one?\nExtend: Demonstrate 'make it shorter' referencing an earlier answer — the within-chat memory in action."
     },
     {
       title: "Beyond the chatbot",
@@ -67,11 +79,15 @@ section({
   <li>Meeting tools that transcribe and summarize calls</li>
 </ul>
 <p>Separate from chatbots, there are <b>generators</b> for images, voices, music, and video — covered later in this unit.</p>`
+    ,
+      teach: "Say: Chat is one doorway — the same models are inside email, docs, editors, and meeting tools already.\nAsk: Where have you already met AI without opening a chatbot?\nExtend: Show an AI feature inside a tool your class already uses (Docs, Office, phone photos)."
     },
     {
       title: "Free vs paid",
       body: `<p>Free tiers use somewhat weaker models and limit how many messages you can send. Paid plans (roughly $20/month) buy a stronger model, higher limits, and extra features like file uploads or image generation.</p>
 <p>Sensible path: <b>start free</b>. Learn the skills — they are identical on every tier. Pay only when you hit the limits often enough to feel them, and for the tool you actually use, not all of them.</p>`
+    ,
+      teach: "Say: Free tiers are enough for this whole course — skills transfer, subscriptions don't.\nAsk: What would make paying worth it for you personally?\nExtend: Show the current limits/pricing of your chosen tool — they change often, so check the day you teach."
     }
   ],
 

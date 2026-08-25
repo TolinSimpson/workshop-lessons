@@ -21,7 +21,11 @@ for (const s of SECTIONS) {
   console.assert(s.unit, `${s.id}: missing unit`);
   console.assert(s.title, `${s.id}: missing title`);
   console.assert(s.slides && s.slides.length, `${s.id}: no slides`);
-  s.slides.forEach((sl, i) => console.assert(sl.title && sl.body, `${s.id} slide ${i + 1}: missing title/body`));
+  s.slides.forEach((sl, i) => {
+    console.assert(sl.title && sl.body, `${s.id} slide ${i + 1}: missing title/body`);
+    console.assert(typeof sl.teach === 'string' && sl.teach.length > 0,
+      `${s.id} slide ${i + 1}: missing teach notes (Say/Ask/Extend — see .claude/skills/section-writing)`);
+  });
   let sectionLongest = 0;
   s.questions.forEach((q, i) => {
     console.assert(q.choices.length >= 2, `${s.id} q${i + 1}: needs 2+ choices`);

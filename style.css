@@ -1,0 +1,144 @@
+:root {
+    --bg: #12141a;
+    --panel: #1c1f28;
+    --line: #2e3340;
+    --text: #e6e8ee;
+    --muted: #9aa1b1;
+    --accent: #5b9dff;
+    --ok: #3fbf7f;
+    --bad: #ef5f5f;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font: 16px/1.6 system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  a { color: var(--accent); }
+  header {
+    border-bottom: 1px solid var(--line);
+    padding: 14px 20px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    position: sticky;
+    top: 0;
+    background: var(--bg);
+    z-index: 5;
+  }
+  header h1 { font-size: 17px; margin: 0; font-weight: 600; }
+  header a.home { text-decoration: none; color: var(--muted); font-size: 14px; }
+  header a.home:hover { color: var(--accent); }
+  main { max-width: 860px; margin: 0 auto; padding: 28px 20px 80px; }
+
+  h2 { font-size: 24px; margin: 32px 0 12px; }
+  h3 { font-size: 18px; margin: 0 0 16px; color: var(--muted); font-weight: 500; }
+
+  .card {
+    display: block;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 16px 18px;
+    margin-bottom: 12px;
+    text-decoration: none;
+    color: inherit;
+  }
+  .card:hover { border-color: var(--accent); }
+  .card .meta { color: var(--muted); font-size: 14px; margin-top: 4px; }
+  .row { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 12px; }
+
+  .btn {
+    background: var(--panel);
+    color: var(--text);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 9px 16px;
+    font: inherit;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+  }
+  .btn:hover:not(:disabled) { border-color: var(--accent); }
+  .btn:disabled { opacity: .35; cursor: default; }
+  .btn.primary { background: var(--accent); border-color: var(--accent); color: #06101f; font-weight: 600; }
+
+  /* slides */
+  .slide {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 28px 30px;
+    min-height: 60vh;
+  }
+  .slide h2 { margin-top: 0; }
+  .slide pre {
+    background: #0e1017;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 12px 14px;
+    overflow-x: auto;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  .slide code { background: #0e1017; padding: 1px 5px; border-radius: 4px; font-size: .92em; }
+  .slide pre code { background: none; padding: 0; }
+  .slide table { border-collapse: collapse; width: 100%; margin: 14px 0; font-size: 15px; }
+  .slide th, .slide td { border: 1px solid var(--line); padding: 8px 10px; text-align: left; vertical-align: top; }
+  .slide th { background: #0e1017; }
+  .slide li { margin-bottom: 6px; }
+
+  .navbar { display: flex; align-items: center; gap: 12px; margin-top: 18px; }
+  .navbar .count { color: var(--muted); font-size: 14px; margin-left: auto; }
+  .dots { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 14px; }
+  .dot {
+    width: 26px; height: 26px; border-radius: 6px;
+    border: 1px solid var(--line); background: var(--panel);
+    color: var(--muted); font-size: 12px; cursor: pointer;
+  }
+  .dot.on { background: var(--accent); border-color: var(--accent); color: #06101f; font-weight: 700; }
+
+  /* quiz */
+  .q { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 16px 18px; margin-bottom: 14px; }
+  .q .qtext { font-weight: 600; margin-bottom: 12px; }
+  .q label {
+    display: block; padding: 9px 12px; border: 1px solid var(--line);
+    border-radius: 8px; margin-bottom: 7px; cursor: pointer;
+  }
+  .q label:hover { border-color: var(--accent); }
+  .q input { margin-right: 9px; }
+  .graded label { cursor: default; }
+  .graded label.correct { border-color: var(--ok); background: rgba(63,191,127,.1); }
+  .graded label.wrong { border-color: var(--bad); background: rgba(239,95,95,.1); }
+  .score { font-size: 20px; font-weight: 600; margin: 20px 0 4px; }
+  .muted { color: var(--muted); }
+
+/* teacher edition */
+.badge {
+  margin-left: auto;
+  font-size: 12px;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  border-radius: 6px;
+  padding: 2px 8px;
+  white-space: nowrap;
+}
+.teach {
+  margin-top: 16px;
+  border: 1px dashed var(--accent);
+  border-radius: 10px;
+  padding: 14px 18px;
+  background: rgba(91,157,255,.06);
+  font-size: 15px;
+}
+.teach .tlabel {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  color: var(--accent);
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+.teach p { margin: 6px 0; }
+.teach b { color: var(--accent); }

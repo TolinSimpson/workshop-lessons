@@ -13,6 +13,8 @@ section({
 </ul>
 <p>"Google" is not your browser, and Chrome is not the internet. You use a <b>browser</b> to visit a <b>search engine</b>, which searches the <b>web</b>.</p>
 <p>Any browser can use any search engine — the default is just a setting.</p>`
+    ,
+      teach: "Say: Three words people use interchangeably — untangle them once and everything else in this section makes sense.\nAsk: Quick poll: is Google a browser? Hands up.\nExtend: Show that Chrome can search with Bing and Edge can search with Google — the default is just a setting."
     },
     {
       title: "Reading an address (URL)",
@@ -24,6 +26,8 @@ section({
   └────────────────────────────── protocol — how to talk to it</pre>
 <p>The <b>domain</b> is the part that matters for trust. <code>paypal.com</code> and <code>paypal-secure-login.com</code> are completely different sites owned by different people — more on that in the next section.</p>
 <p>The address bar does double duty: type a URL and it goes there directly; type anything else and it sends your words to your default search engine. Knowing the difference saves a step — if you know the address, type it.</p>`
+    ,
+      teach: "Say: Read a URL aloud left to right, then teach reading the domain right to left.\nAsk: paypal.com vs paypal-secure-login.com — same company?\nExtend: This is the foundation the phishing lesson builds on; foreshadow it with a real lookalike domain story."
     },
     {
       title: "How a search engine works",
@@ -34,6 +38,8 @@ section({
   <li><b>Ranking</b> — when you search, the engine pulls matching pages from the index and orders them by hundreds of signals: relevance, popularity, freshness, how many other sites link there.</li>
 </ol>
 <p>Consequences: brand-new pages may not be findable yet, deleted pages can linger in results for a while, and <b>no engine has the whole web</b> — pages behind logins or never linked from anywhere don't get crawled.</p>`
+    ,
+      teach: "Say: The engine searches its copy of the web, not the web itself — that explains all its quirks.\nAsk: Why might your brand-new page not show up tomorrow?\nExtend: Show Google's cached/indexed date for a page, or discuss robots.txt for advanced groups."
     },
     {
       title: "Searching well",
@@ -47,6 +53,8 @@ section({
   <li><b>Search the error message</b>, in quotes, when tech breaks — someone has hit it before you.</li>
 </ul>
 <p>If the first attempt misses, don't scroll to page five — change the words. You are describing the page you hope exists.</p>`
+    ,
+      teach: "Say: Searching well is a skill, and it's mostly word choice.\nAsk: Give the class a broken-printer scenario — have them draft the search phrase.\nExtend: Live-demo quotes, minus, and site: operators with a real query."
     },
     {
       title: "Reading a results page",
@@ -57,6 +65,8 @@ section({
   <li><b>AI summaries and snippet boxes</b> — the engine's paraphrase of other people's pages. Handy, but check the source for anything that matters; the paraphrase can be wrong.</li>
 </ul>
 <p>Before clicking, glance at the <b>domain under the headline</b> — it tells you who you are about to visit. Ranked high does not mean true: ranking rewards popularity and relevance, not accuracy. For anything important, compare a couple of independent sources.</p>`
+    ,
+      teach: "Say: The results page has paid seats and earned seats — teach the difference before anyone clicks.\nAsk: Where does the first 'real' result start on this page? Project one and find it together.\nExtend: Discuss AI summary boxes appearing above results — this connects to Unit 4's SEO section."
     },
     {
       title: "Cookies",
@@ -70,6 +80,8 @@ section({
 </ul>
 <p>Two lifespans: <b>session cookies</b> vanish when you close the browser; <b>persistent cookies</b> stay until an expiry date, which is why you are still logged in tomorrow.</p>
 <p>A cookie is plain text, not a program — it cannot infect anything. The concern with cookies is not viruses, it is <i>tracking</i>.</p>`
+    ,
+      teach: "Say: Cookies are the answer to 'how does the site remember me?' — mundane, useful, misunderstood.\nAsk: What breaks if you block all cookies? (Logins, baskets, settings.)\nExtend: Open DevTools and show the actual cookies for a site."
     },
     {
       title: "Tracking and third-party cookies",
@@ -77,6 +89,8 @@ section({
 <p>The controversial kind is <b>third-party</b>: set by <i>other companies</i> whose invisible content — ads, trackers — is embedded in the page. If the same ad network is embedded in thousands of sites, its one cookie lets it recognise you on all of them and assemble your browsing history into an interest profile. That is why a product you viewed once follows you around the web for a fortnight.</p>
 <p>Those "Accept cookies?" banners exist because privacy law (GDPR) requires consent for exactly this. "Reject all" or "necessary only" keeps the site working — it declines the tracking, not the login cookie.</p>
 <p>Modern browsers increasingly block third-party cookies by default, and you can clear or block cookies per-site in settings.</p>`
+    ,
+      teach: "Say: First-party remembers you; third-party follows you. That's the whole controversy in one line.\nAsk: Who's been followed around the internet by a product they looked at once?\nExtend: Discuss GDPR banners, 'reject all' habits, and browser tracking protection settings."
     },
     {
       title: "History, cache, and private browsing",
@@ -88,6 +102,8 @@ section({
 </ul>
 <p><b>Private / incognito mode</b> opens a window that keeps none of these once closed: no history entry, cookies deleted on exit. Useful for a shared computer, checking prices without profile-based nudges, or logging into a second account.</p>
 <p>What it does <b>not</b> do: make you anonymous. Your school or workplace network, your internet provider, and every website you visit still see the traffic exactly as before. Private mode wipes the local record — nothing more.</p>`
+    ,
+      teach: "Say: Private mode wipes the local record — nothing more. The name oversells it.\nAsk: Who can still see your browsing in incognito? (Network, employer, websites.)\nExtend: Clear a cache live to fix a 'broken' page, or discuss VPNs if the anonymity question comes up."
     }
   ],
 

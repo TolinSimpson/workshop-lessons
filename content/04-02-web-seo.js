@@ -8,6 +8,8 @@ section({
       body: `<p><b>SEO — search engine optimization</b> — is making your site the best answer to questions your audience is already asking, in a form search engines can recognize.</p>
 <p>You know the machinery from Unit 1: crawlers fetch pages, an index catalogs them, ranking orders them by hundreds of signals. SEO is working <i>with</i> that machinery.</p>
 <p>One reframe kills most bad SEO: you are not optimizing for a robot, you are competing to <b>satisfy a searcher</b>. Google's systems are built to detect satisfaction — content written for readers ranks; content written to game rankings gets filtered. Every tactic that follows serves that principle.</p>`
+    ,
+      teach: "Say: One reframe kills bad SEO: you're not optimizing for a robot, you're competing to satisfy a searcher.\nAsk: Callback to Unit 1: what were the three steps — crawl, index, rank?\nExtend: Search a term live and dissect why the top result deserves its spot."
     },
     {
       title: "Keywords are questions",
@@ -20,6 +22,8 @@ section({
 </ul>
 <p>Match the page type to the intent — a product page cannot rank for a how-to search, no matter how well made.</p>
 <p>Beginner strategy: skip giant head terms ("fitness") and target <b>long-tail keywords</b> — longer, specific phrases ("kettlebell workout for lower back pain"). Less traffic each, far less competition, and the visitor is exactly who you want. Google's own autocomplete, "People also ask" boxes, and an AI chatbot are all free keyword research tools.</p>`
+    ,
+      teach: "Say: Keywords are questions, and each carries an intent — guide, comparison, purchase, or destination.\nAsk: Classify these four searches by intent, quickly, as a group.\nExtend: Demo free keyword research live: autocomplete, People Also Ask, and a chatbot brainstorm."
     },
     {
       title: "E-E-A-T: why 'why you?' matters",
@@ -31,6 +35,8 @@ section({
   <li><b>Trustworthiness</b> — accurate, honest, transparent about who you are</li>
 </ul>
 <p>The first E was added precisely because generic, researched-from-other-articles content became infinite and cheap — especially with AI. What can't be faked at scale is first-hand experience: your tests, your photos, your results, your mistakes. Say who wrote the page and why they're credible. This is the "why you?" from Section 1, made into a ranking factor.</p>`
+    ,
+      teach: "Say: E-E-A-T — the first E is Experience, added exactly because generic AI content became infinite.\nAsk: Two identical articles, one with original photos and test results — which do YOU trust?\nExtend: Show a page that oozes first-hand experience vs a generic listicle on the same topic."
     },
     {
       title: "On-page basics",
@@ -43,6 +49,8 @@ section({
   <li><b>Descriptive alt text and file names</b> for images; <b>readable URLs</b> (<code>/kettlebell-back-pain</code>, not <code>/p?id=482</code>).</li>
   <li><b>Internal links</b> between your related pages, with descriptive link text — never "click here".</li>
 </ul>`
+    ,
+      teach: "Say: Unit 2's HTML is now marketing: title tag, meta description, one h1, answer first, real URLs, internal links.\nAsk: Which of these did we already learn as 'good HTML'? (Nearly all.)\nExtend: View-source a well-optimized page and find each element together."
     },
     {
       title: "Technical basics and links",
@@ -54,6 +62,8 @@ section({
   <li>Register with <b>Google Search Console</b> — free, shows exactly which searches bring people to you and flags problems.</li>
 </ul>
 <p><b>Backlinks</b> — links from other sites to yours — remain a heavyweight signal: each is a vote of confidence, weighted by the voter's own authority. They're earned by being worth linking to: original data, genuinely useful tools and guides, being cited by people in your niche. Buying links or joining link schemes violates Google's policies and gets sites penalized.</p>`
+    ,
+      teach: "Say: Technical basics gate everything: speed, mobile, HTTPS, Search Console. Backlinks are earned votes.\nAsk: Why does buying links backfire while earning them compounds?\nExtend: Run a live PageSpeed or Lighthouse test on a site the class picks."
     },
     {
       title: "Search is changing: AI answers",
@@ -65,6 +75,8 @@ section({
   <li>Be a <b>named, consistent entity</b> — same name and description across your site and profiles, so AI systems know who you are</li>
 </ul>
 <p>The good news: GEO is mostly E-E-A-T under a new name. Clear, credible, experience-backed content wins in both worlds.</p>`
+    ,
+      teach: "Say: The ground is shifting — AI answers sit above the links now. GEO means being the source the AI quotes.\nAsk: When did you last click past an AI summary? What made you click?\nExtend: Ask a chatbot a question in your niche and see who it cites — that's the new results page."
     },
     {
       title: "What NOT to do",
@@ -77,6 +89,8 @@ section({
   <li><b>Chasing algorithms instead of readers</b> — tricks decay every update; satisfied readers compound.</li>
 </ul>
 <p>SEO timelines are honest: months, not days. It compounds — a page that ranks can bring visitors every day for years, which is why it's worth doing properly.</p>`
+    ,
+      teach: "Say: Every shortcut has been tried and penalized — stuffing, bought links, unreviewed AI mass content. Months, not days; then it compounds.\nAsk: Why does content written for readers survive every algorithm update?\nExtend: A tale of a site wiped out by a core update makes this concrete — bring one from the SEO press."
     }
   ],
 

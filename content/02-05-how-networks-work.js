@@ -12,6 +12,8 @@ section({
   <li><b>The internet</b> — the global network of networks. No company owns it; thousands of independent networks agree to pass each other's traffic.</li>
 </ul>
 <p>Everything in the next section — websites, hosting, domains — is built on top of this plumbing, so it is worth seeing how the plumbing works first.</p>`
+    ,
+      teach: "Say: A network is computers that can talk; the internet is networks agreeing to pass each other's messages. Nobody owns it.\nAsk: What's the smallest network you own? (Phone + laptop hotspot counts.)\nExtend: Sketch your building's actual network on the board — devices, router, ISP."
     },
     {
       title: "IP addresses and packets",
@@ -23,6 +25,8 @@ section({
   <li>The receiver reassembles them in order and asks for any that went missing.</li>
 </ol>
 <p>This is why the internet is resilient: if a route fails, packets simply flow around it.</p>`
+    ,
+      teach: "Say: Data travels as packets — addressed envelopes that may take different roads and reassemble at the end.\nAsk: Why does chopping data into packets make the internet hard to break?\nExtend: Run tracert/traceroute to a famous site live and read the hops."
     },
     {
       title: "Clients and servers",
@@ -35,12 +39,16 @@ section({
 <p>Examples: browser ↔ web server, mail app ↔ mail server, game ↔ game server.</p>
 <p>"Server" describes a <i>role</i>, not special hardware — any computer can act as one. The same machine can be a server for one conversation and a client in another.</p>
 <p>The other model, worth one line: <b>peer-to-peer</b> has no central server — every participant talks directly to the others. File sharing and cryptocurrencies work this way. The web does not: it is client–server, and <b>hosting</b> — the next section — is the business of providing the server.</p>`
+    ,
+      teach: "Say: Client asks, server answers — that's most of the internet. 'Server' is a role, not special hardware.\nAsk: In this classroom, right now, name three client-server conversations happening.\nExtend: The P2P aside can grow here if the class asks about torrents or crypto."
     },
     {
       title: "Ports and protocols",
       body: `<p>An IP address gets a packet to the right <i>machine</i>. A <b>port</b> — a number stamped on the packet — gets it to the right <i>program</i> on that machine, like a flat number inside a building. Web traffic uses port <b>80</b> (HTTP) or <b>443</b> (HTTPS); email and games use others.</p>
 <p>A <b>protocol</b> is the agreed language both ends speak once connected — <b>HTTP</b> for web pages, <b>HTTPS</b> for the encrypted version.</p>
 <p>So "visit <code>https://example.com</code>" really means: look up the IP for <code>example.com</code>, connect to it on port 443, and speak HTTPS.</p>`
+    ,
+      teach: "Say: IP finds the machine, the port finds the program, the protocol is the language spoken.\nAsk: So what three things happen when you visit https://example.com?\nExtend: Show netstat or the browser's network tab for real ports in action."
     },
     {
       title: "From your sofa to the internet",
@@ -57,6 +65,8 @@ section({
   <li>Machines out on the internet <b>cannot reach into</b> your home network uninvited; the router only lets in replies to conversations you started.</li>
 </ul>
 <p>Both are good for safety — and both are exactly why serving a website from home is painful, as the next section explains.</p>`
+    ,
+      teach: "Say: Home networks share one public address; the router translates. That's also a safety wall.\nAsk: Why can't a stranger on the internet directly reach your laptop?\nExtend: Log into a real router admin page (yours, projected) — DHCP table, connected devices. Foreshadows why home hosting is painful."
     }
   ],
 

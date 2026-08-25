@@ -7,6 +7,8 @@ section({
       title: "Images from a description",
       body: `<p>Image generators turn a written description into a picture in seconds. The big chatbots have this built in (ChatGPT, Gemini, Copilot can all generate images), and dedicated tools like <b>Midjourney</b> go further on artistic quality.</p>
 <p>Like text generation, the first result is a draft. Expect to generate several variations, pick the closest, and refine — "same image, but at sunset", "remove the text from the sign".</p>`
+    ,
+      teach: "Say: Now pictures from sentences. Same loop as text: draft, judge, refine.\nAsk: What would you make first if a description became an image in ten seconds?\nExtend: Generate something live from a class suggestion — misfires are as instructive as successes."
     },
     {
       title: "Describing the picture you want",
@@ -19,6 +21,8 @@ section({
 </ul>
 <p><i>"A watercolor of a red bicycle against a brick wall, soft morning light, wide shot"</i> beats <i>"a bike"</i> every time.</p>
 <p>One persistent weakness: <b>text inside images</b> often comes out garbled. Generate the picture, add the words yourself in an editor.</p>`
+    ,
+      teach: "Say: Subject, style, mood, framing — every unstated detail is the tool's guess.\nAsk: Upgrade 'a bike' together into a full prompt on the board.\nExtend: Run the weak and strong prompt side by side; note the garbled-text weakness with a sign or logo attempt."
     },
     {
       title: "Editing photos with AI",
@@ -30,6 +34,8 @@ section({
   <li><b>Upscale</b> — enlarge a small image while keeping it sharp</li>
 </ul>
 <p>These features are in phone photo apps, free editors, and professional tools alike — often labeled "magic" something.</p>`
+    ,
+      teach: "Say: AI is also inside photo editing — remove, extend, cut out, upscale, on REAL photos.\nAsk: Where's the line between fixing a photo and faking one?\nExtend: Demo object removal on a phone or editor if available — the wow moment of this section."
     },
     {
       title: "Audio: voice and transcription",
@@ -39,6 +45,8 @@ section({
   <li><b>Speech to text (transcription)</b> — record a meeting, interview, or voice memo and get accurate written text back. Often the fastest way to "write" is to talk, transcribe, then have a chatbot clean it up.</li>
 </ul>
 <p>AI music generators also exist — describe a mood and genre, get a track for background use.</p>`
+    ,
+      teach: "Say: Two directions: text to speech, and speech to text. Both are workhorses.\nAsk: Talk-then-transcribe versus type: when would dictating win?\nExtend: Play a modern AI voice sample; raise the voice-cloning consent rule here — it previews the deepfake lesson."
     },
     {
       title: "Video",
@@ -48,6 +56,8 @@ section({
   <li><b>AI-assisted editing</b> — this is the quietly practical part: auto-generated captions, cutting silences and filler words, editing video by editing its transcript, translating a voice track.</li>
 </ul>
 <p>For most creators today, AI's biggest video win is the editing help, not full generation.</p>`
+    ,
+      teach: "Say: Video generation is impressive and imperfect; AI EDITING is the quiet workhorse — captions, silence-cutting, transcript edits.\nAsk: Where have you already seen AI video without labeling it that? (Auto-captions.)\nExtend: Show a generated clip and hunt for artifacts together — hands, physics, continuity."
     },
     {
       title: "Files, formats, and originals",
@@ -58,6 +68,8 @@ section({
   <li><b>Keep your originals.</b> Save the full-size first download and the prompt that made it; every re-export and re-compression loses quality (lossy compression, Unit 1)</li>
 </ul>
 <p>Name files so future-you can find them: <code>logo-draft-3-blue.png</code>, not <code>image(7).png</code>.</p>`
+    ,
+      teach: "Say: Unit 1 pays off: formats, quality loss, originals. Keep the first full-size download and the prompt.\nAsk: Why does re-exporting a JPEG or MP3 repeatedly damage it? (Callback: lossy compression.)\nExtend: Show your own file-naming scheme for generated assets — boring, priceless."
     },
     {
       title: "A content workflow, end to end",
@@ -70,6 +82,8 @@ section({
   <li><b>Chatbot again</b> — title options and description for upload</li>
 </ol>
 <p>Each step is a tool assisting a decision <i>you</i> make. The taste — what to make, what to keep, what to cut — never stops being your job.</p>`
+    ,
+      teach: "Say: The whole pipeline: script, images, voice, assembly, packaging — AI assists each step, you decide each step.\nAsk: Which step would AI help YOU most with? Which would you never delegate?\nExtend: If time allows, run a micro-project: 30-second video plan through every step as a class."
     }
   ],
 

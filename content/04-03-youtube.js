@@ -12,6 +12,8 @@ section({
   <li><b>Retention / average view duration</b> — of those who clicked, how long did they keep watching? This measures your <b>content</b>.</li>
 </ul>
 <p>Great packaging + weak video = clicks that immediately leave, and the algorithm stops recommending. Great video + weak packaging = nobody ever clicks to find out. You need both, which is why the next two slides split them apart.</p>`
+    ,
+      teach: "Say: Demystify the algorithm: it's a satisfaction counter. Small test audience, measured response, wider push if it lands.\nAsk: If YOU were the algorithm, what two numbers would you watch? (Clicks, and staying power.)\nExtend: CTR times retention as a mental model — sketch the funnel on the board."
     },
     {
       title: "Packaging first: title and thumbnail",
@@ -23,6 +25,8 @@ section({
   <li><b>Title and thumbnail complement, not repeat</b> — the thumbnail raises the question, the title sharpens it</li>
 </ul>
 <p>Draft ten titles per video and pick the best — an AI chatbot is excellent at generating options for you to judge.</p>`
+    ,
+      teach: "Say: Packaging first — title and thumbnail BEFORE filming. If it can't be packaged, don't make it.\nAsk: Why does MrBeast decide the thumbnail before the video exists?\nExtend: Project a YouTube homepage; have the class rate thumbnails: what would they click and why?"
     },
     {
       title: "Retention engineering",
@@ -34,6 +38,8 @@ section({
   <li><b>Deliver the promise</b> — the title made a deal; the video keeps it, or the viewer leaves and the algorithm notices.</li>
 </ul>
 <p>Then read your <b>retention graph</b> — YouTube shows exactly where viewers left every video. A cliff at 0:45 means your intro is losing them. This graph is the single most instructive chart on the platform: it tells you precisely what to fix next video.</p>`
+    ,
+      teach: "Say: Retention is a craft: confirm the click in 30 seconds, open loops, tight pacing, keep the promise.\nAsk: How long do you give a video before bailing? Be honest.\nExtend: Play the first 30 seconds of a strong and a weak opener — count the seconds until value appears."
     },
     {
       title: "Format, series, and repeatability",
@@ -46,6 +52,8 @@ section({
 </ol>
 <p>A format also builds <b>binge sessions</b> — a viewer who likes one episode watches five, and YouTube strongly rewards channels that keep people on the platform. Playlists and end screens that chain episodes amplify this.</p>
 <p>Consistency matters more than volume: pick a cadence you can hold for a year. Weekly and sustainable beats daily and abandoned.</p>`
+    ,
+      teach: "Say: Channels grow by repeatability, not lottery tickets — find the outperformer, make it a series, iterate.\nAsk: Name a channel whose format you could describe in one sentence. That's the lesson.\nExtend: Pull up a successful channel and identify its repeatable format together."
     },
     {
       title: "Shorts vs long-form",
@@ -58,11 +66,15 @@ section({
   <tr><td>Key metric</td><td>CTR + retention</td><td>Swiped-away vs watched-through</td></tr>
 </table>
 <p>The current playbook: <b>Shorts for discovery, long-form for depth and income</b>. Cut your best long-form moments into Shorts that funnel new viewers to the full videos. For Shorts, the first second replaces the thumbnail — hook instantly or get swiped.</p>`
+    ,
+      teach: "Say: Two platforms in one: Shorts for reach, long-form for depth and income. The first second is the Shorts thumbnail.\nAsk: Which do you watch more — and which creators do you actually remember from Shorts?\nExtend: Show how a long video was cut into Shorts by a creator who does it well."
     },
     {
       title: "Search, and AI tools",
       body: `<p>YouTube is also a search engine — apply Section 2's thinking. <b>Titles carry keywords naturally</b>: "how to" searches on YouTube are enormous, and tutorial content gets found for years. The rest of the markup — descriptions, chapters, tags, hashtags, captions — has its own rules and gets the whole next section.</p>
 <p>The AI-tool workflow from Unit 3 maps on directly: chatbots for ideas, titles, and scripts; research tools (vidIQ, TubeBuddy) for keyword and competitor data; image generators for thumbnail drafts; transcription and AI editing for the production grind. The taste and the face on camera remain yours.</p>`
+    ,
+      teach: "Say: YouTube is a search engine too — titles carry phrases people actually search; the AI toolkit covers the grind.\nAsk: What did you last SEARCH on YouTube rather than get recommended?\nExtend: Metadata gets its own section next — here, demo one AI-assisted title brainstorm from Unit 3 habits."
     },
     {
       title: "The long game",
@@ -73,6 +85,8 @@ section({
   <li><b>Study your outliers.</b> One video doing 5× your baseline is the platform telling you what your audience wants. Make more of that.</li>
   <li><b>Monetization follows audience</b>, not the reverse: ads (via the Partner Program's thresholds), sponsors, your own products, memberships. Build the audience first; the money paths open on their own.</li>
 </ul>`
+    ,
+      teach: "Say: Calibrate expectations: early videos reach few, every upload is a fresh audition, outliers are the map, money follows audience.\nAsk: Why is 'the first 20 videos are reps' encouraging rather than discouraging?\nExtend: Find a big creator's view counts from their first year — screenshot-worthy perspective."
     }
   ],
 

@@ -7,6 +7,8 @@ section({
       title: "Beating the blank page",
       body: `<p>The hardest part of most writing is starting. AI removes that: describe what you need, get a rough draft in seconds, and now you are <i>editing</i> instead of staring at an empty page — a much easier job.</p>
 <p>Treat every draft as raw material. It will be competent and slightly bland. Your edit — cutting, reordering, adding the details only you know — is what turns it into something worth sending.</p>`
+    ,
+      teach: "Say: The blank page is the hardest part of writing — and it's now optional. Draft fast, edit like an owner.\nAsk: What's easier: writing a first sentence, or fixing a bad one?\nExtend: Live: generate a rough draft of something the class actually needs this week."
     },
     {
       title: "Editing and rewriting",
@@ -18,6 +20,8 @@ section({
   <li><b>Simplify</b> — "Rewrite so someone outside the industry understands it."</li>
 </ul>
 <p>The "change nothing else" instruction matters — without it, the model tends to rewrite everything in its own voice.</p>`
+    ,
+      teach: "Say: Editing your OWN text is the underrated use — proofread, tone shift, shorten, simplify.\nAsk: Why does 'change nothing else' matter in a proofreading prompt?\nExtend: Run the same paragraph through 'more formal' and 'friendlier' and compare what changed."
     },
     {
       title: "Summarizing and digesting",
@@ -29,6 +33,8 @@ section({
   <li>"Explain section 4 in plain language."</li>
 </ul>
 <p>You can interrogate a document instead of rereading it. For anything with real consequences — contracts, medical or legal text — use the summary to understand, but read the original before you sign.</p>`
+    ,
+      teach: "Say: Paste anything long, then interrogate it — summary, obligations, risks, plain-language translation.\nAsk: Where's the line between using the summary and trusting the summary? (Contracts: understand with AI, sign after reading.)\nExtend: Bring a dense real document — policy, terms of service — and mine it live."
     },
     {
       title: "Emails and messages",
@@ -39,6 +45,8 @@ section({
   <li>"I need to ask my landlord to fix the heating, third time asking. Draft it."</li>
 </ul>
 <p>Awkward messages — complaints, reminders about money, saying no — are where a neutral first draft helps most, because the model has no emotions to leak into the text.</p>`
+    ,
+      teach: "Say: Awkward messages are where neutral drafting shines — no leaked frustration to regret.\nAsk: What email have you delayed sending because the tone was hard?\nExtend: Draft a firm-but-polite complaint live, then edit it into the sender's own voice."
     },
     {
       title: "Learning and research",
@@ -48,6 +56,8 @@ section({
   <li>Use AI to <b>understand</b> — concepts, context, vocabulary, where to look</li>
   <li>Use real sources to <b>confirm</b> — the facts, numbers, and quotes you will repeat</li>
 </ul>`
+    ,
+      teach: "Say: As a tutor: tireless. As a source: shaky. Understand with AI, confirm with sources.\nAsk: For which school subjects would the tutor mode shine? Where would hallucination hurt?\nExtend: Run a quiz-me session live on this course's own earlier material."
     },
     {
       title: "Practical everyday tasks",
@@ -59,12 +69,16 @@ section({
   <li><b>Comparisons</b> — "Make a table comparing these three phones from these specs: [paste]"</li>
   <li><b>Forms and officialese</b> — "What is this letter from the tax office actually telling me?"</li>
 </ul>`
+    ,
+      teach: "Say: Beyond prose: planning, spreadsheet formulas, translation, officialese decoding.\nAsk: Which everyday chore of yours fits this list?\nExtend: Solve a real spreadsheet-formula question from the room, live."
     },
     {
       title: "Keep your voice, own the result",
       body: `<p>Two closing rules for AI writing:</p>
 <p><b>Keep your voice.</b> Unedited AI text has a recognizable flavor — smooth, wordy, oddly enthusiastic. Readers are learning to spot it. Editing in your own phrasing and concrete details is what keeps your writing yours.</p>
 <p><b>Own the result.</b> Whatever you send, sign, or publish is yours — "the AI wrote it" excuses nothing. That is why the verify habit and the final read-through are not optional steps; they are the job.</p>`
+    ,
+      teach: "Say: Close with the two rules: keep your voice, own the result.\nAsk: How would you feel discovering a heartfelt message you received was unedited AI?\nExtend: The AI-flavor discussion is rich: show an obviously-AI paragraph and have the class identify the tells."
     }
   ],
 

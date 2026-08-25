@@ -67,7 +67,25 @@ Filenames control order (`UU-SS-slug.js`), and titles carry numbers, so both mus
 5. Run `node build.js && node check.js` — the manifest is generated from filenames
    and must be rebuilt after any rename.
 
-## 6. Naming and scope
+## 6. Teacher notes — every slide carries a `teach` field
+
+Each slide object has a required `teach` string (enforced by check.js) rendered only
+on the unlinked `teacher.html` page, never on the student-facing `index.html`. Format
+is three newline-separated lines:
+
+```
+teach: "Say: <spoken framing the teacher can read aloud to open the slide>\nAsk: <a class question — the pause/discussion break>\nExtend: <where the teacher inserts their own specific or advanced knowledge, demos, or local context>"
+```
+
+- **Say** — conversational, first-person-teacher, not a repeat of the slide body.
+- **Ask** — a genuine discussion prompt, answerable from the room, creating a break.
+- **Extend** — an explicit insertion point: demos, war stories, local policy,
+  advanced depth. Where content is volatile (pricing, laws, platform features), the
+  Extend line should tell the teacher to check/insert current specifics.
+- Teacher notes are plain text (no HTML). teacher.html is public-but-unlinked —
+  obscurity, not security; never put anything sensitive in teach notes.
+
+## 7. Naming and scope
 
 - One topic per section, nameable in a few words; if the title needs "and" twice,
   split it.

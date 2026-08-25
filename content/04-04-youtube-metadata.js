@@ -11,6 +11,8 @@ section({
   <li><b>Metadata must match the content.</b> YouTube's misleading-metadata policy prohibits titles, descriptions, tags, or thumbnails that promise something the video doesn't contain — violations can get videos removed, and viewers who feel tricked leave early, which kills retention anyway (Section 3). Honesty and performance point the same direction.</li>
   <li><b>Write for humans first, the index second.</b> Exactly the same principle as web SEO (Section 2): natural language that a person would want to read, with the search phrases appearing because they genuinely describe the video.</li>
 </ul>`
+    ,
+      teach: "Say: YouTube can't watch your video — it reads your metadata. Honest markup and good performance point the same way.\nAsk: What text does the platform actually have to work with? List the pieces.\nExtend: Pull up any video and inventory its metadata together — title, description, chapters, hashtags."
     },
     {
       title: "The description: first two lines carry the weight",
@@ -22,6 +24,8 @@ section({
   <li><b>Give a reason to keep watching</b> — a promise the video pays off</li>
 </ul>
 <p>Write these two lines with the same care as the title — they are packaging (Section 3), not an afterthought. Draft several versions and pick the best; a chatbot generates options quickly, you choose with your data.</p>`
+    ,
+      teach: "Say: Only the first two description lines show above the fold — they're packaging, written with title-level care.\nAsk: Read a real video's first 150 characters: does it sell the click and carry the search phrase?\nExtend: Rewrite a weak real description opener live, as a class."
     },
     {
       title: "A description format that works",
@@ -43,6 +47,8 @@ Newsletter: yoursite.com/news
 
 #knifesharpening #kitchenskills #cooking</pre>
 <p>Order matters: value first, links after, hashtags last. Keep it consistent across videos — a template saves time and viewers learn where to find things. Update the template once, benefit everywhere.</p>`
+    ,
+      teach: "Say: A template: hook lines, expanded paragraph, chapters, links, hashtags. Value first, links after.\nAsk: Why does a consistent template help both the creator and the viewer?\nExtend: Build the class's own reusable description template and save it."
     },
     {
       title: "Chapters",
@@ -54,6 +60,8 @@ Newsletter: yoursite.com/news
 </ul>
 <p>Why bother: chapters let viewers jump to what they need — which sounds like it hurts watch time but in practice <i>helps</i>: skimmers who would have left instead find their answer, and chapter titles are one more place your key phrases legitimately live. Individual chapters can also surface directly in Google search results ("key moments").</p>
 <p>Name chapters descriptively ("The sharpening motion", not "Part 2") — they're navigation and metadata at once.</p>`
+    ,
+      teach: "Say: Chapters have hard rules — start at 00:00, three minimum, ten seconds each — and they help retention, not hurt it.\nAsk: Skimmers can jump around — why does that KEEP them instead of losing them?\nExtend: Show 'key moments' from a YouTube chapter appearing in Google results."
     },
     {
       title: "Tags: mostly retired — don't overthink them",
@@ -69,6 +77,8 @@ Newsletter: yoursite.com/news
   <li><b>Don't paste tag lists into the description</b> — a wall of comma-separated keywords in the visible description is treated as spam, and looks like it too</li>
 </ul>
 <p>A few minutes, a few relevant entries, move on. Energy spent agonizing over tags is energy stolen from packaging and retention, which actually move the needle.</p>`
+    ,
+      teach: "Say: Tags are the most over-mythologized box on the platform — minimal role, misspellings and variants only.\nAsk: Why do you think the tags myth survives? (Old advice never dies.)\nExtend: Show YouTube's own help page on tags — primary-source proof beats any influencer claim."
     },
     {
       title: "Hashtags",
@@ -79,6 +89,8 @@ Newsletter: yoursite.com/news
   <li>Misleading or unrelated hashtags fall under the same metadata policy as tags</li>
 </ul>
 <p>Practical use: 2–3 relevant hashtags at the end of the description — your niche, your series name, the topic. A consistent series hashtag groups your videos on one tap. That's the whole game; hashtags are seasoning, not strategy.</p>`
+    ,
+      teach: "Say: Hashtags: three show, sixty voids them all, relevance is policy. Seasoning, not strategy.\nAsk: What would 40 hashtags on a video signal to you as a viewer?\nExtend: Show a series hashtag working — one tap grouping a creator's episodes."
     },
     {
       title: "Captions, plus the dos and don'ts card",
@@ -92,6 +104,8 @@ Newsletter: yoursite.com/news
   <tr><td>Correct your captions</td><td>Paste keyword lists into the description</td></tr>
   <tr><td>Describe what's actually in the video</td><td>Promise anything the video doesn't deliver</td></tr>
 </table>`
+    ,
+      teach: "Say: Captions are markup too — indexed, accessible, worth correcting. Then close on the do/don't card.\nAsk: Who watches muted? Who benefits from captions besides you? (Search does too.)\nExtend: Open auto-captions on a real video and count errors in one minute — then show the editor that fixes them."
     }
   ],
 

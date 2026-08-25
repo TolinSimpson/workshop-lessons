@@ -7,6 +7,8 @@ section({
       title: "A prompt is just instructions",
       body: `<p>The message you type to an AI tool is called a <b>prompt</b>. There are no magic words and no secret syntax — plain language is exactly what the model was trained on. If you can explain a task to a competent new assistant, you can prompt.</p>
 <p>The skill is not phrasing. It is <b>deciding what the task actually is</b> before you type: what you want, who it is for, and what "good" looks like.</p>`
+    ,
+      teach: "Say: No magic words — a prompt is instructions to a very fast, very literal assistant.\nAsk: If a new intern joined today, how would you brief them on a task? That's prompting.\nExtend: Type the same casual request you'd give a person, live — show that plain language works."
     },
     {
       title: "Vague in, vague out",
@@ -19,18 +21,24 @@ section({
   <li><b>How long</b> — sentences, words, or paragraphs</li>
   <li><b>What tone</b> — formal, friendly, playful, neutral</li>
 </ul>`
+    ,
+      teach: "Say: Vague in, vague out. Every detail you give is a guess the model doesn't make.\nAsk: Improve 'write something about our bake sale' together, one detail at a time, on the board.\nExtend: Run both versions live and compare outputs side by side."
     },
     {
       title: "Give it the material",
       body: `<p>The model knows only what is in the chat. It has not seen your email thread, your notes, or your draft — unless you paste them in. So paste them in:</p>
 <p><i>"Here is the email I received: [paste]. Write a polite reply declining the invitation but suggesting next month."</i></p>
 <p>Many tools also accept <b>file uploads</b> — a PDF, spreadsheet, or photo — and can answer questions about the contents. Working over material you supply also grounds the answer: summarizing <i>your</i> document leaves far less room to hallucinate than answering from memory.</p>`
+    ,
+      teach: "Say: The model knows nothing outside the chat — paste the material in.\nAsk: Why does summarizing a pasted document hallucinate less than answering from memory?\nExtend: Upload or paste a real document your class cares about and interrogate it."
     },
     {
       title: "Show an example",
       body: `<p>Some things are easier to show than describe. Style is the classic case: instead of finding words for how you write, paste a sample:</p>
 <p><i>"Here are two product descriptions I wrote earlier: [paste]. Write one for a ceramic mug in the same style."</i></p>
 <p>The same trick works for formats — show one filled-in row of the table, one entry of the list, one answered question, and ask it to continue the pattern.</p>`
+    ,
+      teach: "Say: Some things are easier to show than describe — style is the classic.\nAsk: Could you describe your own writing style in words? Easier to paste two samples.\nExtend: Paste a distinctive sample (a famous author, or your own) and ask for a continuation in the same style."
     },
     {
       title: "It is a conversation, not a slot machine",
@@ -42,6 +50,8 @@ section({
   <li>"Give me three more options for the opening line."</li>
 </ul>
 <p>Because the model sees the whole chat, each correction builds on the last. Two or three quick steers usually beat one elaborate prompt.</p>`
+    ,
+      teach: "Say: Conversation, not slot machine — steer the draft, don't restart.\nAsk: What's wasteful about abandoning a 90%-right answer to try a new prompt?\nExtend: Live: take one output through three quick steers — shorter, warmer, add an example."
     },
     {
       title: "Ask for the shape you want",
@@ -52,6 +62,8 @@ section({
   <li>"As a one-paragraph summary followed by bullet points."</li>
 </ul>
 <p>Two more useful instructions: <i>"Ask me questions before you start if anything is unclear"</i> — which surfaces details you forgot to give — and <i>"Explain it like I'm a complete beginner"</i>, which sets the level of every explanation in the chat.</p>`
+    ,
+      teach: "Say: Ask for the shape you want — list, table, steps — and get it.\nAsk: Same information as prose vs table: when do you want which?\nExtend: The 'ask me questions before you start' trick deserves a live run — the model's questions teach what a good brief contains."
     },
     {
       title: "Break big jobs into steps",
@@ -62,6 +74,8 @@ section({
   <li>"Write the first section from this outline." — edit, continue</li>
 </ol>
 <p>This keeps you in control of direction, and each step gives the model the context of the approved step before it.</p>`
+    ,
+      teach: "Say: Big jobs go in steps, with you approving each. Direction stays yours.\nAsk: Why is 'outline first' better than 'write the whole newsletter'?\nExtend: Run a mini pipeline live: topics, pick one, outline, draft one section."
     },
     {
       title: "When the answer is wrong",
@@ -72,6 +86,8 @@ section({
   <li><b>Confidently wrong facts</b> — do not argue with it; the model may "apologize" and produce a different wrong answer. Check a real source.</li>
 </ul>
 <p>A model challenged on a correct answer will often cave and change it — its agreement is not evidence. Only a source is.</p>`
+    ,
+      teach: "Say: Three moves when it's wrong: steer, rewrite the prompt, or — for facts — leave the chat and check a source.\nAsk: The model apologized and changed its answer when challenged. What does that prove? (Nothing.)\nExtend: Demonstrate the cave: challenge a CORRECT answer and watch it fold. Memorable every time."
     }
   ],
 

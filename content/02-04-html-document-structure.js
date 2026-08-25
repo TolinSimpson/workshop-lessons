@@ -14,6 +14,8 @@ opening  content        closing</pre>
 <pre>&lt;a href="about.html" class="nav-link"&gt;About&lt;/a&gt;
 &lt;img src="cat.jpg" alt="A ginger cat"&gt;</pre>
 <p>Elements <b>nest</b> and must close in reverse order. <code>&lt;b&gt;&lt;i&gt;text&lt;/i&gt;&lt;/b&gt;</code> is correct; <code>&lt;b&gt;&lt;i&gt;text&lt;/b&gt;&lt;/i&gt;</code> is not.</p>`
+    ,
+      teach: "Say: Elements are the LEGO bricks: opening tag, content, closing tag, attributes on the opening tag.\nAsk: Spot the error in <b><i>text</b></i> — why does nesting order matter?\nExtend: Type a broken nesting live and show browsers heroically coping anyway."
     },
     {
       title: "The skeleton of every page",
@@ -32,6 +34,8 @@ opening  content        closing</pre>
   &lt;/body&gt;
 &lt;/html&gt;</pre>
 <p>Memorise this shape. Every page you ever write starts here.</p>`
+    ,
+      teach: "Say: This skeleton is every web page ever — have them read it line by line before you explain it.\nAsk: Which parts do you recognize already? Which lines are mysteries?\nExtend: Have everyone create hello.html from this skeleton and open it in a browser — first web page, today."
     },
     {
       title: "&lt;!DOCTYPE html&gt; and &lt;html&gt;",
@@ -39,6 +43,8 @@ opening  content        closing</pre>
 <p>Leave it out and browsers fall back to <b>quirks mode</b>, emulating 1990s bugs for compatibility. Your layout will break in strange ways.</p>
 <p><b>&lt;html&gt;</b> is the <b>root element</b>. Everything else lives inside it, and it contains exactly two children: <code>&lt;head&gt;</code> and <code>&lt;body&gt;</code>.</p>
 <p>The <code>lang="en"</code> attribute declares the page language. Screen readers use it to choose the correct pronunciation, and translation tools use it to detect the source language.</p>`
+    ,
+      teach: "Say: DOCTYPE flips the browser into modern mode; html is the root holding head and body.\nAsk: What could 'quirks mode' possibly be? (A museum of 1990s bugs.)\nExtend: lang='en' matters for screen readers — a good first accessibility mention."
     },
     {
       title: "The &lt;head&gt;: information about the page",
@@ -51,6 +57,8 @@ opening  content        closing</pre>
   <li><code>&lt;meta name="description"&gt;</code> — the summary snippet search engines display</li>
   <li><code>&lt;link rel="icon"&gt;</code> — the favicon</li>
 </ul>`
+    ,
+      teach: "Say: The head is ABOUT the page — almost none of it is visible except the title in the tab.\nAsk: Where do you actually see the title text? (Tab, bookmark, search result.)\nExtend: View-source a real site's head and identify each tag together; show a missing-viewport page on a phone."
     },
     {
       title: "The &lt;body&gt;: what the user sees",
@@ -67,6 +75,8 @@ opening  content        closing</pre>
   <li><code>&lt;div&gt;</code> and <code>&lt;span&gt;</code> — generic containers with no meaning of their own</li>
 </ul>
 <p>Use <b>one <code>&lt;h1&gt;</code> per page</b> and do not skip heading levels — <code>&lt;h1&gt;</code> then <code>&lt;h3&gt;</code> confuses screen readers and search engines. Headings convey outline, not font size; CSS handles size.</p>`
+    ,
+      teach: "Say: The body is everything visible. Headings are outline, not font size.\nAsk: Why one h1 per page? Who benefits from proper heading order? (Screen readers, search engines, skimmers.)\nExtend: Show a screen reader or browser outline view walking a well-structured page."
     },
     {
       title: "Semantic HTML",
@@ -81,6 +91,8 @@ opening  content        closing</pre>
   <li><code>&lt;footer&gt;</code> — closing content, copyright, contact</li>
 </ul>
 <p>Why it matters: screen readers let users jump straight to <code>&lt;main&gt;</code> or <code>&lt;nav&gt;</code>; search engines understand the page better; and the code is far easier for humans to read than nested <code>&lt;div class="wrapper-inner-2"&gt;</code>.</p>`
+    ,
+      teach: "Say: Semantic tags say what content IS — nav, main, article — instead of anonymous divs.\nAsk: Why would a screen-reader user love a page with a real <main> tag?\nExtend: Compare a div-soup page with a semantic one in view-source; connect to SEO in Unit 4."
     },
     {
       title: "Accessibility essentials",
@@ -92,6 +104,8 @@ opening  content        closing</pre>
   <li><b>Real buttons and links</b> — <code>&lt;button&gt;</code> and <code>&lt;a&gt;</code> are keyboard-operable for free. A clickable <code>&lt;div&gt;</code> is not.</li>
   <li><b>Enough colour contrast</b>, and never colour alone to convey meaning.</li>
 </ul>`
+    ,
+      teach: "Say: Accessibility is small habits: alt text, real link text, labels, real buttons, contrast.\nAsk: Read 'click here click here click here' as a screen reader would — what's wrong?\nExtend: Run a page through a contrast checker or Lighthouse live."
     },
     {
       title: "Where scripts and styles go",
@@ -107,6 +121,8 @@ opening  content        closing</pre>
   <li><code>class="something"</code> — reusable; many elements may share a class</li>
 </ul>
 <p>CSS and JavaScript both use these to target elements. Validate finished pages with the W3C validator, and inspect them with the browser's developer tools (F12).</p>`
+    ,
+      teach: "Say: CSS loads in the head, scripts at the end or deferred — it's about what paints first. id is unique, class is reusable.\nAsk: Why would a script in the head make a page feel slow?\nExtend: For advanced groups: demo defer vs blocking with a slow script; everyone else, close with the id/class distinction — CSS and JS both hang off them."
     }
   ],
 

@@ -14,6 +14,8 @@ section({
   <li>Your employer's confidential material, unless work has approved the tool</li>
 </ul>
 <p>Most tools have a setting to opt out of training on your chats. Worth finding on day one.</p>`
+    ,
+      teach: "Say: New rule of thumb: type nothing into a chat you wouldn't tell a helpful stranger from a company.\nAsk: Which of the never-paste list would people around you violate first?\nExtend: Find the training opt-out setting in your class's actual tool, together, now."
     },
     {
       title: "Verify before you publish",
@@ -25,6 +27,8 @@ section({
   <li><b>Links</b> — click every one; models invent convincing-looking URLs</li>
 </ul>
 <p>The trap is that errors are <i>sparse</i>: nineteen true statements build trust, and the twentieth — false — rides out on it. Spot-checking the claims that would embarrass you is the minimum.</p>`
+    ,
+      teach: "Say: Verification as a checklist: names, numbers, quotes, links — before anything ships under your name.\nAsk: Why are SPARSE errors worse than constant ones? (Trust builds, then one rides out on it.)\nExtend: Give groups an AI-written paragraph with two planted errors — first to find both wins."
     },
     {
       title: "Bias and blind spots",
@@ -35,6 +39,8 @@ section({
   <li>It mirrors your framing: "why is X terrible?" gets reasons X is terrible, whether or not X is terrible</li>
 </ul>
 <p>None of this makes the tool useless — it makes it one voice to weigh, not an oracle.</p>`
+    ,
+      teach: "Say: The model mirrors its training data and your framing. One voice to weigh, not an oracle.\nAsk: Ask 'why is X great?' then 'why is X terrible?' — what does the pair of answers teach?\nExtend: Run exactly that pair live on a debatable topic the class picks."
     },
     {
       title: "Whose work is it?",
@@ -44,6 +50,8 @@ section({
   <li><b>Do I own it like my own work?</b> Murkier. In the US, purely AI-generated work does not qualify for copyright; your edits and arrangement can.</li>
   <li><b>Is it fair?</b> Imitating a living artist's style, or generating a real person's likeness, may be legal-ish and still wrong. The tools will do it; that does not mean you should.</li>
 </ul>`
+    ,
+      teach: "Say: Three separate questions: can I use it, do I own it, is it fair. Don't let them blur.\nAsk: Is imitating a living artist's style okay if it's legal? Take temperature of the room.\nExtend: Copyright law here is jurisdiction-specific and moving — insert your local counsel's view or latest cases."
     },
     {
       title: "Honesty about AI help",
@@ -54,6 +62,8 @@ section({
   <li><b>Everyday writing</b> — an email you drafted with AI and edited into your own words is yours; no disclosure needed.</li>
 </ul>
 <p>The test: would the reader feel deceived if they found out? If yes, disclose.</p>`
+    ,
+      teach: "Say: The disclosure test is one sentence: would the reader feel deceived? Then disclose.\nAsk: AI-drafted wedding speech, edited by you — disclose or not? Argue both sides.\nExtend: Bring your school's or employer's actual AI policy — this is where it slots in."
     },
     {
       title: "Deepfakes and AI-powered scams",
@@ -64,6 +74,8 @@ section({
   <li><b>Flawless phishing</b> — the broken-English tell is gone; AI writes fluent scam email</li>
 </ul>
 <p>Defense is unchanged from Unit 1, applied harder: <b>verify through a separate channel</b>. Hang up and call the person on their known number. Urgency plus a request for money or codes is the signature of a scam, whatever the voice sounds like.</p>`
+    ,
+      teach: "Say: The same tools power scams now — cloned voices, deepfakes, flawless phishing. Defense unchanged: verify on a separate channel.\nAsk: Your 'sibling' calls in distress needing money — what do you DO, concretely?\nExtend: Agree on a family code word tonight — small homework, real protection. Play a deepfake detection example if you have one."
     },
     {
       title: "The habit that sums up the unit",
@@ -78,6 +90,8 @@ section({
   <li>Guard privacy, verify claims, stay honest (this section)</li>
 </ul>
 <p>That combination — tool skills plus judgment — is what competent AI use means.</p>`
+    ,
+      teach: "Say: The unit in one line: enormous leverage, no judgment — it drafts, you decide.\nAsk: Which section of this unit changed what you'll actually do this week?\nExtend: Recap by having students each name one habit they're adopting — commitment out loud sticks."
     }
   ],
 

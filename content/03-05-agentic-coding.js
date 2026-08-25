@@ -7,6 +7,8 @@ section({
       title: "From chatbot to agent",
       body: `<p>Everything so far has been chat: you ask, the model answers, you copy the answer out. An <b>agent</b> goes further — you give it a goal, and it works toward that goal by itself: reading your files, writing code, running commands, seeing the errors, and fixing them, in a loop, until the job is done or it needs your input.</p>
 <p>This is called <b>agentic coding</b>, and it is how software is increasingly built: you describe <i>what</i> you want, the agent handles most of the <i>how</i>, and you review and steer. Unit 2's knowledge — files, HTML, good code practices — is what lets you steer well.</p>`
+    ,
+      teach: "Say: Chat answers; an agent ACTS — reads files, writes code, runs it, fixes it, loops. This is the biggest shift in the unit.\nAsk: What's the difference between asking for directions and hiring a driver?\nExtend: If you have a live agent set up, a two-minute demo here beats every slide that follows."
     },
     {
       title: "Our tools: Claude and Zed",
@@ -16,6 +18,8 @@ section({
   <li><b>Zed</b> (zed.dev) — a fast, free code editor with an <b>Agent Panel</b> built in. Claude runs inside it, sees your project, and proposes changes you review right in the editor.</li>
 </ul>
 <p>Editor plus agent is the working pattern: the editor is where <i>you</i> read and adjust code; the agent panel is where you describe work and review what the agent did. Same skills apply in other editors (VS Code, Cursor) — the tools differ, the workflow doesn't.</p>`
+    ,
+      teach: "Say: Our stack: Claude is the model, Zed is the editor it works inside. Skills transfer to any editor-plus-agent pair.\nAsk: Why keep the human in an editor at all — why not just chat?\nExtend: Tour the Zed Agent Panel live; mention the equivalents (VS Code, Cursor) your students may meet."
     },
     {
       title: "Getting set up",
@@ -26,6 +30,8 @@ section({
   <li>Type what you want built or fixed, in plain language, and watch it work.</li>
 </ol>
 <p>Everything is a normal folder of normal files (Unit 1) — the agent edits the same <code>.html</code>, <code>.css</code>, and <code>.js</code> files you could open yourself. No magic location, no lock-in.</p>`
+    ,
+      teach: "Say: Setup is mundane on purpose — download from the official site, open a folder, sign in. The agent sees only that folder.\nAsk: Callback: how do we know zed.dev is the real site? (Unit 1 habits.)\nExtend: Walk the class through the actual install on your platform; note org restrictions if machines are managed."
     },
     {
       title: "Describing the work",
@@ -33,6 +39,8 @@ section({
 <p>Weak: <i>"make a website"</i>. Strong:</p>
 <p><i>"Build a one-page site for my bakery: name, opening hours, a photo gallery, and a contact section. Plain HTML/CSS/JS, no frameworks. Warm colors. Must look good on a phone."</i></p>
 <p>Cover: <b>what</b> to build, <b>constraints</b> (tools, files, what not to touch), and <b>what done looks like</b>. When fixing a bug, paste the exact error message and say how to reproduce it — the same habit as searching an error, aimed at an agent that can actually fix it.</p>`
+    ,
+      teach: "Say: The full task up front — goal, constraints, done-looks-like. Agents reward good briefs.\nAsk: Draft the bakery-site brief as a class; what did we forget? (Phone layout? Colors? No frameworks?)\nExtend: Run the weak brief and the strong brief against a real agent and compare the first attempt."
     },
     {
       title: "Reviewing what it did",
@@ -42,6 +50,8 @@ section({
   <li><b>Run the result.</b> Open the page, click the buttons, try the edge cases (Unit 2: empty input, first and last item).</li>
   <li><b>Work in small steps.</b> One feature at a time, verified working, then the next — the same rhythm as Unit 2's good code practices, now with the agent doing the typing.</li>
 </ul>`
+    ,
+      teach: "Say: The diff is the deal: the agent proposes, you dispose. Reading diffs is the new code literacy.\nAsk: Why is 'accept all without reading' the same as 'sign without reading'?\nExtend: Project a small diff and read it together — old, new, why."
     },
     {
       title: "When the agent gets stuck or it breaks",
@@ -52,6 +62,8 @@ section({
   <li><b>Keep known-good versions.</b> Save or commit whenever the project works, so any experiment is one undo away. Agents make this <i>more</i> important, not less — they can change many files at once.</li>
   <li><b>Fresh start beats long argument.</b> A long, tangled agent session drifts, like a long chat. Start a new session and restate the task cleanly.</li>
 </ul>`
+    ,
+      teach: "Say: When it breaks: evidence, small steps, known-good saves, fresh sessions. Unit 2's debugging method, delegated.\nAsk: Which is more useful to an agent: 'it doesn't work' or the pasted error message?\nExtend: If demoing live, break something on purpose and let the class watch the recovery loop."
     },
     {
       title: "Judgment, cost, and ownership",
@@ -62,6 +74,8 @@ section({
   <li><b>Agents cost money by the token.</b> Clear, complete requests that succeed on the first pass cost less than long flailing sessions. Specificity is now a budgeting skill.</li>
   <li><b>Understanding compounds.</b> Every diff you actually read teaches you the codebase. People who only accept-all stay dependent; people who read become the engineer the agent works for.</li>
 </ul>`
+    ,
+      teach: "Say: Close on ownership: you ship it, you own it. Secrets stay out of prompts. Reading diffs compounds into skill.\nAsk: Who's responsible when AI-written code leaks user data? Debate it briefly.\nExtend: Share how professional teams handle this today — review requirements, CI, code owners."
     }
   ],
 

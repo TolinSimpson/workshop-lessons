@@ -12,6 +12,8 @@ section({
   <li><b>Your computer itself</b> — as a tool for sending spam or attacking others.</li>
 </ul>
 <p>Notice what is missing: movie-style hacking of your machine by genius programmers. The real front door is <b>you being tricked</b> — which is why most of this section is about habits, not software.</p>`
+    ,
+      teach: "Say: Attackers are not movie hackers — they're after accounts, money, and machines, mostly by tricking people.\nAsk: What would a stranger want with YOUR account specifically? (Answer: resale, spam, leverage on others.)\nExtend: Share a real local phishing or scam incident if you can — nothing lands like a true story."
     },
     {
       title: "What makes a password strong",
@@ -22,6 +24,8 @@ section({
 </ul>
 <p><code>P@ssw0rd1!</code> looks complex but is one of the first things cracking tools try — substituting <code>@</code> for <code>a</code> and <code>0</code> for <code>o</code> is a known trick.</p>
 <p>A passphrase of four random unrelated words, like <code>correct-battery-lamp-staple</code>, is longer, far harder to guess, and easier to remember.</p>`
+    ,
+      teach: "Say: Length beats cleverness. P@ssw0rd1! is weak; four random words are strong.\nAsk: Race: which is harder to guess, 'Tr0ub4dor!' or 'correct-battery-lamp-staple'? Why?\nExtend: Show a password-strength estimator, or the math of guesses per character added."
     },
     {
       title: "The real danger: password reuse",
@@ -29,6 +33,8 @@ section({
 <p>When any one site is breached, attackers take the stolen email-and-password list and try it automatically on hundreds of other sites — banks, email, social media. This is called <b>credential stuffing</b>.</p>
 <p>Your strongest password is worthless if the site that leaked it was a forum you forgot about in 2014.</p>
 <p><b>Rule: every account gets its own unique password.</b></p>`
+    ,
+      teach: "Say: Reuse is the real killer — one leaked forum password unlocks your email.\nAsk: Hands up (privately, to yourself): who reuses a password right now?\nExtend: Show haveibeenpwned.com with a volunteer email or a known-breached example."
     },
     {
       title: "Password managers",
@@ -36,6 +42,8 @@ section({
 <p>It generates long random passwords, stores them encrypted, and fills them in automatically. You memorize exactly one strong master password.</p>
 <p>A bonus security feature: a password manager fills in credentials only on the <b>correct domain</b>. If a phishing site looks identical to your bank but the address is <code>bank-secure-login.com</code>, the manager stays silent — a useful warning your eyes might miss.</p>
 <p>Never store passwords in a plain text file or on a sticky note on the monitor.</p>`
+    ,
+      teach: "Say: Nobody memorizes a hundred passwords — the manager does it, you memorize one.\nAsk: Why is a manager filling passwords only on the right domain a phishing defence?\nExtend: Demo whichever manager your school or org actually uses; discuss browser-saved vs dedicated managers."
     },
     {
       title: "Two-factor authentication (2FA)",
@@ -47,6 +55,8 @@ section({
 </ul>
 <p><b>Two-factor authentication</b> requires two different kinds. A password plus a second password is not 2FA — both are "something you know".</p>
 <p>Why it works: a stolen password alone is no longer enough to get in.</p>`
+    ,
+      teach: "Say: Two DIFFERENT kinds of proof — that's what makes 2FA work.\nAsk: Password plus security question — is that 2FA? Why not?\nExtend: Have students enable 2FA on a real account before leaving today."
     },
     {
       title: "2FA methods, weakest to strongest",
@@ -59,6 +69,8 @@ section({
   <tr><td>Hardware key / passkey</td><td>Strongest</td><td>Cryptographically bound to the real domain, so phishing sites cannot use it. Can be lost.</td></tr>
 </table>
 <p>Save your <b>backup recovery codes</b> somewhere safe and offline when you enable 2FA. Losing your phone without them can lock you out permanently.</p>`
+    ,
+      teach: "Say: Not all 2FA is equal — walk the table weakest to strongest.\nAsk: Why does texting a code beat nothing but lose to an app?\nExtend: SIM-swapping stories and passkeys are rich ground here; demo a passkey login if you can."
     },
     {
       title: "Malware: the family tree",
@@ -72,6 +84,8 @@ section({
   <tr><td><b>Spyware / keylogger</b></td><td>Silently records activity, keystrokes, passwords</td></tr>
   <tr><td><b>Adware</b></td><td>Forces unwanted ads, hijacks search and browser settings</td></tr>
 </table>`
+    ,
+      teach: "Say: Malware is the family name — the table is the family members. Don't memorize, recognize.\nAsk: Which of these have you heard of in the news?\nExtend: Ransomware deserves the extra minutes: a local hospital or council case study works well."
     },
     {
       title: "How infections actually happen",
@@ -84,6 +98,8 @@ section({
   <li>Plugging in an unknown USB drive</li>
 </ul>
 <p>Signs of infection: sudden slowness, new toolbars or homepages, unknown programs at startup, disabled antivirus, fans running hard while idle, contacts receiving messages you never sent.</p>`
+    ,
+      teach: "Say: Most infections need a human to open the door — that's good news, the door is ours.\nAsk: Which of these routes have you seen attempted in real life?\nExtend: Show a real 'fake update' popup screenshot; discuss macro warnings in Office."
     },
     {
       title: "Antivirus, sensibly",
@@ -95,6 +111,8 @@ section({
   <li>Keep <b>real-time protection</b> on, and keep the operating system updated. Most successful attacks exploit holes that were patched months ago.</li>
 </ul>
 <p>Antivirus is one layer, not a force field. <b>Backups beat everything.</b> Follow the <b>3-2-1 rule</b> — 3 copies, on 2 different media, 1 stored offsite or offline. Ransomware cannot encrypt a backup drive that is unplugged.</p>`
+    ,
+      teach: "Say: Antivirus knows fingerprints and watches behavior — that's why updates matter and why it's one layer, not a force field.\nAsk: Why can't antivirus catch a brand-new virus by fingerprint?\nExtend: Backups deserve real time: tell a ransomware-recovery story and walk the 3-2-1 rule with the class's own data."
     },
     {
       title: "Safe downloading",
@@ -105,6 +123,8 @@ section({
   <li>Be suspicious of executable extensions: <code>.exe</code>, <code>.msi</code>, <code>.bat</code>, <code>.scr</code> — and remember the hidden-extensions trick from Section 1.</li>
   <li>Uncheck the bundled extras in installers — toolbars and "helpers" hidden behind the Express option.</li>
 </ul>`
+    ,
+      teach: "Say: Downloading safely is mostly one habit: the official source.\nAsk: You search for 'VLC download' — which result do you click and why?\nExtend: Anatomy of a fake download page — show one (safely) or a screenshot; mention VirusTotal."
     },
     {
       title: "Email threats: phishing",
@@ -115,6 +135,8 @@ section({
   <li><b>Smishing</b> / <b>vishing</b> — the same attack by SMS or voice call</li>
   <li><b>Business email compromise</b> — an urgent request for a payment or gift cards, apparently from your boss</li>
 </ul>`
+    ,
+      teach: "Say: Phishing is the most likely attack every person here will face this year.\nAsk: Who has received one? What did it claim?\nExtend: Bring 2-3 real phishing emails (redacted) for the class to judge."
     },
     {
       title: "Spotting a phishing email",
@@ -127,6 +149,8 @@ section({
   <li><b>Requests for credentials, codes, or payment.</b> Legitimate organisations never ask for your password or your 2FA code.</li>
 </ul>
 <p><b>The reliable defence:</b> do not use links or numbers from the message. Open a new tab, type the site's address yourself, and log in there. If it was real, the notice will be waiting in your account.</p>`
+    ,
+      teach: "Say: Walk the red flags in order — urgency first, because panic is the mechanism.\nAsk: Project a sample email: find every flag as a group.\nExtend: The hover-to-see-the-real-link move deserves a live demo on desktop and mobile."
     },
     {
       title: "If something goes wrong",
@@ -140,6 +164,8 @@ section({
   <li><b>Tell someone</b> — your IT department, your bank. Fast reporting is what limits the damage.</li>
 </ol>
 <p>Note that your <b>email account is the master key</b>: whoever controls it can reset the password on everything else. Protect it with the strongest password and the strongest 2FA you have.</p>`
+    ,
+      teach: "Say: If it happens, order matters: disconnect, change password from a clean device, then widen out.\nAsk: Why change the password from a DIFFERENT device?\nExtend: 'Email is the master key' — trace together everything a stolen inbox can reset. Add your org's incident-reporting route here."
     }
   ],
 

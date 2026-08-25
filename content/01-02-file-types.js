@@ -12,6 +12,8 @@ section({
   <li><b>Text files</b> — bytes represent readable characters. Openable in Notepad.</li>
   <li><b>Binary files</b> — bytes represent anything else. Opening one in Notepad shows garbage.</li>
 </ul>`
+    ,
+      teach: "Say: Same bytes, different meaning — the format is the decoder ring.\nAsk: Open a photo in Notepad — what do you expect to see?\nExtend: Actually do it: rename a .jpg to .txt and open it. The garbage on screen makes the point instantly."
     },
     {
       title: "Compression",
@@ -23,6 +25,8 @@ section({
 <p>When the file is opened, the instruction is followed and all twenty A's come back exactly. Nothing was lost — the <b>description</b> got shorter, not the information.</p>
 <p>Real files rarely repeat a single letter, but they are full of other repetition — the same words appearing again and again in a document, large patches of identical colour in an image. Compressors hunt for those patterns the same way.</p>
 <p>Why bother: smaller files mean less disk space, faster downloads, and lower bandwidth costs. The trade-off is CPU time: something has to compress and decompress the data.</p>`
+    ,
+      teach: "Say: Compression sounds technical but the 'repeat A twenty times' example makes it click. Walk it slowly.\nAsk: What kinds of files do you think squeeze well? Text? Photos? Why?\nExtend: Zip a large text file live and compare sizes; deeper groups can hear about run-length encoding vs dictionary methods."
     },
     {
       title: "Lossless compression",
@@ -30,6 +34,8 @@ section({
 <p><b>Use it when any change would break the file:</b> documents, spreadsheets, source code, program executables, logos and diagrams, archives.</p>
 <p>Examples: <code>.zip</code>, <code>.png</code>, <code>.flac</code>, <code>.gif</code>, <code>.7z</code></p>
 <p>Downside: the size reduction is limited. You cannot losslessly compress a photo to 5% of its size.</p>`
+    ,
+      teach: "Say: Lossless means every bit comes back — stress when that matters.\nAsk: What would happen if one letter changed in your saved essay? In a program?\nExtend: Contrast with a corrupted download story from your own experience."
     },
     {
       title: "Lossy compression",
@@ -37,6 +43,8 @@ section({
 <p>The discarded data is <b>gone forever</b>. Decompressing gives an approximation, not the original.</p>
 <p>Examples: <code>.jpg</code>, <code>.mp3</code>, <code>.mp4</code>, <code>.aac</code>, <code>.webp</code> (lossy mode)</p>
 <p><b>Generation loss:</b> every time you re-save a JPEG, it is compressed again and quality drops further. Editing and re-saving the same JPEG twenty times visibly destroys it. Lossless formats do not suffer from this.</p>`
+    ,
+      teach: "Say: Lossy throws data away forever — and mostly nobody notices. That's the trick.\nAsk: Why can music survive losing data but a spreadsheet can't?\nExtend: Play a heavily compressed vs original audio clip if you have speakers; generation loss demos well by re-saving a JPEG ten times."
     },
     {
       title: "Lossless vs lossy side by side",
@@ -50,6 +58,8 @@ section({
   <tr><td>Formats</td><td>ZIP, PNG, FLAC, 7z</td><td>JPEG, MP3, MP4</td></tr>
 </table>
 <p>Rule of thumb: <b>edit in lossless, deliver in lossy.</b></p>`
+    ,
+      teach: "Say: This table is the takeaway — edit in lossless, deliver in lossy.\nAsk: Which column would you pick for wedding photos you're editing? For posting them?\nExtend: Relate to your own workflow — RAW photography, audio masters, video exports."
     },
     {
       title: "Raster vs vector images",
@@ -61,6 +71,8 @@ section({
 <li>Tiny file sizes for logos, icons, diagrams</li>
 <li>Cannot represent a photograph well</li></ul>
 <p>Scale a raster logo to a billboard and it turns to mush. Scale a vector logo and it stays crisp.</p>`
+    ,
+      teach: "Say: Pixels versus math — zoom is the tell.\nAsk: Why does a logo go blurry on a poster but a printed font never does?\nExtend: Zoom deep into a PNG and an SVG side by side in the browser."
     },
     {
       title: "Image formats and their uses",
@@ -73,6 +85,8 @@ section({
   <tr><td>WEBP</td><td>Raster, lossy or lossless</td><td>Yes</td><td>Modern web images — smaller than JPEG or PNG</td></tr>
 </table>
 <p>Quick picks: <b>photo on a website → JPEG or WEBP. Logo with transparent background → PNG or SVG. Screenshot of text → PNG</b> (JPEG makes text edges fuzzy).</p>`
+    ,
+      teach: "Say: This table answers the question everyone actually asks: which format do I pick?\nAsk: Screenshot of text — JPEG or PNG? Let them argue before revealing.\nExtend: Show a JPEG screenshot's fuzzy text edges at 200% zoom."
     },
     {
       title: "Text formats: plain text",
@@ -85,6 +99,8 @@ section({
   <li><code>.html</code>, <code>.css</code>, <code>.js</code> — source code, coming in Unit 2</li>
 </ul>
 <p>Character encoding matters here. <b>UTF-8</b> is the modern standard and covers every language and emoji. Wrong encoding is why you sometimes see <code>Ã©</code> where an <code>é</code> should be.</p>`
+    ,
+      teach: "Say: Plain text is the cockroach of file formats — it survives everything.\nAsk: Why do programmers keep notes in .txt and .md instead of Word?\nExtend: Open a .csv in both Notepad and a spreadsheet app to show one file, two views. The Ã© mojibake example is worth telling as a story."
     },
     {
       title: "Text formats: rich text and documents",
@@ -96,6 +112,8 @@ section({
   <tr><td>.odt</td><td>Open document standard</td><td>Same role as .docx, open format</td></tr>
 </table>
 <p>Key distinction: <b>.docx is for editing, .pdf is for delivering.</b> A PDF preserves exact layout and fonts on every device; a .docx may re-flow differently if the reader lacks your font.</p>`
+    ,
+      teach: "Say: docx is for editing, pdf is for delivering — say it twice, it's on the test of life.\nAsk: Why do job applications ask for PDF resumes?\nExtend: Show the same document re-flowing badly on another machine if you have one handy."
     },
     {
       title: "ZIP files",
@@ -107,6 +125,8 @@ section({
 </ul>
 <p>Common trap: some programs cannot open files that are still <i>inside</i> a ZIP. If a downloaded ZIP "doesn't work", extract it first, then use the extracted files.</p>
 <p>You may also meet cousins — <code>.7z</code>, <code>.rar</code>, <code>.tar.gz</code> — which do the same job with different tools. Free programs like 7-Zip open all of them.</p>`
+    ,
+      teach: "Say: ZIP is the format everyone uses and nobody was taught.\nAsk: Who has double-clicked a ZIP and been confused why the program inside 'didn't work'?\nExtend: Demonstrate extract-first live; mention 7-Zip and password-protected archives if asked."
     }
   ],
 

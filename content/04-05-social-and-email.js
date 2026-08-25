@@ -12,6 +12,8 @@ section({
   <li><b>Watch-through is king.</b> The feeds measure whether people watched to the end (and rewatched). Short and fully-watched beats long and abandoned.</li>
   <li><b>Native beats polished.</b> Feed audiences respond to authentic, direct-to-camera content over produced ads — a phone and good light genuinely suffice.</li>
 </ul>`
+    ,
+      teach: "Say: Short-form feeds are algorithmic auditions — every video tested on strangers, follower counts optional.\nAsk: How is a swipe decision different from a click decision?\nExtend: Scroll a feed together (curated in advance) and time how long each video gets before the swipe."
     },
     {
       title: "Hooks",
@@ -24,6 +26,8 @@ section({
   <li><b>Mid-action start</b> — begin at the interesting part; explain later, or never</li>
 </ul>
 <p>Write the hook before filming — the same packaging-first discipline as YouTube titles. And the promise rule carries over: a hook the video doesn't pay off trains the audience (and the algorithm) to skip you.</p>`
+    ,
+      teach: "Say: The hook — one to three seconds — decides everything. Write it before filming.\nAsk: Match real videos to the five hook patterns on this slide.\nExtend: Have students write three hooks for one topic and vote on the strongest."
     },
     {
       title: "Choose platforms deliberately",
@@ -38,6 +42,8 @@ section({
   <tr><td>Facebook</td><td>Local businesses, older demographics, groups</td></tr>
 </table>
 <p>The sane strategy: <b>one primary platform</b> mastered — where your audience actually spends time and your format fits — plus repurposed content elsewhere. Spread thin, you'll be mediocre everywhere; algorithms reward the consistent, not the omnipresent.</p>`
+    ,
+      teach: "Say: You can't do every platform well — one primary, mastered, plus repurposing. The table is a matching exercise.\nAsk: For YOUR niche, which platform is primary and why?\nExtend: Insert your local/industry knowledge here — where your students' real audiences actually are."
     },
     {
       title: "Repurposing: make once, publish everywhere",
@@ -48,6 +54,8 @@ section({
   <li><b>Reshape per platform</b> — three Shorts, an article for the site (SEO), a LinkedIn post, a newsletter section — each adapted to its platform's native form, not blind cross-posting</li>
 </ol>
 <p>One day of real work becomes a week of presence. The pillar carries your depth and experience; the fragments carry reach; every fragment points back to home base.</p>`
+    ,
+      teach: "Say: The efficiency engine: one pillar piece becomes a week of platform-native fragments — AI does the mechanical middle.\nAsk: Which Unit 3 tools appear in this pipeline? (Transcription, chatbot extraction, clip tools.)\nExtend: Take one real long video and storyboard its fragments as a class."
     },
     {
       title: "Email: the asset you keep",
@@ -59,6 +67,8 @@ section({
   <li><b>A consistent newsletter</b> — same value-first ratio as everywhere else: useful every time, occasional ask</li>
 </ol>
 <p>Two rules: <b>consent</b> — only email people who signed up (spam laws like GDPR and CAN-SPAM are real, and every email needs an unsubscribe link); and <b>deliver</b> — a subscriber's inbox is the most personal space in marketing, so respect it.</p>`
+    ,
+      teach: "Say: Email is the asset you keep — lead magnet, signup, consistent value. Consent and unsubscribe are law, not politeness.\nAsk: What free thing would YOUR audience trade an email for?\nExtend: Show a great newsletter you actually read and dissect why it survives in your inbox."
     },
     {
       title: "Engagement is a two-way street",
@@ -69,6 +79,8 @@ section({
   <li><b>Borrow audiences legitimately</b> — collaborations, duets and stitches, podcast guesting, being genuinely useful in others' comment sections. Growth compounds through other people's audiences.</li>
   <li><b>Disclose sponsorships</b> — "ad" or "sponsored", clearly. It's the law in most countries, and audiences punish hidden ads harder than honest ones.</li>
 </ul>`
+    ,
+      teach: "Say: Platforms measure conversation — reply early, mine comments for ideas, borrow audiences honestly, disclose ads.\nAsk: Why are your own comment sections a pre-validated content mine?\nExtend: Local ad-disclosure rules vary — insert your jurisdiction's specifics (FTC, ASA, etc.)."
     },
     {
       title: "The system, assembled",
@@ -82,6 +94,8 @@ section({
   <li><b>Ownership</b> — every channel feeding the email list and site you control (§1, §5)</li>
 </ol>
 <p>AI accelerates every step — research, drafts, thumbnails, clips, analysis — and none of it replaces the loop: <b>make something valuable for a specific audience, read the data, make the next one better.</b> That loop, run consistently, is the entire game.</p>`
+    ,
+      teach: "Say: The whole unit assembled: foundations, search, YouTube, metadata, reach, ownership — one machine, run consistently.\nAsk: Which single section would most change what you do this month?\nExtend: Close the unit by having each student sketch their own version of this system on one page."
     }
   ],
 

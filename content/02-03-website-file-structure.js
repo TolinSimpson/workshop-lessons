@@ -13,6 +13,8 @@ section({
   <li><b>.css</b> — appearance</li>
   <li><b>.js</b> — behaviour and interactivity</li>
 </ul>`
+    ,
+      teach: "Say: Demystify it completely: a website is a folder of files on a computer that never sleeps.\nAsk: So what's in the folder for the sites you visit daily?\nExtend: Open view-source on a real page — the file is right there."
     },
     {
       title: "The three-layer separation",
@@ -24,6 +26,8 @@ section({
   <tr><td>Behaviour</td><td>JavaScript</td><td>Reacting to clicks, fetching data, changing the page</td><td>The muscles</td></tr>
 </table>
 <p>Why bother: one CSS file restyles a thousand pages at once, and the browser caches it after the first download.</p>`
+    ,
+      teach: "Say: Three layers, three jobs — skeleton, clothes, muscles.\nAsk: If you restyle a thousand-page site, which layer do you touch and how many files?\nExtend: Toggle a site's CSS off in DevTools — the unstyled skeleton makes the separation visceral."
     },
     {
       title: "index.html is special",
@@ -32,6 +36,8 @@ section({
 example.com/about/    → serves  /about/index.html</pre>
 <p>This is a server convention, not an HTML rule. It is why nearly every site's homepage is named <code>index.html</code>, and why GitHub Pages requires one at the top of your repository.</p>
 <p>Without an index file, a server either shows a bare directory listing or returns a 404.</p>`
+    ,
+      teach: "Say: index.html is the default file for a folder — a server convention, not magic.\nAsk: Why does example.com show a page when you never typed a filename?\nExtend: Show a directory listing from a server without an index file if you can find one."
     },
     {
       title: "A typical project layout",
@@ -54,6 +60,8 @@ example.com/about/    → serves  /about/index.html</pre>
   <li><b>Lowercase names, hyphens instead of spaces.</b> <code>my-page.html</code>, never <code>My Page.html</code> — spaces become <code>%20</code> in URLs and look broken</li>
   <li>Keep every file inside the project folder so relative links survive being moved or deployed</li>
 </ul>`
+    ,
+      teach: "Say: The layout on this slide is the one they'll use in their own project — group by type, lowercase, hyphens.\nAsk: Why does 'My Page.html' break as a URL?\nExtend: %20 in a real URL is worth showing; discuss your own naming conventions."
     },
     {
       title: "Linking files together",
@@ -70,6 +78,8 @@ example.com/about/    → serves  /about/index.html</pre>
   <li><code>https://example.com/x.css</code> — absolute: another site entirely</li>
 </ul>
 <p>Two classic bugs: <b>case sensitivity</b> — <code>Logo.svg</code> works on your Windows machine and 404s on the Linux server — and using <code>C:\\Users\\me\\photo.jpg</code>, which only exists on your own computer.</p>`
+    ,
+      teach: "Say: Files point at each other with paths — the same paths from Unit 1, now load-bearing.\nAsk: The image works on your laptop but 404s on the server — what are the two classic causes?\nExtend: Case-sensitivity on Linux servers bites everyone once; tell the story now so it bites them never."
     },
     {
       title: "Static vs dynamic sites",
@@ -82,6 +92,8 @@ example.com/about/    → serves  /about/index.html</pre>
   <tr><td>Examples</td><td>Portfolios, docs, blogs, this course site</td><td>Facebook, Amazon, online banking</td></tr>
 </table>
 <p><b>GitHub Pages hosts static sites only.</b> It serves files; it will not run PHP or a database for you. Dynamic-feeling behaviour is still possible by using JavaScript in the browser to call an external API.</p>`
+    ,
+      teach: "Say: Static means pre-written files; dynamic means built per request. Our course site is static — that's why hosting it is free.\nAsk: Is your bank's account page static or dynamic? How do you know?\nExtend: Discuss where static sites end and databases begin; JAMstack for advanced groups."
     },
     {
       title: "Front end and back end",
@@ -90,6 +102,8 @@ example.com/about/    → serves  /about/index.html</pre>
   <li><b>Back end (server-side)</b> — code running on the server: databases, authentication, payments. Hidden from the user.</li>
 </ul>
 <p>Critical consequence: <b>never put secrets in front-end code.</b> API keys and passwords in JavaScript are readable by every visitor. "Hidden" fields and disabled buttons are trivially bypassed. All real validation must happen on the server.</p>`
+    ,
+      teach: "Say: Front end is visible to everyone; back end is hidden — and that's a security boundary, not a suggestion.\nAsk: Why is an API key in front-end JavaScript already leaked?\nExtend: Press F12 on a real site and read its front-end code together — proof nothing client-side is secret. This rule returns in the agentic coding lesson."
     }
   ],
 

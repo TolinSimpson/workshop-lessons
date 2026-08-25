@@ -13,6 +13,8 @@ section({
   <li>The <b>server</b> — the always-on machine that sends them</li>
   <li>The <b>domain name</b> — the human-readable address that points to that server</li>
 </ol>`
+    ,
+      teach: "Say: Hosting is renting a computer that never sleeps. Files, server, domain — three pieces, that's the whole product.\nAsk: Why not just serve the site from my laptop? Collect the reasons before revealing.\nExtend: Price out a real host live if you like — the numbers are surprisingly small."
     },
     {
       title: "Domains and DNS",
@@ -26,6 +28,8 @@ section({
  └─────────────── subdomain</pre>
 <p>You <b>rent</b> a domain from a registrar, typically yearly. You never own it outright, and letting it expire means someone else can take it.</p>
 <p>DNS changes take time to spread worldwide — <b>propagation</b> — usually minutes to a few hours.</p>`
+    ,
+      teach: "Say: DNS is the phone book: names to numbers. You rent a domain, never own it.\nAsk: What happens if a business forgets to renew its domain?\nExtend: Run nslookup on a known site; read a domain right-to-left again (TLD, name, subdomain) — it echoes the URL lesson."
     },
     {
       title: "How a page load actually works",
@@ -45,6 +49,8 @@ section({
   <li><b>403</b> — forbidden; you are not allowed</li>
   <li><b>500</b> — server error; the server's own code broke</li>
 </ul>`
+    ,
+      teach: "Say: Walk the page-load steps in order — DNS, connect, request, response, render. Status codes are the server talking back.\nAsk: What's the difference between a 404 and a 500 — whose fault is each?\nExtend: Open the browser network tab and watch a real page load: every request, every code."
     },
     {
       title: "Types of hosting",
@@ -55,6 +61,8 @@ section({
   <tr><td><b>Cloud servers</b></td><td>Rented machines, scale with demand</td><td>Apps with their own server code and databases</td></tr>
 </table>
 <p>A <b>CDN</b> (content delivery network) is a complementary layer: copies of your files cached in data centres worldwide, so a visitor in Tokyo is served from Tokyo rather than Virginia. Faster, and it absorbs traffic spikes.</p>`
+    ,
+      teach: "Say: The hosting menu, cheap to serious. For a folder of files, static hosting is free and enough.\nAsk: Which row fits the site this course builds? Which fits a bank?\nExtend: CDNs are a nice aside: why the same file loads fast in Tokyo and Toronto."
     },
     {
       title: "GitHub Pages",
@@ -68,6 +76,8 @@ section({
   <li>Every push to that branch redeploys automatically.</li>
 </ol>
 <p>Limits: static files only — no PHP, no server-side database. Public repositories on the free tier. A soft limit around 1 GB and 100 GB of bandwidth per month, which is far beyond a course site's needs.</p>`
+    ,
+      teach: "Say: GitHub Pages — the free path from folder to live URL. This is the slide their own site ships through.\nAsk: What must sit at the top of the repository for it to work?\nExtend: Deploy something live in class if accounts allow — nothing beats seeing a URL come alive."
     },
     {
       title: "HTTPS and certificates",
@@ -75,6 +85,8 @@ section({
 <p>An <b>SSL/TLS certificate</b> proves the server really is the one for that domain and enables the encryption. <b>Let's Encrypt</b> issues them free, and most hosts including GitHub Pages provision one automatically.</p>
 <p>Use HTTPS on every site, not just ones handling payments. Browsers mark plain HTTP pages "Not secure", search engines rank them lower, and modern browser features refuse to run without it.</p>
 <p>Remember the earlier lesson: the padlock proves the connection is encrypted and the domain matches the certificate. It does <b>not</b> prove the site is honest.</p>`
+    ,
+      teach: "Say: HTTPS everywhere — encryption plus proof you reached the right domain. Free now, so no excuses.\nAsk: Padlock on a scam site — possible? (Yes. Encrypted ≠ honest — callback to Unit 1.)\nExtend: Click a real certificate in the browser and read who issued it."
     },
     {
       title: "Deploying and maintaining",
@@ -91,6 +103,8 @@ section({
   <li>Watch analytics and uptime</li>
 </ul>
 <p>Costs, roughly: domain £8–15 a year, static hosting free, shared hosting £3–10 a month.</p>`
+    ,
+      teach: "Say: Push to deploy is the modern loop; then the boring duties — renew the domain, patch, back up.\nAsk: Which of these duties kills the most real websites? (Expired domains and no backups.)\nExtend: Share a real 'site went down' story and which duty was skipped."
     }
   ],
 
