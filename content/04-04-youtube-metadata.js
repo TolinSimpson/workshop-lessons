@@ -112,6 +112,7 @@ Newsletter: yoursite.com/news
   questions: [
     {
       q: "How does YouTube primarily \"read\" what your video is about?",
+      key: true,
       choices: [
         "Its staff watch and label every uploaded video",
         "From the metadata — title, description, chapters, and captions",
@@ -122,6 +123,7 @@ Newsletter: yoursite.com/news
     },
     {
       q: "What does YouTube's misleading-metadata policy prohibit?",
+      key: true,
       choices: [
         "Descriptions longer than one paragraph",
         "Using exactly the same title style on every single video you upload",
@@ -132,6 +134,7 @@ Newsletter: yoursite.com/news
     },
     {
       q: "Why do the first ~100–150 characters of a description matter most?",
+      key: true,
       choices: [
         "They are the only part shown in search and above the fold",
         "YouTube deletes everything after the first two lines automatically",

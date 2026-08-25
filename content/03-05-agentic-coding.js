@@ -82,6 +82,7 @@ section({
   questions: [
     {
       q: "What makes a coding agent different from a chatbot?",
+      key: true,
       choices: [
         "It answers questions about code much faster than an ordinary general-purpose chatbot ever could",
         "It works toward a goal itself — reading files, editing, running, and fixing in a loop",
@@ -122,6 +123,7 @@ section({
     },
     {
       q: "What is a diff?",
+      key: true,
       choices: [
         "A side-by-side view of old code and new code showing what changed",
         "An error message produced when two programs try to change the same file at once",
@@ -132,6 +134,7 @@ section({
     },
     {
       q: "The agent finished a change. What should you do before asking for the next feature?",
+      key: true,
       choices: [
         "Immediately publish the project while the change is fresh",
         "Read the changes and run the result to confirm it works",

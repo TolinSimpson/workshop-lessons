@@ -159,6 +159,7 @@ opening  content        closing</pre>
     },
     {
       q: "Which two elements are the direct children of `<html>`?",
+      key: true,
       choices: [
         "<header> and <footer>",
         "<title> and <body>",
@@ -189,6 +190,7 @@ opening  content        closing</pre>
     },
     {
       q: "Where does content that the user actually sees on the page go?",
+      key: true,
       choices: [
         "Inside <head>",
         "Inside <body>",
@@ -219,6 +221,7 @@ opening  content        closing</pre>
     },
     {
       q: "What is the correct use of the `alt` attribute on an image?",
+      key: true,
       choices: [
         "The filename of the image, so the browser knows which file to load",
         "A description of the image's meaning, read by screen readers",

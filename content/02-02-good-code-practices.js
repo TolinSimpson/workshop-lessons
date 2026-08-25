@@ -93,6 +93,7 @@ sendToPrinter(job, { retries: 2 });</pre>
   questions: [
     {
       q: "Why does readable code matter if the program already works?",
+      key: true,
       choices: [
         "It doesn't — working is all that counts",
         "Code is read many times after it is written; unreadable code is where bugs hide",
@@ -133,6 +134,7 @@ sendToPrinter(job, { retries: 2 });</pre>
     },
     {
       q: "What problem does DRY (Don't Repeat Yourself) prevent?",
+      key: true,
       choices: [
         "Programs using too much memory, since every pasted copy doubles the RAM the program needs while running",
         "A change made in three of four pasted copies, leaving the fourth as a lurking bug",
@@ -173,6 +175,7 @@ sendToPrinter(job, { retries: 2 });</pre>
     },
     {
       q: "What is the FIRST step of methodical debugging?",
+      key: true,
       choices: [
         "Rewrite the program from scratch",
         "Find steps that reproduce the bug reliably",

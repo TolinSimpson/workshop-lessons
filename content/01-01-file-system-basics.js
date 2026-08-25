@@ -130,6 +130,7 @@ archive.tar.gz → extension is  .gz</pre>
     },
     {
       q: "Which of these is an absolute path?",
+      key: true,
       choices: [
         "..\\..\\Photos\\vacation\\summer-trip\\beach.jpg",
         "Documents\\essay.docx",
@@ -190,6 +191,7 @@ archive.tar.gz → extension is  .gz</pre>
     },
     {
       q: "What does the file extension of a file actually do?",
+      key: true,
       choices: [
         "It tells the operating system which program should open it",
         "It converts the file's data into that format",
@@ -210,6 +212,7 @@ archive.tar.gz → extension is  .gz</pre>
     },
     {
       q: "Why is it recommended to turn on 'show file name extensions' in Windows?",
+      key: true,
       choices: [
         "It makes files open faster",
         "It frees up disk space by removing extension data from every file name",

@@ -121,6 +121,7 @@ section({
     },
     {
       q: "What does DNS do?",
+      key: true,
       choices: [
         "Encrypts all traffic between your browser and the destination server",
         "Translates a domain name into an IP address",
@@ -151,6 +152,7 @@ section({
     },
     {
       q: "What does an HTTP 404 status code mean?",
+      key: true,
       choices: [
         "The request succeeded and the file was returned",
         "The server's own code crashed while handling the request",
@@ -201,6 +203,7 @@ section({
     },
     {
       q: "What does an SSL/TLS certificate provide?",
+      key: true,
       choices: [
         "Proof that the website's content is truthful",
         "Encryption and proof the server matches the domain",

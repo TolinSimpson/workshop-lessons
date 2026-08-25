@@ -94,6 +94,7 @@ section({
   questions: [
     {
       q: "What does a large language model fundamentally do?",
+      key: true,
       choices: [
         "Looks up answers in a curated database of verified facts",
         "Predicts what text should come next, word by word",
@@ -134,6 +135,7 @@ section({
     },
     {
       q: "What is a hallucination?",
+      key: true,
       choices: [
         "When the model refuses to answer a question it finds too hard",
         "When the model repeats the same answer twice in one chat",
@@ -164,6 +166,7 @@ section({
     },
     {
       q: "What does a brand-new chat know about your previous conversations?",
+      key: true,
       choices: [
         "Everything, because all chats share one continuous memory",
         "Only conversations from the last thirty days",

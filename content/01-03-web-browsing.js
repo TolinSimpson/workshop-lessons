@@ -110,6 +110,7 @@ section({
   questions: [
     {
       q: "What is the difference between a browser and a search engine?",
+      key: true,
       choices: [
         "A browser is a program that displays web pages; a search engine is a website that finds other websites",
         "They are two names for the same thing",
@@ -190,6 +191,7 @@ section({
     },
     {
       q: "What is a cookie?",
+      key: true,
       choices: [
         "A small hidden program that websites secretly install and run on your computer's hard drive",
         "A small piece of text a website stores in your browser and reads back on later visits",
@@ -230,6 +232,7 @@ section({
     },
     {
       q: "What does private / incognito mode actually do?",
+      key: true,
       choices: [
         "Hides your activity from websites and your internet provider",
         "Keeps no local history or cookies once the window closes",

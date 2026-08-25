@@ -125,6 +125,7 @@ section({
   questions: [
     {
       q: "What does the notation Ctrl+C mean?",
+      key: true,
       choices: [
         "Press Ctrl, release it, then press C",
         "Hold Ctrl and tap C at the same time",
@@ -140,6 +141,7 @@ section({
     },
     {
       q: "You just deleted a paragraph by mistake. Fastest fix?",
+      key: true,
       choices: ["Ctrl+A", "Ctrl+Z", "Ctrl+S", "Alt+F4"],
       answer: 1
     },
@@ -210,6 +212,7 @@ section({
     },
     {
       q: "You closed a browser tab by accident. How do you get it back?",
+      key: true,
       choices: ["Ctrl+Shift+N", "Ctrl+Shift+T", "Ctrl+Shift+Tab", "Ctrl+Shift+Esc"],
       answer: 1
     },

@@ -35,6 +35,9 @@ for (const s of SECTIONS) {
     const lens = q.choices.map(c => c.length);
     if (lens[q.answer] === Math.max(...lens) && lens.filter(l => l === lens[q.answer]).length === 1) sectionLongest++;
   });
+  // every section must contribute to its unit test
+  console.assert(s.questions.filter(q => q.key).length >= 2,
+    `${s.id}: needs 2+ questions flagged \`key: true\` for the unit test`);
   // per-section guard so a new biased section can't hide inside the global average
   console.assert(sectionLongest / s.questions.length <= 0.5,
     `${s.id}: correct choice is strictly longest in ${sectionLongest}/${s.questions.length} questions (max 50% per section)`);

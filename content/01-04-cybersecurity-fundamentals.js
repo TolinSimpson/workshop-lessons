@@ -192,6 +192,7 @@ section({
     },
     {
       q: "Which of these is genuinely two-factor authentication?",
+      key: true,
       choices: [
         "A password plus a security question, since the question acts as a second independent factor",
         "A password plus a PIN, because entering two secrets counts as two factors",
@@ -252,6 +253,7 @@ section({
     },
     {
       q: "What does the 3-2-1 backup rule state?",
+      key: true,
       choices: [
         "3 passwords, 2 backup devices, 1 antivirus program installed",
         "3 copies, on 2 different media, 1 kept offsite or offline",
@@ -292,6 +294,7 @@ section({
     },
     {
       q: "What is the most reliable response to an urgent email claiming your bank account will be closed?",
+      key: true,
       choices: [
         "Click the link and log in quickly before the deadline passes",
         "Reply to the message asking the sender to confirm whether it is genuine",

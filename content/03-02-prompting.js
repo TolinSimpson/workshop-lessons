@@ -94,6 +94,7 @@ section({
   questions: [
     {
       q: "What is a prompt?",
+      key: true,
       choices: [
         "A special programming language invented for controlling AI models precisely",
         "The instructions you type to an AI tool, in plain language",
@@ -104,6 +105,7 @@ section({
     },
     {
       q: "Why does \"Write something about our bake sale\" get a generic result?",
+      key: true,
       choices: [
         "Bake sales are too informal a topic for AI tools",
         "The prompt is too short for the model to process",
@@ -144,6 +146,7 @@ section({
     },
     {
       q: "The first answer is close but too formal. Best next move?",
+      key: true,
       choices: [
         "Start a brand-new chat and try different wording",
         "Send a follow-up like \"less formal, half the length\"",

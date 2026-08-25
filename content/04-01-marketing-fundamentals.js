@@ -86,6 +86,7 @@ section({
   questions: [
     {
       q: "What is the core loop of digital marketing?",
+      key: true,
       choices: [
         "Post daily on every platform that exists",
         "Be found, earn trust, invite action",
@@ -146,6 +147,7 @@ section({
     },
     {
       q: "Why are platform followers described as \"rented\"?",
+      key: true,
       choices: [
         "Platforms charge a monthly fee per follower",
         "Followers legally belong to the platform's shareholders rather than to creators",
@@ -166,6 +168,7 @@ section({
     },
     {
       q: "Which of these is a vanity metric?",
+      key: true,
       choices: [
         "Email signups from a specific page",
         "Total follower count",

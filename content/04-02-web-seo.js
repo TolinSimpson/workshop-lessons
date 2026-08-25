@@ -97,6 +97,7 @@ section({
   questions: [
     {
       q: "What is the core principle behind all effective SEO?",
+      key: true,
       choices: [
         "Repeat the target keyword as often as possible",
         "Satisfy the searcher — write for readers, not robots",
@@ -117,6 +118,7 @@ section({
     },
     {
       q: "Why target long-tail keywords as a beginner?",
+      key: true,
       choices: [
         "They are the only keywords AI systems can read",
         "Google charges less for long search phrases",
@@ -167,6 +169,7 @@ section({
     },
     {
       q: "What makes backlinks valuable?",
+      key: true,
       choices: [
         "They make pages load faster for visitors",
         "Each link is a vote of confidence, weighted by the linker's own authority",

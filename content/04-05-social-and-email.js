@@ -102,6 +102,7 @@ section({
   questions: [
     {
       q: "How do short-form feeds decide what to show next?",
+      key: true,
       choices: [
         "Strictly the newest posts from the accounts that each viewer already follows, in order",
         "The algorithm tests videos on fresh audiences, regardless of follower count",
@@ -172,6 +173,7 @@ section({
     },
     {
       q: "What is a lead magnet?",
+      key: true,
       choices: [
         "A paid ad that links to your newsletter",
         "Something genuinely useful offered free in exchange for an email",
@@ -182,6 +184,7 @@ section({
     },
     {
       q: "Which email practice is legally required?",
+      key: true,
       choices: [
         "Sending at least one email per month",
         "Using the subscriber's first name in every subject line you send",

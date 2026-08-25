@@ -143,6 +143,7 @@ section({
     },
     {
       q: "What is the defining feature of lossy compression?",
+      key: true,
       choices: [
         "It permanently discards data, so the original cannot be restored",
         "It keeps every single bit and can always be reversed exactly to the original",
@@ -163,6 +164,7 @@ section({
     },
     {
       q: "What is the difference between a raster and a vector image?",
+      key: true,
       choices: [
         "Raster stores a pixel grid; vector stores scalable shapes",
         "Vector stores a grid of pixels, while raster stores mathematical shapes that scale to any size",
@@ -193,6 +195,7 @@ section({
     },
     {
       q: "Which image format supports a transparent background AND is lossless?",
+      key: true,
       choices: [
         "JPEG",
         "PNG",

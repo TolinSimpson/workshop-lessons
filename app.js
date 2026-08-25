@@ -13,8 +13,22 @@ function parse() {
 }
 function esc(s) { return String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])); }
 
+function units() {
+  const list = [];
+  for (const s of SECTIONS) {
+    let u = list.find(u => u.title === s.unit);
+    if (!u) list.push(u = { title: s.unit, sections: [] });
+    u.sections.push(s);
+  }
+  return list;
+}
+
 function render() {
   const r = parse();
+  if (r.id === 'unit') {
+    const u = units()[+r.mode];
+    return u ? unitTest(u) : home();
+  }
   const section = SECTIONS.find(s => s.id === r.id);
   if (!section) return home();
   if (r.mode === 'test') return test(section);
@@ -23,15 +37,9 @@ function render() {
 
 function home() {
   crumb.textContent = 'Computing Course';
-  const units = [];
-  for (const s of SECTIONS) {
-    let u = units.find(u => u.title === s.unit);
-    if (!u) units.push(u = { title: s.unit, sections: [] });
-    u.sections.push(s);
-  }
   let openUnits = [];
   try { openUnits = JSON.parse(localStorage.getItem('openUnits')) || []; } catch (e) {}
-  app.innerHTML = units.map(u => `
+  app.innerHTML = units().map((u, ui) => `
     <details class="unit" data-title="${esc(u.title)}" ${openUnits.includes(u.title) ? 'open' : ''}>
       <summary>
         <span class="utitle">${esc(u.title)}</span>
@@ -46,6 +54,13 @@ function home() {
             <a class="btn" href="#/${s.id}/test">Test</a>
           </div>
         </div>`).join('')}
+      <div class="card">
+        <div><b>Unit Test</b></div>
+        <div class="meta">${u.sections.reduce((n, s) => n + s.questions.filter(q => q.key).length, 0)} key questions covering the whole unit</div>
+        <div class="row">
+          <a class="btn primary" href="#/unit/${ui}/test">Unit Test</a>
+        </div>
+      </div>
     </details>
   `).join('');
   app.querySelectorAll('details.unit').forEach(d => d.addEventListener('toggle', () => {
@@ -101,12 +116,20 @@ function lesson(section, i) {
 }
 
 function test(section) {
-  const qs = section.questions;
   crumb.textContent = section.unit + ' — ' + section.title + ' — Test';
+  quiz(section.title + ' — Test', section.questions, `#/${section.id}/lesson/0`, 'Review lesson');
+}
+
+function unitTest(u) {
+  crumb.textContent = u.title + ' — Unit Test';
+  quiz(u.title + ' — Unit Test', u.sections.flatMap(s => s.questions.filter(q => q.key)), '#/', 'Back to units');
+}
+
+function quiz(title, qs, backHref, backLabel) {
   document.onkeydown = null;
   app.innerHTML = `
-    <h3>${esc(section.title)} &mdash; Test</h3>
-    <p class="muted">${qs.length} multiple choice questions. Pick one answer each, then submit.</p>
+    <h3>${esc(title)}</h3>
+    <p class="muted">${qs.length} multiple choice questions. Pick one answer each, then submit. Unanswered questions count as wrong.</p>
     <form id="quiz">
       ${qs.map((q, i) => `
         <div class="q" data-i="${i}">
@@ -118,7 +141,7 @@ function test(section) {
         </div>`).join('')}
       <div class="row">
         <button type="submit" class="btn primary">Submit answers</button>
-        <a class="btn" href="#/${section.id}/lesson/0">Review lesson</a>
+        <a class="btn" href="${backHref}">${backLabel}</a>
       </div>
     </form>
     <div id="result"></div>`;
@@ -129,21 +152,22 @@ function test(section) {
     let score = 0, unanswered = 0;
     qs.forEach((q, i) => {
       const picked = form[`q${i}`].value;
-      if (picked === '') unanswered++;
       const box = app.querySelector(`.q[data-i="${i}"]`);
       box.classList.add('graded');
+      if (picked === '') { unanswered++; box.classList.add('blank'); }
       box.querySelectorAll('label').forEach(l => {
         const j = +l.dataset.j;
         l.querySelector('input').disabled = true;
         if (j === q.answer) l.classList.add('correct');
         else if (String(j) === picked) l.classList.add('wrong');
       });
-      if (+picked === q.answer) score++;
+      if (picked !== '' && +picked === q.answer) score++;
     });
     const pct = Math.round(score / qs.length * 100);
+    const grade = pct >= 90 ? 'A' : pct >= 80 ? 'B' : pct >= 70 ? 'C' : pct >= 60 ? 'D' : 'F';
     document.getElementById('result').innerHTML = `
-      <div class="score">${score} / ${qs.length} &mdash; ${pct}%${pct >= 80 ? ' ✓ Pass' : ''}</div>
-      <p class="muted">${unanswered ? unanswered + ' left blank. ' : ''}Green marks the correct answer, red marks your incorrect pick.</p>
+      <div class="score">${score} / ${qs.length} &mdash; ${pct}% &mdash; Grade: ${grade}</div>
+      <p class="muted">${unanswered ? unanswered + ' left blank (marked wrong). ' : ''}Green marks the correct answer, red marks your incorrect pick.</p>
       <div class="row">
         <button class="btn" onclick="render()">Retake</button>
         <a class="btn" href="#/">Back to units</a>

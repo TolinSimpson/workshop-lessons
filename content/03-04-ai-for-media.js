@@ -90,6 +90,7 @@ section({
   questions: [
     {
       q: "What does an image generator need from you?",
+      key: true,
       choices: [
         "A rough sketch drawn with the mouse",
         "A written description of the picture you want",
@@ -130,6 +131,7 @@ section({
     },
     {
       q: "What is transcription?",
+      key: true,
       choices: [
         "Turning recorded speech into written text",
         "Turning written text into a natural-sounding voice",
@@ -140,6 +142,7 @@ section({
     },
     {
       q: "When is cloning a voice acceptable?",
+      key: true,
       choices: [
         "Whenever the result is clearly labeled as a parody",
         "Only for voices of people who are famous",

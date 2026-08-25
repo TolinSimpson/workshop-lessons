@@ -111,6 +111,7 @@
   .graded label { cursor: default; }
   .graded label.correct { border-color: var(--ok); background: rgba(63,191,127,.1); }
   .graded label.wrong { border-color: var(--bad); background: rgba(239,95,95,.1); }
+  .q.blank { border-color: var(--bad); }
   .score { font-size: 20px; font-weight: 600; margin: 20px 0 4px; }
   .muted { color: var(--muted); }
 

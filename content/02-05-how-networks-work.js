@@ -73,6 +73,7 @@ section({
   questions: [
     {
       q: "What is the internet?",
+      key: true,
       choices: [
         "One giant central supercomputer owned and operated by a single private company",
         "A global network of independent networks that pass each other's traffic",
@@ -83,6 +84,7 @@ section({
     },
     {
       q: "How does data actually travel across a network?",
+      key: true,
       choices: [
         "As one continuous unbroken stream that must follow a single path",
         "Split into packets that are routed independently and reassembled at the destination",
@@ -103,6 +105,7 @@ section({
     },
     {
       q: "In the client–server model, which statement is true?",
+      key: true,
       choices: [
         "The client waits for requests and the server sends them",
         "The client sends requests and the server answers them",

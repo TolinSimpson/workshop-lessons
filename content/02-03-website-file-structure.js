@@ -110,6 +110,7 @@ example.com/about/    → serves  /about/index.html</pre>
   questions: [
     {
       q: "Which layer is responsible for the appearance of a page?",
+      key: true,
       choices: [
         "HTML",
         "CSS",
@@ -130,6 +131,7 @@ example.com/about/    → serves  /about/index.html</pre>
     },
     {
       q: "Which file does a web server send by default when someone requests a directory?",
+      key: true,
       choices: [
         "main.html",
         "index.html",
@@ -200,6 +202,7 @@ example.com/about/    → serves  /about/index.html</pre>
     },
     {
       q: "Why must you never put an API key or password in front-end JavaScript?",
+      key: true,
       choices: [
         "It would slow down page load by adding extra encryption overhead",
         "JavaScript cannot store text values",

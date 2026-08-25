@@ -85,6 +85,7 @@ section({
   questions: [
     {
       q: "What is the main advantage of starting with an AI draft?",
+      key: true,
       choices: [
         "The draft is publishable immediately without any changes",
         "Editing a rough draft is much easier than facing a blank page",
@@ -135,6 +136,7 @@ section({
     },
     {
       q: "\"Use AI to understand, real sources to confirm\" means:",
+      key: true,
       choices: [
         "Never ask AI factual questions of any kind",
         "Trust AI for concepts and context, but verify facts you will repeat",
@@ -175,6 +177,7 @@ section({
     },
     {
       q: "Who is responsible for an AI-drafted email you send?",
+      key: true,
       choices: [
         "You — whatever you send is yours, regardless of who drafted it",
         "The AI company that operates the model and stores the conversation",

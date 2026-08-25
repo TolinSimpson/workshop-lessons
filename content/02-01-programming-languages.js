@@ -100,6 +100,7 @@ section({
   questions: [
     {
       q: "Generally, what is the trade-off between low-level and high-level languages?",
+      key: true,
       choices: [
         "Low-level is faster to write but slower to run than high-level code",
         "High-level is faster to write but generally slower to run",
@@ -110,6 +111,7 @@ section({
     },
     {
       q: "What does a compiler do?",
+      key: true,
       choices: [
         "Translates all source code into machine code before the program runs",
         "Executes the source code one line at a time, translating each line while the program runs",
@@ -160,6 +162,7 @@ section({
     },
     {
       q: "Which language do web browsers run natively?",
+      key: true,
       choices: [
         "Python",
         "Java (through browser applets)",

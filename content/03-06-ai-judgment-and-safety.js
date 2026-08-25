@@ -98,6 +98,7 @@ section({
   questions: [
     {
       q: "Which of these is safe to paste into an AI chat?",
+      key: true,
       choices: [
         "Your password manager's master password",
         "A press release already published on your company's website",
@@ -128,6 +129,7 @@ section({
     },
     {
       q: "Why are sparse errors especially dangerous in AI output?",
+      key: true,
       choices: [
         "Sparse errors crash the tools that display the text",
         "Errors always cluster at the start of the text where nobody bothers reading",
@@ -188,6 +190,7 @@ section({
     },
     {
       q: "A caller sounding exactly like your sibling urgently needs money wired. Best response?",
+      key: true,
       choices: [
         "Wire the money — voices cannot be faked convincingly",
         "Ask the caller personal questions only your sibling knows",

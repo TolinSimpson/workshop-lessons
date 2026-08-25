@@ -93,6 +93,7 @@ section({
   questions: [
     {
       q: "How does YouTube decide whether to recommend a video widely?",
+      key: true,
       choices: [
         "Staff review and approve promising uploads",
         "It tests the video on a small audience and measures their response",
@@ -103,6 +104,7 @@ section({
     },
     {
       q: "What does CTR measure?",
+      key: true,
       choices: [
         "How long viewers watch before leaving",
         "How many comments and likes a video receives for every hundred views",
@@ -123,6 +125,7 @@ section({
     },
     {
       q: "What is the \"packaging first\" method?",
+      key: true,
       choices: [
         "Designing channel art before uploading any videos",
         "Editing the video before writing its script",
