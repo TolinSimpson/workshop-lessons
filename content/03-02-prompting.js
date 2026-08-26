@@ -1,6 +1,7 @@
 section({
   unit: "Unit 3: Using AI Tools",
   title: "Section 2: Prompting",
+  video: { id: "jC4v5AS4RIM", title: "The Perfect Prompt Formula — Jeff Su (8 min)" },
 
   slides: [
     {

@@ -1,6 +1,7 @@
 section({
   unit: "Unit 1: Basic Computing",
   title: "Section 3: Web Browsing",
+  video: { id: "0eKVizvYSUQ", title: "How Google Search Works — Google (5 min)" },
 
   slides: [
     {

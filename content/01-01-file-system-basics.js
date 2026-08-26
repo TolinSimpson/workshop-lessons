@@ -1,6 +1,7 @@
 section({
   unit: "Unit 1: Basic Computing",
   title: "Section 1: File System Basics",
+  video: { id: "k-EID5_2D9U", title: "File Management Basics — Dane Hartman (4 min)" },
 
   slides: [
     {

@@ -1,6 +1,7 @@
 section({
   unit: "Unit 2: Intro to Computer Science",
   title: "Section 4: HTML Document Structure",
+  video: { id: "it1rTvBcfRg", title: "HTML Introduction — W3Schools (3 min)" },
 
   slides: [
     {

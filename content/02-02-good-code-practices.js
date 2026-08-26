@@ -1,6 +1,7 @@
 section({
   unit: "Unit 2: Intro to Computer Science",
   title: "Section 2: Good Code Practices",
+  video: { id: "nqHoxa4bamo", title: "What is Clean Code? — Smok Code (4 min)" },
 
   slides: [
     {

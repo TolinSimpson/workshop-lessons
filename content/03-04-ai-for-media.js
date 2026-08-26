@@ -1,6 +1,7 @@
 section({
   unit: "Unit 3: Using AI Tools",
   title: "Section 4: AI for Images, Audio, and Video",
+  video: { id: "9YrYDqhJdPw", title: "Text-to-Image Generation Explained — Google Research (6 min)" },
 
   slides: [
     {

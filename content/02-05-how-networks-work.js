@@ -1,6 +1,7 @@
 section({
   unit: "Unit 2: Intro to Computer Science",
   title: "Section 5: How Networks Work",
+  video: { id: "KjD3KANH-xc", title: "How Does the Internet Work? Data Packets — PowerCert (6 min)" },
 
   slides: [
     {

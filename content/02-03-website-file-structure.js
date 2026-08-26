@@ -1,6 +1,7 @@
 section({
   unit: "Unit 2: Intro to Computer Science",
   title: "Section 3: Website File Structure",
+  video: { id: "U8542COlBiU", title: "What is HTML, CSS and JavaScript? — IT-Made-Easy (6 min)" },
 
   slides: [
     {

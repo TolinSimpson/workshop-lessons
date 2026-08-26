@@ -1,6 +1,7 @@
 section({
   unit: "Unit 3: Using AI Tools",
   title: "Section 1: What AI Tools Are",
+  video: { id: "LPZh9BOjkQs", title: "Large Language Models Explained Briefly — 3Blue1Brown (8 min)" },
 
   slides: [
     {

@@ -1,6 +1,7 @@
 section({
   unit: "Unit 4: Digital Marketing",
   title: "Section 4: YouTube Metadata — Descriptions, Tags, and Chapters",
+  video: { id: "6rWjoqkKG7o", title: "Set Up Your YouTube Description the Right Way — Think Media (7 min)" },
 
   slides: [
     {

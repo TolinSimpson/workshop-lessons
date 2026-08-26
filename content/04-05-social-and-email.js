@@ -1,6 +1,7 @@
 section({
   unit: "Unit 4: Digital Marketing",
   title: "Section 5: Short-Form, Social, and Email",
+  video: { id: "94gHaHKmD4Q", title: "Email Marketing for Beginners — HubSpot (6 min)" },
 
   slides: [
     {

@@ -70,9 +70,16 @@ function home() {
 }
 
 function lesson(section, i) {
-  const n = section.slides.length;
+  // Optional per-section YouTube video, shown as an extra final slide.
+  const slides = section.video ? section.slides.concat([{
+    title: 'Video: ' + section.video.title,
+    body: `<p class="muted">Optional supplement — the same ideas in video form.</p>
+<iframe class="yt" src="https://www.youtube-nocookie.com/embed/${section.video.id}" title="${esc(section.video.title)}" allowfullscreen loading="lazy" allow="fullscreen; picture-in-picture"></iframe>
+<p class="muted"><a href="https://www.youtube.com/watch?v=${section.video.id}" target="_blank" rel="noopener">Open on YouTube</a> if the embed doesn't load.</p>`
+  }]) : section.slides;
+  const n = slides.length;
   i = Math.max(0, Math.min(i, n - 1));
-  const slide = section.slides[i];
+  const slide = slides[i];
   crumb.textContent = section.unit + ' — ' + section.title;
   const last = i === n - 1;
   app.innerHTML = `
@@ -97,7 +104,7 @@ function lesson(section, i) {
       <span class="count">Slide ${i + 1} of ${n}</span>
     </div>
     <div class="dots">
-      ${section.slides.map((_, k) =>
+      ${slides.map((_, k) =>
         `<button class="dot ${k === i ? 'on' : ''}" data-i="${k}">${k + 1}</button>`).join('')}
     </div>`;
 

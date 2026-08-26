@@ -1,6 +1,7 @@
 section({
   unit: "Unit 4: Digital Marketing",
   title: "Section 1: Marketing Fundamentals",
+  video: { id: "bixR-KIJKYM", title: "Digital Marketing in 5 Minutes — Simplilearn (5 min)" },
 
   slides: [
     {

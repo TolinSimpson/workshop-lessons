@@ -1,6 +1,7 @@
 section({
   unit: "Unit 3: Using AI Tools",
   title: "Section 6: Judgment, Safety, and Ethics",
+  video: { id: "005JLRt3gXI", title: "Why Do AI Models Hallucinate? — Claude (5 min)" },
 
   slides: [
     {

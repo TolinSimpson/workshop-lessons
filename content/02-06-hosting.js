@@ -1,6 +1,7 @@
 section({
   unit: "Unit 2: Intro to Computer Science",
   title: "Section 6: Hosting",
+  video: { id: "wXyQiBy0kjk", title: "Web Hosting vs Domain Hosting — Elegant Themes (3 min)" },
 
   slides: [
     {

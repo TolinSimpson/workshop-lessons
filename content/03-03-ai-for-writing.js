@@ -1,6 +1,7 @@
 section({
   unit: "Unit 3: Using AI Tools",
   title: "Section 3: AI for Writing and Everyday Work",
+  video: { id: "r2vYObllqJU", title: "Claude AI Tutorial for Beginners — Kevin Stratvert (9 min)" },
 
   slides: [
     {

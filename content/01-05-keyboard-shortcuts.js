@@ -1,6 +1,7 @@
 section({
   unit: "Unit 1: Basic Computing",
   title: "Section 5: Keyboard Shortcuts",
+  video: { id: "CpDyDwTPEzo", title: "Keyboard Shortcuts on Windows and Mac — LearnFree (3 min)" },
 
   slides: [
     {

@@ -88,6 +88,7 @@
   .slide th, .slide td { border: 1px solid var(--line); padding: 8px 10px; text-align: left; vertical-align: top; }
   .slide th { background: #0e1017; }
   .slide li { margin-bottom: 6px; }
+  .slide .yt { width: 100%; aspect-ratio: 16 / 9; border: 1px solid var(--line); border-radius: 8px; }
 
   .navbar { display: flex; align-items: center; gap: 12px; margin-top: 18px; }
   .navbar .count { color: var(--muted); font-size: 14px; margin-left: auto; }

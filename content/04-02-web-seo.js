@@ -1,6 +1,7 @@
 section({
   unit: "Unit 4: Digital Marketing",
   title: "Section 2: Web SEO",
+  video: { id: "MYE6T_gd7H0", title: "SEO in 5 Minutes — Simplilearn (5 min)" },
 
   slides: [
     {

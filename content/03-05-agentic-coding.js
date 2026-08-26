@@ -1,6 +1,7 @@
 section({
   unit: "Unit 3: Using AI Tools",
   title: "Section 5: Agentic Coding with Claude and Zed",
+  video: { id: "FwOTs4UxQS4", title: "AI Agents, Clearly Explained — Jeff Su (10 min)" },
 
   slides: [
     {

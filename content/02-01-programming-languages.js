@@ -1,6 +1,7 @@
 section({
   unit: "Unit 2: Intro to Computer Science",
   title: "Section 1: Programming Languages",
+  video: { id: "Y_9t3eQFmU4", title: "Computer Science Basics: Programming Languages — LearnFree (2 min)" },
 
   slides: [
     {

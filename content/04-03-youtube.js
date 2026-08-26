@@ -1,6 +1,7 @@
 section({
   unit: "Unit 4: Digital Marketing",
   title: "Section 3: YouTube",
+  video: { id: "twjd3ZQ932o", title: "The YouTube Algorithm Explained — Think Media (9 min)" },
 
   slides: [
     {

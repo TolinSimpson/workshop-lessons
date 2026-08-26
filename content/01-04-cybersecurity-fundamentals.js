@@ -1,6 +1,7 @@
 section({
   unit: "Unit 1: Basic Computing",
   title: "Section 4: Cybersecurity Fundamentals",
+  video: { id: "inWWhr5tnEA", title: "What Is Cyber Security? — Simplilearn (7 min)" },
 
   slides: [
     {
