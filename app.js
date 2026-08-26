@@ -70,13 +70,14 @@ function home() {
 }
 
 function lesson(section, i) {
-  // Optional per-section YouTube video, shown as an extra final slide.
-  const slides = section.video ? section.slides.concat([{
+  // Optional per-section YouTube video, shown as an extra first slide.
+  // Nothing is loaded from YouTube until Play is clicked (no cookies/tracking on page view).
+  const slides = section.video ? [{
     title: 'Video: ' + section.video.title,
     body: `<p class="muted">Optional supplement — the same ideas in video form.</p>
-<iframe class="yt" src="https://www.youtube-nocookie.com/embed/${section.video.id}" title="${esc(section.video.title)}" allowfullscreen loading="lazy" allow="fullscreen; picture-in-picture"></iframe>
+<div class="yt" id="ytbox"><button class="btn primary" id="ytplay">&#9654; Play video</button></div>
 <p class="muted"><a href="https://www.youtube.com/watch?v=${section.video.id}" target="_blank" rel="noopener">Open on YouTube</a> if the embed doesn't load.</p>`
-  }]) : section.slides;
+  }].concat(section.slides) : section.slides;
   const n = slides.length;
   i = Math.max(0, Math.min(i, n - 1));
   const slide = slides[i];
@@ -107,6 +108,12 @@ function lesson(section, i) {
       ${slides.map((_, k) =>
         `<button class="dot ${k === i ? 'on' : ''}" data-i="${k}">${k + 1}</button>`).join('')}
     </div>`;
+
+  const play = document.getElementById('ytplay');
+  if (play) play.onclick = () => {
+    document.getElementById('ytbox').innerHTML =
+      `<iframe src="https://www.youtube-nocookie.com/embed/${section.video.id}?autoplay=1&rel=0&iv_load_policy=3" title="${esc(section.video.title)}" allowfullscreen allow="autoplay; fullscreen; picture-in-picture" referrerpolicy="no-referrer"></iframe>`;
+  };
 
   const go = k => { location.hash = `#/${section.id}/lesson/${k}`; };
   const prev = document.getElementById('prev');

@@ -1,7 +1,7 @@
 section({
   unit: "Unit 1: Basic Computing",
   title: "Section 2: File Types",
-  video: { id: "3nym3fkHqyk", title: "Lossy vs Lossless Compression — Elegant Themes (3 min)" },
+  video: { id: "guo8if4Yxhw", title: "Data Compression as Fast As Possible — Techquickie (5 min)" },
 
   slides: [
     {
