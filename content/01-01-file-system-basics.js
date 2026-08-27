@@ -1,7 +1,10 @@
 section({
   unit: "Unit 1: Basic Computing",
   title: "Section 1: File System Basics",
-  video: { id: "k-EID5_2D9U", title: "File Management Basics — Dane Hartman (4 min)" },
+  video: [
+    { id: "hUW5MEKDtMM", title: "Explaining Computer Files, Folders, and Directories — LinkedIn Learning (5 min)" },
+    { id: "68GD6oiqLL0", title: "CS Basics: File Extensions — Mr Matthews (4 min)" }
+  ],
 
   slides: [
     {
