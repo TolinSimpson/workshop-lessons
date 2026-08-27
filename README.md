@@ -113,3 +113,42 @@ node check.js
 
 Reports slide and question counts, and flags out-of-range answer indices,
 duplicate choices, missing fields, and a stale manifest.
+
+## Grades and retakes
+
+Configured in the `GRADES` object at the top of `app.js`.
+
+**Retake limit** — `maxAttempts` (default 2, `0` = unlimited). Attempts are
+counted per test in the student's browser (localStorage). When attempts run
+out, the test page shows "No attempts left". The teacher edition
+(`teacher.html`) is never limited. To reset a student, have them run
+`localStorage.removeItem('attempts')` in the browser console (F12), or clear
+site data.
+
+**Sending grades to the teacher** — two options, use either or both:
+
+1. *Google Form (automatic, recommended).* Grades post silently into a Google
+   Sheet when a student submits a test.
+   - Create a Google Form with five **Short answer** questions: Name, Test,
+     Score, Grade, Attempt.
+   - Click ⋮ → *Get pre-filled link*, fill dummy answers, copy the generated
+     link. It contains `entry.NNNNN=` IDs for each field.
+   - In `app.js`, set `formUrl` to the form's URL with `/viewform` replaced by
+     `/formResponse`, and put each `entry.NNNNN` id in `fields`.
+   - In the Form's Responses tab, link a spreadsheet (and optionally enable
+     email notifications).
+2. *Email button.* Set `teacherEmail` and a "Email result to teacher" button
+   appears with the result pre-filled — uses the student's mail app.
+3. *My Grades page.* The home page links to `#/grades`, which lists the
+   student's latest result per test (stored in localStorage) with their name,
+   and an "Email grades to teacher" button that opens a pre-filled email in
+   their mail app for them to review and send manually. Works even without
+   `teacherEmail` set — the To: field is just left blank.
+
+Students are prompted for their name once (stored in localStorage) and it is
+included with every grade.
+
+**Honesty note:** GitHub Pages is a static host, so both features are
+client-side. A student who clears browser data gets fresh attempts, and grades
+are reported by the student's browser, not verified. Fine for a classroom
+honor system; a real backend would be needed for enforcement.

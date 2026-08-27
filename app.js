@@ -6,6 +6,42 @@ const SECTIONS = [];
 let loading = '';
 function section(s) { SECTIONS.push({ ...s, id: loading }); }
 
+// --- grade reporting & retake limits (teacher setup: see README) ---
+// ponytail: all client-side (localStorage + student-reported grades) — GitHub Pages
+// has no server; clearing browser data resets attempts. Move to a real backend if
+// enforcement ever matters.
+const GRADES = {
+  maxAttempts: 2,   // attempts allowed per test; 0 = unlimited
+  teacherEmail: '', // set to show an "Email result to teacher" button
+  formUrl: '',      // Google Form ".../formResponse" URL; auto-sends grades to its Sheet
+  fields: { name: 'entry.0', test: 'entry.0', score: 'entry.0', grade: 'entry.0', attempt: 'entry.0' }
+};
+const attempts = id => (JSON.parse(localStorage.getItem('attempts') || '{}')[id] || 0);
+function bumpAttempts(id) {
+  const a = JSON.parse(localStorage.getItem('attempts') || '{}');
+  a[id] = (a[id] || 0) + 1;
+  localStorage.setItem('attempts', JSON.stringify(a));
+  return a[id];
+}
+function studentName() {
+  let n = localStorage.getItem('studentName');
+  if (!n) {
+    n = (prompt('Your name (sent to the teacher with your grade):') || '').trim();
+    if (n) localStorage.setItem('studentName', n);
+  }
+  return n || 'Unknown';
+}
+function reportGrade(r) {
+  if (!GRADES.formUrl) return;
+  const d = new FormData();
+  d.append(GRADES.fields.name, r.name);
+  d.append(GRADES.fields.test, r.test);
+  d.append(GRADES.fields.score, `${r.score}/${r.total} (${r.pct}%)`);
+  d.append(GRADES.fields.grade, r.grade);
+  d.append(GRADES.fields.attempt, r.attempt);
+  fetch(GRADES.formUrl, { method: 'POST', mode: 'no-cors', body: d }).catch(() => {});
+}
+
 // --- routing: #/  |  #/<section-id>/lesson/0  |  #/<section-id>/test ---
 function parse() {
   const p = location.hash.replace(/^#\/?/, '').split('/').filter(Boolean);
@@ -29,6 +65,7 @@ function render() {
     const u = units()[+r.mode];
     return u ? unitTest(u) : home();
   }
+  if (r.id === 'grades') return gradesPage();
   const section = SECTIONS.find(s => s.id === r.id);
   if (!section) return home();
   if (r.mode === 'test') return test(section);
@@ -62,7 +99,8 @@ function home() {
         </div>
       </div>
     </details>
-  `).join('');
+  `).join('') + `
+    <div class="row"><a class="btn" href="#/grades">My Grades</a></div>`;
   app.querySelectorAll('details.unit').forEach(d => d.addEventListener('toggle', () => {
     const open = [...app.querySelectorAll('details.unit[open]')].map(x => x.dataset.title);
     localStorage.setItem('openUnits', JSON.stringify(open));
@@ -130,18 +168,56 @@ function lesson(section, i) {
   window.scrollTo(0, 0);
 }
 
+function gradesPage() {
+  crumb.textContent = 'My Grades';
+  const res = Object.values(JSON.parse(localStorage.getItem('results') || '{}'));
+  const name = localStorage.getItem('studentName') || '';
+  app.innerHTML = `
+    <h3>My Grades</h3>
+    ${res.length ? `
+    <div class="slide"><table>
+      <tr><th>Test</th><th>Score</th><th>Grade</th><th>Attempt</th></tr>
+      ${res.map(r => `<tr><td>${esc(r.test)}</td><td>${r.score}/${r.total} (${r.pct}%)</td><td>${r.grade}</td><td>${r.attempt}</td></tr>`).join('')}
+    </table></div>
+    <p class="muted">Latest result per test. Check your name below, then send — the email opens in your mail app for you to review and hit Send yourself.</p>
+    <p><label>Name: <input id="gname" value="${esc(name)}"></label></p>` : `
+    <p class="muted">No completed tests yet.</p>`}
+    <div class="row">
+      ${res.length ? `<a class="btn primary" id="sendgrades" href="#">Email grades to teacher</a>` : ''}
+      <a class="btn" href="#/">Back to units</a>
+    </div>`;
+  const send = document.getElementById('sendgrades');
+  if (send) send.onclick = () => {
+    const n = (document.getElementById('gname').value.trim() || 'Unknown');
+    localStorage.setItem('studentName', n);
+    const body = n + '\n\n' + res.map(r =>
+      `${r.test}: ${r.score}/${r.total} (${r.pct}%) — Grade ${r.grade}, attempt ${r.attempt}`).join('\n');
+    send.href = `mailto:${GRADES.teacherEmail}?subject=${encodeURIComponent('Grades — ' + n)}&body=${encodeURIComponent(body)}`;
+  };
+  window.scrollTo(0, 0);
+}
+
 function test(section) {
   crumb.textContent = section.unit + ' — ' + section.title + ' — Test';
-  quiz(section.title + ' — Test', section.questions, `#/${section.id}/lesson/0`, 'Review lesson');
+  quiz(section.title + ' — Test', section.questions, `#/${section.id}/lesson/0`, 'Review lesson', section.id);
 }
 
 function unitTest(u) {
   crumb.textContent = u.title + ' — Unit Test';
-  quiz(u.title + ' — Unit Test', u.sections.flatMap(s => s.questions.filter(q => q.key)), '#/', 'Back to units');
+  quiz(u.title + ' — Unit Test', u.sections.flatMap(s => s.questions.filter(q => q.key)), '#/', 'Back to units', 'unit-' + u.title);
 }
 
-function quiz(title, qs, backHref, backLabel) {
+function quiz(title, qs, backHref, backLabel, testId) {
   document.onkeydown = null;
+  const used = attempts(testId);
+  if (GRADES.maxAttempts && used >= GRADES.maxAttempts && !window.TEACHER) {
+    app.innerHTML = `
+      <h3>${esc(title)}</h3>
+      <p class="muted">No attempts left (${used} of ${GRADES.maxAttempts} used). Ask your teacher if you need a reset.</p>
+      <div class="row"><a class="btn" href="${backHref}">${backLabel}</a></div>`;
+    window.scrollTo(0, 0);
+    return;
+  }
   app.innerHTML = `
     <h3>${esc(title)}</h3>
     <p class="muted">${qs.length} multiple choice questions. Pick one answer each, then submit. Unanswered questions count as wrong.</p>
@@ -180,11 +256,27 @@ function quiz(title, qs, backHref, backLabel) {
     });
     const pct = Math.round(score / qs.length * 100);
     const grade = pct >= 90 ? 'A' : pct >= 80 ? 'B' : pct >= 70 ? 'C' : pct >= 60 ? 'D' : 'F';
+    let attempt = 0, mailBtn = '', attemptNote = '';
+    if (!window.TEACHER) {
+      attempt = bumpAttempts(testId);
+      const results = JSON.parse(localStorage.getItem('results') || '{}');
+      results[testId] = { test: title, score, total: qs.length, pct, grade, attempt };
+      localStorage.setItem('results', JSON.stringify(results));
+      const name = studentName();
+      reportGrade({ name, test: title, score, total: qs.length, pct, grade, attempt });
+      if (GRADES.teacherEmail) {
+        const body = `${name}\n${title}\nScore: ${score}/${qs.length} (${pct}%) — Grade ${grade}\nAttempt ${attempt}`;
+        mailBtn = `<a class="btn" href="mailto:${GRADES.teacherEmail}?subject=${encodeURIComponent('Grade: ' + title + ' — ' + name)}&body=${encodeURIComponent(body)}">Email result to teacher</a>`;
+      }
+      if (GRADES.maxAttempts) attemptNote = ` Attempt ${attempt} of ${GRADES.maxAttempts}.`;
+    }
+    const canRetake = window.TEACHER || !GRADES.maxAttempts || attempt < GRADES.maxAttempts;
     document.getElementById('result').innerHTML = `
       <div class="score">${score} / ${qs.length} &mdash; ${pct}% &mdash; Grade: ${grade}</div>
-      <p class="muted">${unanswered ? unanswered + ' left blank (marked wrong). ' : ''}Green marks the correct answer, red marks your incorrect pick.</p>
+      <p class="muted">${unanswered ? unanswered + ' left blank (marked wrong). ' : ''}Green marks the correct answer, red marks your incorrect pick.${attemptNote}</p>
       <div class="row">
-        <button class="btn" onclick="render()">Retake</button>
+        ${canRetake ? '<button class="btn" onclick="render()">Retake</button>' : ''}
+        ${mailBtn}
         <a class="btn" href="#/">Back to units</a>
       </div>`;
     document.getElementById('result').scrollIntoView({ behavior: 'smooth' });
